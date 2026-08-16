@@ -1,0 +1,35 @@
+<svg width="800" height="500" viewBox="0 0 800 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="800" y2="500">
+      <stop stop-color="#0F172A"/>
+      <stop offset="1" stop-color="#1E293B"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#bg)"/>
+  
+  <g opacity="0.3">
+    <circle cx="150" cy="150" r="120" fill="#3B82F6"/>
+    <circle cx="650" cy="350" r="150" fill="#EC4899"/>
+  </g>
+
+  <g>
+    <rect x="100" y="80" width="600" height="340" rx="20" fill="#111827" stroke="#334155" stroke-width="2"/>
+    
+    <text x="150" y="140" fill="#F1F5F9" font-family="Arial, sans-serif" font-size="32" font-weight="700">Big Data Impact</text>
+    
+    <rect x="140" y="170" width="520" height="200" rx="12" fill="#0F172A" stroke="#3B82F6" stroke-width="2"/>
+    
+    <g transform="translate(180, 200)">
+      <rect x="0" y="60" width="40" height="100" fill="#3B82F6" rx="4"/>
+      <text x="50" y="120" fill="#E2E8F0" font-size="14">Correlation</text>
+      
+      <rect x="120" y="30" width="40" height="130" fill="#8B5CF6" rx="4"/>
+      <text x="170" y="100" fill="#E2E8F0" font-size="14">Trust Level</text>
+      
+      <rect x="240" y="50" width="40" height="110" fill="#22C55E" rx="4"/>
+      <text x="290" y="120" fill="#E2E8F0" font-size="14">Engagement</text>
+    </g>
+    
+    <text x="150" y="400" fill="#94A3B8" font-family="Arial, sans-serif" font-size="16">55 Participants | SPSS & Excel Analysis</text>
+  </g>
+</svg>

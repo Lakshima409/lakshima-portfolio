@@ -1,0 +1,37 @@
+<svg width="800" height="500" viewBox="0 0 800 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="800" y2="500">
+      <stop stop-color="#0F172A"/>
+      <stop offset="1" stop-color="#1E293B"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#bg)"/>
+  
+  <g opacity="0.3">
+    <circle cx="200" cy="180" r="130" fill="#8B5CF6"/>
+    <circle cx="680" cy="360" r="150" fill="#14B8A6"/>
+  </g>
+
+  <g>
+    <rect x="100" y="80" width="600" height="340" rx="20" fill="#111827" stroke="#334155" stroke-width="2"/>
+    
+    <text x="150" y="140" fill="#F1F5F9" font-family="Arial, sans-serif" font-size="32" font-weight="700">PantryPal AI</text>
+    
+    <g transform="translate(160, 190)">
+      <circle cx="40" cy="40" r="35" fill="#8B5CF6" opacity="0.2" stroke="#A78BFA" stroke-width="2"/>
+      <text x="25" y="50" fill="#A78BFA" font-size="28">🥘</text>
+      
+      <circle cx="160" cy="40" r="35" fill="#14B8A6" opacity="0.2" stroke="#6EE7B7" stroke-width="2"/>
+      <text x="145" y="50" fill="#6EE7B7" font-size="28">📊</text>
+      
+      <circle cx="280" cy="40" r="35" fill="#F59E0B" opacity="0.2" stroke="#FBBF24" stroke-width="2"/>
+      <text x="265" y="50" fill="#FBBF24" font-size="28">🤖</text>
+      
+      <line x1="75" y1="40" x2="125" y2="40" stroke="#6B7280" stroke-width="2" stroke-dasharray="5,5"/>
+      <line x1="195" y1="40" x2="245" y2="40" stroke="#6B7280" stroke-width="2" stroke-dasharray="5,5"/>
+    </g>
+    
+    <rect x="140" y="310" width="520" height="50" rx="10" fill="#0F172A" stroke="#6366F1" stroke-width="2"/>
+    <text x="165" y="342" fill="#A5F3FC" font-size="14">83% Accuracy • 0.7s Response • 85%+ Satisfaction</text>
+  </g>
+</svg>

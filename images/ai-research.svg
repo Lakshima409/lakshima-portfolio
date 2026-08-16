@@ -1,0 +1,41 @@
+<svg width="800" height="500" viewBox="0 0 800 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="800" y2="500">
+      <stop stop-color="#0F172A"/>
+      <stop offset="1" stop-color="#1E293B"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#bg)"/>
+  
+  <g opacity="0.3">
+    <circle cx="200" cy="180" r="130" fill="#6366F1"/>
+    <circle cx="680" cy="330" r="150" fill="#F43F5E"/>
+  </g>
+
+  <g>
+    <rect x="100" y="80" width="600" height="340" rx="20" fill="#111827" stroke="#334155" stroke-width="2"/>
+    
+    <text x="150" y="140" fill="#F1F5F9" font-family="Arial, sans-serif" font-size="32" font-weight="700">AI Research</text>
+    
+    <rect x="140" y="170" width="520" height="200" rx="12" fill="#0F172A" stroke="#6366F1" stroke-width="2"/>
+    
+    <g transform="translate(180, 210)">
+      <text x="0" y="0" fill="#A5F3FC" font-size="24">🔍</text>
+      <text x="35" y="8" fill="#E2E8F0" font-size="14">Adversarial Search</text>
+      
+      <text x="0" y="50" fill="#FCA5A5" font-size="24">🎲</text>
+      <text x="35" y="58" fill="#E2E8F0" font-size="14">Uncertainty & Probabilistic</text>
+      
+      <text x="0" y="100" fill="#D1D5DB" font-size="24">🧬</text>
+      <text x="35" y="108" fill="#E2E8F0" font-size="14">Human Augmentation</text>
+      
+      <text x="300" y="0" fill="#FBBF24" font-size="24">⚡</text>
+      <text x="335" y="8" fill="#E2E8F0" font-size="14">Reasoning</text>
+      
+      <text x="300" y="50" fill="#86EFAC" font-size="24">🤝</text>
+      <text x="335" y="58" fill="#E2E8F0" font-size="14">Collaboration</text>
+    </g>
+    
+    <text x="150" y="400" fill="#94A3B8" font-family="Arial, sans-serif" font-size="16">Exploratory Research | AI Foundations</text>
+  </g>
+</svg>
