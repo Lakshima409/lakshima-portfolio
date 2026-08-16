@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PantryPal - AI Recipe & Meal Planning | Lakshima Madurangi</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .project-hero {
+      background: linear-gradient(135deg, rgba(59, 130, 246, 0.2) 0%, rgba(139, 92, 246, 0.2) 100%);
+      padding: 60px 0;
+      margin-bottom: 40px;
+    }
+    .project-header {
+      margin-bottom: 30px;
+    }
+    .project-header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+    }
+    .project-meta {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+    .meta-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .project-content {
+      max-width: 900px;
+    }
+    .project-content h2 {
+      font-size: 1.8rem;
+      margin-top: 40px;
+      margin-bottom: 20px;
+      color: var(--accent);
+    }
+    .project-content h3 {
+      font-size: 1.3rem;
+      margin-top: 30px;
+      margin-bottom: 15px;
+    }
+    .project-content p {
+      line-height: 1.8;
+      margin-bottom: 15px;
+      color: var(--text);
+    }
+    .project-content ul {
+      margin-left: 20px;
+      margin-bottom: 20px;
+      line-height: 1.8;
+    }
+    .project-content li {
+      margin-bottom: 10px;
+    }
+    .tech-stack {
+      background: var(--surface);
+      padding: 20px;
+      border-radius: 8px;
+      margin: 30px 0;
+      border-left: 4px solid var(--accent);
+    }
+    .tech-stack strong {
+      color: var(--accent);
+    }
+    .highlights {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      margin: 30px 0;
+    }
+    .highlight-card {
+      background: var(--surface);
+      padding: 20px;
+      border-radius: 8px;
+      text-align: center;
+      border: 1px solid var(--border);
+    }
+    .highlight-card .number {
+      font-size: 2rem;
+      font-weight: bold;
+      color: var(--accent);
+    }
+    .highlight-card .label {
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin-top: 10px;
+    }
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 30px;
+      color: var(--accent);
+      text-decoration: none;
+      font-size: 0.95rem;
+    }
+    .back-link:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">Lakshima</a>
+      <nav class="site-nav" id="siteNav">
+        <a href="index.html#home">Home</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#skills">Skills</a>
+        <a href="index.html#projects">Projects</a>
+        <a href="index.html#education">Education</a>
+        <a href="index.html#certificates">Certificates</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <button class="icon-button" id="themeToggle" aria-label="Toggle theme">🌙</button>
+        <button class="icon-button mobile-menu" id="mobileMenuBtn" aria-label="Toggle menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="project-hero">
+      <div class="container">
+        <a href="index.html#projects" class="back-link">← Back to Projects</a>
+        <div class="project-header">
+          <h1>PantryPal</h1>
+          <p style="font-size: 1.2rem; color: var(--muted);">AI-Powered Recipe Recommendation & Meal Planning System</p>
+          <div class="project-meta">
+            <div class="meta-item">
+              <span>📚</span> Final Year Research Project
+            </div>
+            <div class="meta-item">
+              <span>🎓</span> London Metropolitan University
+            </div>
+            <div class="meta-item">
+              <span>📅</span> 2025
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container project-content">
+        <h2>About My Final Year Research Project</h2>
+        
+        <p>My final-year research project, <strong>PantryPal – Recipe Recommendation and Personalized Meal Planning System</strong>, focused on investigating how artificial intelligence and machine learning could be applied to improve everyday meal-planning decisions.</p>
+
+        <p>The idea originated from a simple but common problem: people may have ingredients available at home but still struggle to decide what to cook while trying to maintain dietary requirements, nutritional goals and a reasonable grocery budget. Through my literature review and analysis of existing food recommendation platforms, I identified a gap in the integration of pantry management, personalized recipe recommendations, nutritional support and automated shopping-list generation.</p>
+
+        <h3>System Design & Implementation</h3>
+
+        <p>To address this problem, I designed and developed PantryPal as a full-stack web application. The system allows users to create profiles, specify dietary preferences, manage pantry ingredients, receive personalized recipes, generate weekly meal plans and automatically identify missing ingredients for shopping lists.</p>
+
+        <p>The technical architecture combines <strong>React.js for the frontend, Node.js and Express.js for the backend, MySQL for structured data storage, and Python/Flask microservices for AI functionality</strong>. The recommendation component applies machine-learning techniques including <strong>TF-IDF, cosine similarity, content-based filtering, collaborative filtering and neural embeddings</strong>, while contextual information such as time of day and season can also contribute to personalization.</p>
+
+        <div class="tech-stack">
+          <strong>Technology Stack:</strong><br>
+          React.js · Node.js · Express.js · Python · Flask · MySQL · Scikit-learn · TensorFlow · REST APIs · JWT · Docker · Spoonacular API
+        </div>
+
+        <h3>Development Approach</h3>
+
+        <p>As the sole researcher and developer, I was responsible for the complete development lifecycle, from identifying the research problem and conducting the literature review through to system design, implementation, testing and evaluation. I used an Agile/Scrum approach to manage development through iterative sprints and continuously refine the system based on testing and feedback.</p>
+
+        <h3>Key Features</h3>
+        <ul>
+          <li>AI-powered personalized recipe recommendations</li>
+          <li>Pantry and ingredient management</li>
+          <li>Dietary and nutritional personalization</li>
+          <li>Weekly meal-plan generation</li>
+          <li>Automated shopping-list generation</li>
+          <li>User authentication and profile management</li>
+          <li>Context-aware recommendations</li>
+          <li>Recipe favourites and interaction tracking</li>
+        </ul>
+
+        <h3>Results & Performance</h3>
+
+        <p>The final evaluation demonstrated that the system was technically viable and capable of delivering relevant personalized recommendations. The reported technical evaluation achieved:</p>
+
+        <div class="highlights">
+          <div class="highlight-card">
+            <div class="number">83%</div>
+            <div class="label">Recommendation Accuracy</div>
+          </div>
+          <div class="highlight-card">
+            <div class="number">0.7s</div>
+            <div class="label">Average API Response Time</div>
+          </div>
+          <div class="highlight-card">
+            <div class="number">98%</div>
+            <div class="label">Local Uptime</div>
+          </div>
+          <div class="highlight-card">
+            <div class="number">0.3s</div>
+            <div class="label">Database Retrieval Time</div>
+          </div>
+          <div class="highlight-card">
+            <div class="number">90-95%</div>
+            <div class="label">Objective Completion</div>
+          </div>
+          <div class="highlight-card">
+            <div class="number">85%+</div>
+            <div class="label">User Satisfaction</div>
+          </div>
+        </div>
+
+        <h3>Skills & Learning Outcomes</h3>
+
+        <p>Beyond the technical outcome, the project gave me valuable experience in combining <strong>research, artificial intelligence, machine learning, full-stack development, database engineering, API integration, cybersecurity, UI/UX design and project management</strong> within a single real-world application.</p>
+
+        <p>Most importantly, the project taught me how to transform a research problem into a working technological solution and how to evaluate that solution critically rather than focusing only on implementation.</p>
+
+        <h3>Research Focus</h3>
+
+        <p>The project explored the application of artificial intelligence and recommendation systems to everyday nutrition, meal planning and household food management, with particular emphasis on personalization, pantry awareness and reducing food waste. This research contributes to understanding how AI can make practical everyday activities more efficient and user-centric.</p>
+
+        <div style="margin-top: 50px; padding-top: 30px; border-top: 1px solid var(--border);">
+          <a href="index.html#projects" class="button primary">← Back to All Projects</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© 2026 M.H. Lakshima Madurangi. Built for MERN Stack internship applications.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

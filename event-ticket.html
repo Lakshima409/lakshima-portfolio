@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Event Ticket Online Web Application | Lakshima Madurangi</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .project-hero {
+      background: linear-gradient(135deg, rgba(59, 130, 246, 0.2) 0%, rgba(139, 92, 246, 0.2) 100%);
+      padding: 60px 0;
+      margin-bottom: 40px;
+    }
+    .project-header {
+      margin-bottom: 30px;
+    }
+    .project-header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+    }
+    .project-meta {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+    .meta-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .project-content {
+      max-width: 900px;
+    }
+    .project-content h2 {
+      font-size: 1.8rem;
+      margin-top: 40px;
+      margin-bottom: 20px;
+      color: var(--accent);
+    }
+    .project-content h3 {
+      font-size: 1.3rem;
+      margin-top: 30px;
+      margin-bottom: 15px;
+    }
+    .project-content p {
+      line-height: 1.8;
+      margin-bottom: 15px;
+      color: var(--text);
+    }
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 30px;
+      color: var(--accent);
+      text-decoration: none;
+      font-size: 0.95rem;
+    }
+    .back-link:hover {
+      text-decoration: underline;
+    }
+    .placeholder {
+      background: var(--surface);
+      padding: 40px;
+      border-radius: 8px;
+      text-align: center;
+      border: 2px dashed var(--border);
+      color: var(--muted);
+      margin: 40px 0;
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">Lakshima</a>
+      <nav class="site-nav" id="siteNav">
+        <a href="index.html#home">Home</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#skills">Skills</a>
+        <a href="index.html#projects">Projects</a>
+        <a href="index.html#education">Education</a>
+        <a href="index.html#certificates">Certificates</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <button class="icon-button" id="themeToggle" aria-label="Toggle theme">🌙</button>
+        <button class="icon-button mobile-menu" id="mobileMenuBtn" aria-label="Toggle menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="project-hero">
+      <div class="container">
+        <a href="index.html#projects" class="back-link">← Back to Projects</a>
+        <div class="project-header">
+          <h1>Event Ticket Online Web Application</h1>
+          <p style="font-size: 1.2rem; color: var(--muted);">Scalable event ticket booking platform</p>
+          <div class="project-meta">
+            <div class="meta-item">
+              <span>🎫</span> ASP.NET MVC Full-Stack Application
+            </div>
+            <div class="meta-item">
+              <span>🎓</span> University Coursework
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container project-content">
+        <div class="placeholder">
+          <h3>Project Content Coming Soon</h3>
+          <p>Detailed information about this project will be added shortly.</p>
+        </div>
+
+        <div style="margin-top: 50px; padding-top: 30px; border-top: 1px solid var(--border);">
+          <a href="index.html#projects" class="button primary">← Back to All Projects</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© 2026 M.H. Lakshima Madurangi. Built for MERN Stack internship applications.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
