@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Case study for Malcolm Lismore Photography, a responsive multipage photography website." />
+  <title>Malcolm Lismore Photography | Case Study</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .case-hero { padding: 56px 0 72px; background: radial-gradient(circle at 85% 15%, rgba(16, 185, 129, 0.16), transparent 35%), var(--bg); }
+    .case-hero-grid, .case-split, .case-gallery, .case-facts { display: grid; gap: 24px; }
+    .case-hero-grid { grid-template-columns: 1fr 1fr; align-items: center; }
+    .case-hero-copy h1 { margin: 12px 0 18px; }
+    .case-hero-copy > p, .case-section > p, .case-panel p, .case-panel li { color: var(--muted); line-height: 1.75; }
+    .case-hero-visual { overflow: hidden; aspect-ratio: 16 / 10; border: 1px solid var(--border); border-radius: 18px; background: #082d3d; box-shadow: var(--shadow); }
+    .case-hero-visual img { width: 100%; height: 100%; object-fit: contain; }
+    .case-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 22px; }
+    .case-tags span { padding: 7px 11px; border: 1px solid var(--border); border-radius: 999px; color: var(--muted); font-size: 0.88rem; }
+    .case-section { padding: 64px 0; scroll-margin-top: 88px; }
+    .case-section + .case-section { border-top: 1px solid var(--border); }
+    .case-section h2 { margin-bottom: 18px; }
+    .case-split { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .case-panel { padding: 26px; border: 1px solid var(--border); border-radius: 16px; background: var(--surface); }
+    .case-panel h3 { margin-bottom: 12px; }
+    .case-panel ul { margin: 0; padding-left: 20px; }
+    .case-steps { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 12px; margin-top: 24px; }
+    .case-step { padding: 18px; border-top: 2px solid var(--accent); background: var(--surface); color: var(--text); font-weight: 600; }
+    .case-gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 28px; }
+    .case-gallery figure { min-width: 0; margin: 0; overflow: hidden; border: 1px solid var(--border); border-radius: 12px; background: #082d3d; }
+    .case-gallery img { width: 100%; aspect-ratio: 16 / 9; object-fit: contain; background: #082d3d; }
+    .case-gallery figcaption { padding: 12px 16px; color: var(--muted); font-size: 0.92rem; }
+    .case-facts { grid-template-columns: repeat(3, minmax(0, 1fr)); margin-top: 24px; }
+    .case-fact { padding: 18px; border: 1px solid var(--border); border-radius: 12px; background: var(--surface); }
+    .case-fact strong { display: block; margin-bottom: 7px; }
+    .case-fact span { color: var(--muted); line-height: 1.6; }
+    .case-footer-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
+    @media (max-width: 780px) {
+      .case-hero-grid, .case-split, .case-gallery, .case-facts { grid-template-columns: 1fr; }
+      .case-steps { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+    @media (max-width: 520px) { .case-steps { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">Lakshima</a>
+      <nav class="site-nav" id="siteNav">
+        <a href="index.html#home">Home</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#skills">Skills</a>
+        <a href="index.html#projects">Projects</a>
+        <a href="index.html#research">Research</a>
+        <a href="index.html#resume">Resume</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <button class="icon-button" id="themeToggle" aria-label="Toggle theme">🌙</button>
+        <button class="icon-button mobile-menu" id="mobileMenuBtn" aria-label="Toggle menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="case-hero">
+      <div class="container case-hero-grid">
+        <div class="case-hero-copy">
+          <a href="index.html#more-projects" class="back-link">← Back to projects</a>
+          <span class="section-tag">Web Design · UI/UX · Full-Stack Development</span>
+          <h1>Malcolm Lismore Photography</h1>
+          <p>A cinematic digital experience designed to showcase Scotland through the lens of a freelance photographer.</p>
+          <p>I designed and developed a responsive, multipage photography website for a photographer specialising in Scotland's landscapes, wildlife, coastal scenes, weddings, and special events.</p>
+          <div class="case-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>PHP</span><span>MySQL</span><span>Apache</span></div>
+        </div>
+        <div class="case-hero-visual"><img src="WEB%20SS/ML1.PNG" alt="Homepage design for Malcolm Lismore Photography" /></div>
+      </div>
+    </section>
+
+    <section class="case-section" id="overview">
+      <div class="container case-split">
+        <div><span class="section-tag">01 · Overview</span><h2>A portfolio and a practical business website</h2></div>
+        <div>
+          <p>The goal was to create more than an image gallery. Visitors should be able to discover Malcolm's work and story, understand his photography services and pricing, read updates, and make an enquiry through one connected experience.</p>
+          <p>Photography stays at the centre of the visual design, while clear navigation and supporting information guide visitors from inspiration toward a potential booking.</p>
+        </div>
+      </div>
+      <div class="container case-facts">
+        <div class="case-fact"><strong>My role</strong><span>UI/UX design, web design, front-end and back-end development, database design</span></div>
+        <div class="case-fact"><strong>Project type</strong><span>Responsive multipage photography website</span></div>
+        <div class="case-fact"><strong>Primary journey</strong><span>Discover → Explore → Learn → Evaluate → Enquire</span></div>
+      </div>
+    </section>
+
+    <section class="case-section">
+      <div class="container">
+        <span class="section-tag">02 · The Challenge</span>
+        <h2>Make the imagery shine and the business easy to use</h2>
+        <div class="case-split">
+          <article class="case-panel"><h3>Creative portfolio</h3><p>Present a distinctive photography identity rooted in Scotland's North West Coast, with large imagery and category-based gallery browsing.</p></article>
+          <article class="case-panel"><h3>Business experience</h3><p>Make the photographer's story, service options, pricing, blog, and enquiry route easy to find without competing with the photography.</p></article>
+        </div>
+        <p>The gallery also needed an organisation that could accommodate future photography without becoming difficult to browse.</p>
+      </div>
+    </section>
+
+    <section class="case-section">
+      <div class="container">
+        <span class="section-tag">03 · Design Process</span>
+        <h2>From requirements to a coherent site experience</h2>
+        <p>The planning work connected client and user requirements to information architecture and fidelity wireframes before implementation.</p>
+        <div class="case-steps"><div class="case-step">Requirements</div><div class="case-step">Information architecture</div><div class="case-step">Wireframes</div><div class="case-step">Interface design</div><div class="case-step">Development &amp; testing</div></div>
+        <div class="case-split" style="margin-top:24px">
+          <article class="case-panel"><h3>Visual direction</h3><p>Natural, cinematic, minimal, and immersive. Large photographic imagery establishes the atmosphere, with typography, spacing, and structured sections supporting the content.</p></article>
+          <article class="case-panel"><h3>User experience</h3><p>Simple navigation, readable content, consistent page structures, and responsive layouts help visitors move naturally from exploring the portfolio to making an enquiry.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="case-section" id="experience">
+      <div class="container">
+        <span class="section-tag">04 · Website Experience</span>
+        <h2>One connected photography experience</h2>
+        <p>The multipage structure brings the photographer's introduction, portfolio, services, editorial content, and customer enquiry journey together.</p>
+        <div class="case-gallery">
+          <figure><img src="WEB%20SS/ML1.PNG" alt="Photography website homepage and landscape hero" loading="lazy" /><figcaption>Home · A visual introduction to Malcolm's photography and Scotland's landscapes.</figcaption></figure>
+          <figure><img src="WEB%20SS/ML2.PNG" alt="About page introducing the photographer" loading="lazy" /><figcaption>About · The photographer's background, creative perspective, and connection to nature.</figcaption></figure>
+          <figure><img src="WEB%20SS/ML4.PNG" alt="Photography portfolio layout" loading="lazy" /><figcaption>Portfolio · Featured photography and routes into the image collections.</figcaption></figure>
+          <figure><img src="WEB%20SS/ML5.PNG" alt="Photography blog section" loading="lazy" /><figcaption>Blog · An editorial space for photography stories and updates.</figcaption></figure>
+          <figure><img src="WEB%20SS/ML9.PNG" alt="Photography gallery with category-led image browsing" loading="lazy" /><figcaption>Gallery · Photography organised for browsing across subjects.</figcaption></figure>
+          <figure><img src="WEB%20SS/ML16.PNG" alt="Photography services and pricing cards" loading="lazy" /><figcaption>Services &amp; pricing · Clear entry points for photography services.</figcaption></figure>
+          <figure><img src="WEB%20SS/ML14.PNG" alt="Photography enquiry or contact page" loading="lazy" /><figcaption>Enquiry · A contact route for potential photography bookings.</figcaption></figure>
+          <figure><img src="WEB%20SS/ML7.PNG" alt="Photography customer feedback section" loading="lazy" /><figcaption>Customer feedback · A testimonial section supporting trust.</figcaption></figure>
+          <figure><img src="WEB%20SS/ML13.PNG" alt="Photography website frequently asked questions" loading="lazy" /><figcaption>FAQ · Answers to common visitor questions.</figcaption></figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="case-section">
+      <div class="container">
+        <span class="section-tag">05 · Development</span><h2>Custom-built web application</h2>
+        <div class="case-split">
+          <article class="case-panel"><h3>Front end</h3><ul><li>HTML for page structure and content</li><li>CSS for visual design, layout, and responsive behaviour</li><li>JavaScript for interactive functionality</li></ul></article>
+          <article class="case-panel"><h3>Back end &amp; hosting</h3><ul><li>PHP for server-side functionality and processing</li><li>MySQL relational database for website information and enquiries</li><li>Apache selected for the PHP hosting environment</li></ul></article>
+        </div>
+        <p>The data model was planned around the site's information needs, including photography-related content, service and pricing information, and enquiry submissions.</p>
+      </div>
+    </section>
+
+    <section class="case-section">
+      <div class="container case-split">
+        <div><span class="section-tag">06 · Testing &amp; Quality</span><h2>Checking the core visitor journeys</h2></div>
+        <div class="case-panel"><ul><li>Navigation links and homepage content</li><li>About page readability and formatting</li><li>Pricing clarity and access</li><li>Gallery image display and category browsing</li><li>Enquiry form fields and submission flow</li></ul><p>The project test plan documents checks across these core areas, including navigation, page content, gallery browsing, and enquiry submission.</p></div>
+      </div>
+    </section>
+
+    <section class="case-section">
+      <div class="container">
+        <span class="section-tag">07 · Outcome &amp; Reflection</span><h2>A complete journey from discovery to enquiry</h2>
+        <p>The project brings photography, storytelling, and business functionality into one website. Visitors can discover Malcolm's work, learn about services, review pricing, and reach out about a booking.</p>
+        <div class="case-split">
+          <article class="case-panel"><h3>What I learned</h3><p>Planning a multipage experience, translating requirements into wireframes, balancing image-led design with clear information, and connecting front-end work with server-side and database considerations.</p></article>
+          <article class="case-panel"><h3>Future improvements</h3><p>Advanced gallery filtering and search, expanded SEO, stronger security measures, and a content management system to support ongoing updates.</p></article>
+        </div>
+        <div class="case-footer-actions"><a href="index.html#more-projects" class="button primary">Back to More Projects</a><a href="index.html#contact" class="button secondary">Contact me</a></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="container footer-inner"><p>© 2026 M.H. Lakshima Madurangi.</p></div></footer>
+  <script src="script.js"></script>
+</body>
+</html>

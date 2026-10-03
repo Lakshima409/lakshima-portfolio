@@ -103,6 +103,38 @@
     .back-link:hover {
       text-decoration: underline;
     }
+    .pantry-gallery {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+      margin: 36px 0;
+    }
+    .pantry-gallery figure {
+      min-width: 0;
+      margin: 0;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      background: var(--surface-strong);
+    }
+    .pantry-gallery img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: contain;
+      background: #f4eee7;
+    }
+    .pantry-gallery figcaption {
+      padding: 12px 16px;
+      color: var(--muted);
+      font-size: 0.92rem;
+      line-height: 1.5;
+    }
+    @media (max-width: 640px) {
+      .pantry-gallery {
+        grid-template-columns: 1fr;
+      }
+    }
   </style>
 </head>
 <body>
@@ -181,6 +213,39 @@
           <li>Context-aware recommendations</li>
           <li>Recipe favourites and interaction tracking</li>
         </ul>
+
+        <h3>Product Screens</h3>
+        <p>A look at the main user flows, from discovering recipes to managing pantry ingredients and personal preferences.</p>
+        <div class="pantry-gallery">
+          <figure>
+            <img src="Pantry%20pal%20Interface%20ss/Screen/Screenshot%202025-11-20%20115401.png" alt="PantryPal landing page introducing meal planning and recipe discovery" loading="lazy" />
+            <figcaption>Landing page · Introduces personalized recipes, meal planning, and dietary support.</figcaption>
+          </figure>
+          <figure>
+            <img src="Pantry%20pal%20Interface%20ss/Screen/Screenshot%202025-07-24%20110549%20Copy.png" alt="PantryPal homepage with recipe recommendation call to action" loading="lazy" />
+            <figcaption>Home · Introduces ingredient-based recipe discovery.</figcaption>
+          </figure>
+          <figure>
+            <img src="Pantry%20pal%20Interface%20ss/Screen/Screenshot%202025-07-24%20111120%20Copy.png" alt="PantryPal recipe browsing and recipe cards" loading="lazy" />
+            <figcaption>Recipe discovery · Browse recipe suggestions and apply filters.</figcaption>
+          </figure>
+          <figure>
+            <img src="Pantry%20pal%20Interface%20ss/Screen/Screenshot%202025-07-24%20111215%20Copy.png" alt="PantryPal recipe detail with ingredients and cooking information" loading="lazy" />
+            <figcaption>Recipe detail · Review recipe information and preparation details.</figcaption>
+          </figure>
+          <figure>
+            <img src="Pantry%20pal%20Interface%20ss/Screen/Screenshot%202025-11-21%20164532.png" alt="PantryPal pantry ingredient management screen" loading="lazy" />
+            <figcaption>Pantry · Manage available ingredients before generating recipes.</figcaption>
+          </figure>
+          <figure>
+            <img src="Pantry%20pal%20Interface%20ss/Screen/Screenshot%202025-11-21%20164416.png" alt="PantryPal user preferences for calorie range, allergies, and dietary choices" loading="lazy" />
+            <figcaption>User preferences · Set calorie ranges, allergies, dietary choices, cooking time, and difficulty.</figcaption>
+          </figure>
+          <figure>
+            <img src="Pantry%20pal%20Interface%20ss/Screen/Screenshot%202025-11-20%20152849.png" alt="PantryPal user profile with health goals and activity sections" loading="lazy" />
+            <figcaption>Profile &amp; preferences · Personal health goals and activity at a glance.</figcaption>
+          </figure>
+        </div>
 
         <h3>Results & Performance</h3>
 
