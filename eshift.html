@@ -71,6 +71,41 @@
       color: var(--muted);
       margin: 40px 0;
     }
+    .screenshot-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 28px;
+      margin: 30px 0 10px;
+    }
+    @media (min-width: 700px) {
+      .screenshot-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+      .screenshot-grid figure.wide {
+        grid-column: 1 / -1;
+      }
+    }
+    .screenshot-grid figure {
+      margin: 0;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    .screenshot-grid img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-bottom: 1px solid var(--border);
+    }
+    .screenshot-grid figcaption {
+      padding: 16px 20px;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+    .screenshot-grid figcaption strong {
+      color: var(--text);
+    }
   </style>
 </head>
 <body>
@@ -147,6 +182,34 @@
         <h3>Skills Demonstrated</h3>
         <div class="skills-box">
           <strong>C# Windows Forms</strong> · <strong>SQL Server</strong> · <strong>Desktop Application Development</strong> · <strong>Business Logic Implementation</strong> · <strong>Database Normalization</strong> · <strong>Security & Encryption</strong>
+        </div>
+
+        <h3>System Screenshots</h3>
+        <div class="screenshot-grid">
+          <figure class="wide">
+            <img src="images/eshift/login.png" alt="eShift Management System role-based login form" loading="lazy" />
+            <figcaption><strong>Login — Role-Based Access.</strong> Admin / Customer role selection with secure username and password authentication.</figcaption>
+          </figure>
+          <figure class="wide">
+            <img src="images/eshift/admin-dashboard.png" alt="eShift Admin Dashboard with navigation" loading="lazy" />
+            <figcaption><strong>Admin Dashboard.</strong> Central hub with customer overview and navigation to drivers, vehicles, jobs and reports.</figcaption>
+          </figure>
+          <figure>
+            <img src="images/eshift/customer-dashboard.png" alt="eShift Customer Dashboard with pending, active and completed jobs" loading="lazy" />
+            <figcaption><strong>Customer Dashboard.</strong> Pending, Active and Completed job counters with Job ID search.</figcaption>
+          </figure>
+          <figure>
+            <img src="images/eshift/job-request.png" alt="eShift Job Request Form from Galle to Colombo" loading="lazy" />
+            <figcaption><strong>Job Request Form.</strong> Start / destination locations, product type, weight, and assistant requirement.</figcaption>
+          </figure>
+          <figure>
+            <img src="images/eshift/report-generator.png" alt="eShift Report Generator" loading="lazy" />
+            <figcaption><strong>Report Generator.</strong> Customer / job reports with PDF and Excel export for analytics.</figcaption>
+          </figure>
+          <figure>
+            <img src="images/eshift/job-report.png" alt="eShift System Job Report document" loading="lazy" />
+            <figcaption><strong>Job Report.</strong> Generated job sheet with route, product details, vehicle, driver and authorization.</figcaption>
+          </figure>
         </div>
 
         <div style="margin-top: 50px; padding-top: 30px; border-top: 1px solid var(--border);">

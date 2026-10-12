@@ -71,6 +71,41 @@
       color: var(--muted);
       margin: 40px 0;
     }
+    .screenshot-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 28px;
+      margin: 30px 0 10px;
+    }
+    @media (min-width: 700px) {
+      .screenshot-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+      .screenshot-grid figure.wide {
+        grid-column: 1 / -1;
+      }
+    }
+    .screenshot-grid figure {
+      margin: 0;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    .screenshot-grid img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-bottom: 1px solid var(--border);
+    }
+    .screenshot-grid figcaption {
+      padding: 16px 20px;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+    .screenshot-grid figcaption strong {
+      color: var(--text);
+    }
   </style>
 </head>
 <body>
@@ -221,6 +256,34 @@
 
         <div style="background: var(--surface); padding: 20px; border-radius: 8px; margin: 30px 0; border-left: 4px solid var(--accent);">
           <strong>Portfolio Tags:</strong> UX Design · UI Design · User Research · User-Centered Design · Figma · Prototyping · Wireframing · Usability Testing · Interaction Design · Information Architecture · Persona Development · Empathy Mapping · Customer Journey Mapping · Iterative Design · Streaming Platform
+        </div>
+
+        <h3>UI Screens</h3>
+        <div class="screenshot-grid">
+          <figure>
+            <img src="images/evc/onboarding.png" alt="StarView onboarding with Unlimited Choices" loading="lazy" />
+            <figcaption><strong>Onboarding.</strong> Welcome flow introducing unlimited streaming choices.</figcaption>
+          </figure>
+          <figure>
+            <img src="images/evc/signin.png" alt="StarView sign in and create account screens" loading="lazy" />
+            <figcaption><strong>Sign In / Sign Up.</strong> Clean auth entry with social login and account creation.</figcaption>
+          </figure>
+          <figure>
+            <img src="images/evc/discovery.png" alt="StarView E-Video Discovery with search and genres" loading="lazy" />
+            <figcaption><strong>Discovery.</strong> Search, Filter By, genre chips and Explore More navigation.</figcaption>
+          </figure>
+          <figure>
+            <img src="images/evc/documentaries.png" alt="StarView documentaries with popular and top 5 rows" loading="lazy" />
+            <figcaption><strong>Documentaries.</strong> Popular and Top 5 rows with recommendations.</figcaption>
+          </figure>
+          <figure>
+            <img src="images/evc/library.png" alt="StarView Library with owned, gifted and rented videos" loading="lazy" />
+            <figcaption><strong>Library.</strong> Owned, Gifted and Rented collections with filter.</figcaption>
+          </figure>
+          <figure>
+            <img src="images/evc/pricing.png" alt="StarView plan pricing Basic Standard Premium" loading="lazy" />
+            <figcaption><strong>Pricing Plans.</strong> Basic / Standard / Premium tiers with Get Started flow.</figcaption>
+          </figure>
         </div>
 
         <div style="margin-top: 50px; padding-top: 30px; border-top: 1px solid var(--border);">

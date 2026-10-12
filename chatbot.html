@@ -62,6 +62,41 @@
     .back-link:hover {
       text-decoration: underline;
     }
+    .screenshot-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 28px;
+      margin: 30px 0 10px;
+    }
+    @media (min-width: 700px) {
+      .screenshot-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+      .screenshot-grid figure.wide {
+        grid-column: 1 / -1;
+      }
+    }
+    .screenshot-grid figure {
+      margin: 0;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    .screenshot-grid img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-bottom: 1px solid var(--border);
+    }
+    .screenshot-grid figcaption {
+      padding: 16px 20px;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+    .screenshot-grid figcaption strong {
+      color: var(--text);
+    }
     .placeholder {
       background: var(--surface);
       padding: 40px;
@@ -134,6 +169,47 @@
           <li>Comprehensive testing and quality assurance</li>
           <li>Collaborative team implementation across analysis, design, and development</li>
         </ul>
+
+        <h3>Project Screenshots</h3>
+        <p>Luna (early prototype) and MindMate (Streamlit) interfaces plus architecture, use case, and class diagrams.</p>
+        <div class="screenshot-grid">
+          <figure class="wide">
+            <img src="images/chatbot/luna-stress-coping.png" alt="Luna chatbot stress support conversation" loading="lazy" />
+            <figcaption><strong>Luna — Stress Support.</strong> Coping ideas like muscle relaxation and journaling.</figcaption>
+          </figure>
+          <figure class="wide">
+            <img src="images/chatbot/luna-exam-anxiety.png" alt="Luna chatbot exam anxiety full window" loading="lazy" />
+            <figcaption><strong>Luna — Exam Anxiety.</strong> Full chat layout with New Chat and online status.</figcaption>
+          </figure>
+          <figure>
+            <img src="images/chatbot/luna-lonely-support.png" alt="Luna chatbot lonely feelings conversation" loading="lazy" />
+            <figcaption><strong>Luna — Loneliness Check-In.</strong> Empathetic follow-up prompts.</figcaption>
+          </figure>
+          <figure>
+            <img src="images/chatbot/mindmate-welcome.png" alt="MindMate chatbot welcome message" loading="lazy" />
+            <figcaption><strong>MindMate — Welcome.</strong> New-chat greeting with history controls and live time.</figcaption>
+          </figure>
+          <figure>
+            <img src="images/chatbot/mindmate-anxiety-answer.png" alt="MindMate chatbot anxiety explanation" loading="lazy" />
+            <figcaption><strong>MindMate — Anxiety Answer.</strong> Knowledge-base psychoeducation response.</figcaption>
+          </figure>
+          <figure>
+            <img src="images/chatbot/mindmate-mental-illness.png" alt="MindMate chatbot mental illness explanation" loading="lazy" />
+            <figcaption><strong>MindMate — Mental Illness Info.</strong> Supportive answer with chat history view.</figcaption>
+          </figure>
+          <figure class="wide">
+            <img src="images/chatbot/architecture-diagram.png" alt="MindMate system architecture diagram" loading="lazy" />
+            <figcaption><strong>System — Architecture Diagram.</strong> NLP pipeline, intent classification, response generation, and data management.</figcaption>
+          </figure>
+          <figure class="wide">
+            <img src="images/chatbot/class-diagram.png" alt="MindMate system class diagram" loading="lazy" />
+            <figcaption><strong>System — Class Diagram.</strong> Chatbot, NLP processor, intent classifier, and response generator.</figcaption>
+          </figure>
+          <figure>
+            <img src="images/chatbot/use-case-diagram.png" alt="MindMate use case diagram with user and administrator flows" loading="lazy" />
+            <figcaption><strong>System — Use Case Diagram.</strong> User support flows and admin model training tasks.</figcaption>
+          </figure>
+        </div>
 
         <h3>Team Contribution</h3>
         <p>Contributed to system analysis, architectural design, implementation, and technical documentation as part of a collaborative team project.</p>

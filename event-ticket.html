@@ -71,6 +71,41 @@
       color: var(--muted);
       margin: 40px 0;
     }
+    .screenshot-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 28px;
+      margin: 30px 0 10px;
+    }
+    @media (min-width: 700px) {
+      .screenshot-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+      .screenshot-grid figure.wide {
+        grid-column: 1 / -1;
+      }
+    }
+    .screenshot-grid figure {
+      margin: 0;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    .screenshot-grid img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-bottom: 1px solid var(--border);
+    }
+    .screenshot-grid figcaption {
+      padding: 16px 20px;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+    .screenshot-grid figcaption strong {
+      color: var(--text);
+    }
   </style>
 </head>
 <body>
@@ -150,6 +185,34 @@
         <h3>Skills Demonstrated</h3>
         <div class="skills-box">
           <strong>ASP.NET MVC</strong> · <strong>Full-Stack Development</strong> · <strong>Payment Integration</strong> · <strong>Database Design</strong> · <strong>Security & Authentication</strong> · <strong>Clean Architecture</strong> · <strong>Analytics Dashboard Development</strong>
+        </div>
+
+        <h3>System Screenshots</h3>
+        <div class="screenshot-grid">
+          <figure class="wide">
+            <img src="images/eticketing/homepage.png" alt="E-Ticketing homepage with Find Your Next Experience hero" loading="lazy" />
+            <figcaption><strong>Homepage — Discover Events.</strong> Hero search with featured events and category browsing.</figcaption>
+          </figure>
+          <figure class="wide">
+            <img src="images/eticketing/event-listing.png" alt="E-Ticketing event listing with filters" loading="lazy" />
+            <figcaption><strong>Event Listing.</strong> Filterable event catalogue with ratings, pricing and location.</figcaption>
+          </figure>
+          <figure class="wide">
+            <img src="images/eticketing/booking-flow.png" alt="E-Ticketing exclusive VIP concert booking flow" loading="lazy" />
+            <figcaption><strong>Booking Flow.</strong> Ticket tier selection with live price summary and capacity handling.</figcaption>
+          </figure>
+          <figure>
+            <img src="images/eticketing/payment.png" alt="E-Ticketing secure checkout and payment" loading="lazy" />
+            <figcaption><strong>Secure Checkout.</strong> Payment step with order summary and buyer protection.</figcaption>
+          </figure>
+          <figure>
+            <img src="images/eticketing/ticket-validation.png" alt="E-Ticketing ticket validation and capacity check" loading="lazy" />
+            <figcaption><strong>Validation.</strong> Real-time ticket availability and overbooking prevention.</figcaption>
+          </figure>
+          <figure class="wide">
+            <img src="images/eticketing/dashboard.png" alt="E-Ticketing organizer dashboard with analytics" loading="lazy" />
+            <figcaption><strong>Organizer Dashboard.</strong> Sales analytics, event performance and booking management.</figcaption>
+          </figure>
         </div>
 
         <div style="margin-top: 50px; padding-top: 30px; border-top: 1px solid var(--border);">

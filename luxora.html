@@ -62,14 +62,40 @@
     .back-link:hover {
       text-decoration: underline;
     }
-    .placeholder {
+    .screenshot-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 28px;
+      margin: 30px 0 10px;
+    }
+    @media (min-width: 700px) {
+      .screenshot-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+      .screenshot-grid figure.wide {
+        grid-column: 1 / -1;
+      }
+    }
+    .screenshot-grid figure {
+      margin: 0;
       background: var(--surface);
-      padding: 40px;
-      border-radius: 8px;
-      text-align: center;
-      border: 2px dashed var(--border);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    .screenshot-grid img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-bottom: 1px solid var(--border);
+    }
+    .screenshot-grid figcaption {
+      padding: 16px 20px;
       color: var(--muted);
-      margin: 40px 0;
+      font-size: 0.95rem;
+    }
+    .screenshot-grid figcaption strong {
+      color: var(--text);
     }
   </style>
 </head>
@@ -139,6 +165,79 @@
           <li>Role-based administration dashboards</li>
           <li>Comprehensive audit logging and compliance tracking</li>
         </ul>
+
+        <h3>Project Screenshots</h3>
+        <p>Live captures from the running Luxora Hotel Suite system (localhost), including the authenticated admin dashboard.</p>
+        <div class="screenshot-grid">
+          <figure class="wide">
+            <img src="images/luxora/admin-overview.png" alt="Luxora admin dashboard — Hotel Overview with occupancy KPIs and room management" loading="lazy" />
+            <figcaption><strong>Admin Dashboard — Hotel Overview.</strong> Occupancy KPIs, quick actions (Reservation / Check-in / Room Management) and the live room table, captured while logged in as admin1.</figcaption>
+          </figure>
+          <figure>
+            <img src="images/luxora/add-room.png" alt="Luxora Add New Room form — register a room into inventory" loading="lazy" />
+            <figcaption><strong>Room Management — Add New Room.</strong> Register a room into inventory with number, type, beds, price (LKR), status and image URL.</figcaption>
+          </figure>
+          <figure>
+            <img src="images/luxora/reservations.png" alt="Luxora admin Reservations page with stats and bookings table" loading="lazy" />
+            <figcaption><strong>Reservations — All Bookings.</strong> All / Upcoming / Completed / Cancelled stats plus New Booking, Add Rooms and Room Management shortcuts.</figcaption>
+          </figure>
+          <figure class="wide">
+            <img src="images/luxora/reports.png" alt="Luxora Revenue Reports chart with date filter and CSV PDF export" loading="lazy" />
+            <figcaption><strong>Reports — Revenue (cancelled excluded).</strong> Date-range filter, room-type filter, revenue chart and CSV / PDF export.</figcaption>
+          </figure>
+          <figure>
+            <img src="images/luxora/cron-settings.png" alt="Luxora Cron Jobs and Settings panels" loading="lazy" />
+            <figcaption><strong>Cron Jobs + Settings.</strong> 7PM Cancel, 11PM No-Show, Midnight Report and Archive runners, plus tax rate, late fee and currency (LKR).</figcaption>
+          </figure>
+          <figure>
+            <img src="images/luxora/users.png" alt="Luxora Users management with role table" loading="lazy" />
+            <figcaption><strong>Users — Role Management.</strong> Add clerk / manager / admin users, toggle active status, enforce role-based access.</figcaption>
+          </figure>
+          <figure class="wide">
+            <img src="images/luxora/audit-logs.png" alt="Luxora Recent Audit Logs table" loading="lazy" />
+            <figcaption><strong>Audit Logs — Compliance Tracking.</strong> Timestamped LOGIN events (admin1, manager1, clerk1) for security auditing.</figcaption>
+          </figure>
+          <figure>
+            <img src="images/luxora/harborlights-admin.jpg" alt="Harborlights admin dashboard with occupancy stats" loading="lazy" />
+            <figcaption><strong>Harborlights — Admin Dashboard.</strong> Occupied rooms, today's check-ins / check-outs and maintenance issues.</figcaption>
+          </figure>
+          <figure>
+            <img src="images/luxora/room-list.jpg" alt="Luxora Room Management list with images and Edit Delete actions" loading="lazy" />
+            <figcaption><strong>Room List — Live Inventory.</strong> Room number, type, beds, price, status and image with Edit / Delete actions.</figcaption>
+          </figure>
+          <figure>
+            <img src="images/luxora/guest-harborlights.jpg" alt="Harborlights guest home hero — Where Elegance Meets Comfort" loading="lazy" />
+            <figcaption><strong>Guest Site — Harborlights Theme.</strong> Alternate guest-facing hero (Experience Luxury Redefined) with Book Now flow.</figcaption>
+          </figure>
+          <figure>
+            <img src="images/luxora/reservation-records.jpg" alt="Luxora reservation records table with booking filters" loading="lazy" />
+            <figcaption><strong>Reservation Records.</strong> Filterable booking table with New Booking, Add Rooms and Room Management actions.</figcaption>
+          </figure>
+          <figure>
+            <img src="images/luxora/report-exports.jpg" alt="Luxora report exports to PDF and Excel" loading="lazy" />
+            <figcaption><strong>Reports — Export Downloads.</strong> Reservation and revenue reports exported to PDF and Excel.</figcaption>
+          </figure>
+          <figure>
+            <img src="images/luxora/clerk-checkin.png" alt="Luxora clerk Reservations Management with check-in completed toast" loading="lazy" />
+            <figcaption><strong>Clerk — Reservations & Check-In.</strong> Today's check-ins / check-outs, occupancy rate, revenue today, and check-in completed toast.</figcaption>
+          </figure>
+          <figure>
+            <img src="images/luxora/clerk-checkout.png" alt="Luxora clerk Reservations Management with check-out completed toast" loading="lazy" />
+            <figcaption><strong>Clerk — Check-Out Flow.</strong> Confirm / cancel bookings, view bills, and check-out completion notification.</figcaption>
+          </figure>
+          <figure>
+            <img src="images/luxora/add-room-form.jpg" alt="Luxora add new room form" loading="lazy" />
+            <figcaption><strong>Add Room — Inventory Form.</strong> Early version of the room registration form with pricing and status.</figcaption>
+          </figure>
+          <figure>
+            <img src="images/luxora/room-added.jpg" alt="Luxora room added successfully confirmation" loading="lazy" />
+            <figcaption><strong>Room Added — Success State.</strong> Confirmation message after registering a new room.</figcaption>
+          </figure>
+          <figure>
+            <img src="images/luxora/room-updated.jpg" alt="Luxora room updated successfully confirmation" loading="lazy" />
+            <figcaption><strong>Edit Room — Update Confirmation.</strong> Success state after updating room details.</figcaption>
+          </figure>
+        </div>
 
         <h3>Skills Demonstrated</h3>
         <div class="skills-box">
