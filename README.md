@@ -15,6 +15,7 @@ Live site: https://lakshima409.github.io/lakshima-portfolio/
 | [Luxora Hotel Suite](luxora.html) | PHP, MySQL, Bootstrap | Team of 4 — billing + check-in/out | Invoicing, split payments, late-checkout rules |
 | [PantryPal (final-year research)](pantrypal.html) | React, Node.js, Python | Research + full-stack | 83% accuracy, 0.7s API response |
 | [AI Mental Health Chatbot](chatbot.html) | Python, NLP | Team — design + NLP + docs | Intent classification, knowledge base |
+| [Sales analysis (Sampath Food City)](taxi.html) — [code](https://github.com/Lakshima409/sampath-food-city-analytics) | Python, Pandas, Matplotlib, Pytest | Solo — analysis + CLI | Branch trends, pricing, preferences, KDE |
 
 Code: https://github.com/Lakshima409?tab=repositories — pin eShift, EventTicket, Luxora, PantryPal with READMEs + setup steps.
 
