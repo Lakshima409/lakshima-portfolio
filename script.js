@@ -16,10 +16,10 @@ siteNav.addEventListener('click', (event) => {
 function setTheme(theme) {
   if (theme === 'light') {
     document.body.classList.add('light-theme');
-    themeToggle.textContent = '🌙';
+    themeToggle.textContent = '☀️';
   } else {
     document.body.classList.remove('light-theme');
-    themeToggle.textContent = '☀️';
+    themeToggle.textContent = '🌙';
   }
   localStorage.setItem('portfolioTheme', theme);
 }
@@ -35,10 +35,28 @@ setTheme(savedTheme);
 const navLinks = document.querySelectorAll('.site-nav a');
 navLinks.forEach((link) => {
   link.addEventListener('click', (event) => {
+    const href = link.getAttribute('href');
+    // Only smooth-scroll in-page anchors; let index.html#... links navigate normally (fixes subpages)
+    if (!href || !href.startsWith('#')) {
+      return;
+    }
     event.preventDefault();
-    const target = document.querySelector(link.getAttribute('href'));
+    const target = document.querySelector(href);
     if (target) {
       target.scrollIntoView({ behavior: 'smooth' });
     }
   });
 });
+
+const copyEmailBtn = document.getElementById('copyEmailBtn');
+if (copyEmailBtn) {
+  copyEmailBtn.addEventListener('click', async () => {
+    try {
+      await navigator.clipboard.writeText('mhlakshima@gmail.com');
+      copyEmailBtn.textContent = 'Copied!';
+      setTimeout(() => { copyEmailBtn.textContent = 'Copy email'; }, 2000);
+    } catch (e) {
+      copyEmailBtn.textContent = 'mhlakshima@gmail.com';
+    }
+  });
+}

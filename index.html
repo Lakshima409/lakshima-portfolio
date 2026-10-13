@@ -3,7 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Lakshima Madurangi | Software Engineering Graduate</title>
+  <title>Software Engineer (C#, React, SQL) | Lakshima Madurangi</title>
+  <meta name="description" content="Software Engineering Graduate (London Met / ESOFT) — C#, ASP.NET, React, SQL. Projects in transport, ticketing, hotel systems. Open to junior roles in Sri Lanka & remote." />
+  <link rel="canonical" href="https://lakshima409.github.io/lakshima-portfolio/" />
+  <link rel="icon" type="image/jpeg" href="images/profile.jpg" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Lakshima Madurangi — Software Engineer" />
+  <meta property="og:description" content="Software Engineering Graduate | C# .NET, React, SQL | Colombo, Sri Lanka. Built full-stack booking, transport & hotel systems with auth, payments, reporting." />
+  <meta property="og:image" content="https://lakshima409.github.io/lakshima-portfolio/images/eshift/login.png" />
+  <meta property="og:url" content="https://lakshima409.github.io/lakshima-portfolio/" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"M.H. Lakshima Madurangi","jobTitle":"Software Engineering Graduate","address":{"@type":"PostalAddress","addressLocality":"Colombo","addressCountry":"LK"},"alumniOf":["London Metropolitan University","ESOFT Metro Campus"],"knowsAbout":["C#","ASP.NET","React","SQL","SQL Server","MySQL"],"url":"https://lakshima409.github.io/lakshima-portfolio/","sameAs":["https://github.com/Lakshima409","https://www.linkedin.com/in/m-h-lakshima-3a5907288"]}</script>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -30,14 +40,22 @@
     <section class="hero section" id="home">
       <div class="container hero-grid">
         <div class="hero-copy">
-          <p class="eyebrow">Software Engineering Graduate</p>
+          <p class="availability-badge"><span class="pulse-dot"></span> Available for work — Intern / Junior + Remote</p>
+          <p class="eyebrow">Software Engineering Graduate | C# .NET, React, SQL</p>
           <h1>I'm M.H. Lakshima Madurangi</h1>
+          <p class="hero-location">Colombo, Sri Lanka • Open to on-site / hybrid / remote</p>
           <p class="hero-description">
-            I build practical software experiences and enjoy exploring the ideas behind them, from full-stack development to AI and data analytics.
+            I build full-stack booking, transport &amp; hotel systems used for coursework — with auth, payments, and reporting. 2:1 Hons (London Met / ESOFT).
           </p>
           <div class="hero-buttons">
             <a class="button primary" href="#projects">View Projects</a>
-            <a class="button secondary" href="resume/Lakshima%20_CV.pdf" download>Download CV</a>
+            <a class="button secondary" href="https://github.com/Lakshima409" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a class="button secondary" href="resume/Lakshima-Madurangi-CV.pdf" download>Download CV</a>
+          </div>
+          <div class="hero-stats-row">
+            <div><strong>8</strong><span>Projects</span></div>
+            <div><strong>3</strong><span>Team projects</span></div>
+            <div><strong>2:1</strong><span>Hons degree</span></div>
           </div>
           <div class="hero-social-links">
             <a href="https://github.com/Lakshima409" target="_blank" rel="noopener noreferrer">GitHub</a>
@@ -51,7 +69,7 @@
         </div>
         <div class="hero-card">
           <div class="profile-frame">
-            <img src="images/profile.jpg" alt="Graduation portrait of Lakshima Madurangi" />
+            <img src="images/profile.jpg" alt="Graduation portrait of Lakshima Madurangi" width="600" height="750" fetchpriority="high" decoding="async" />
           </div>
           <div class="hero-stats">
             <div>
@@ -71,7 +89,10 @@
       <div class="container about-grid">
         <div class="about-text card">
           <p>
-            I'm Lakshima Madurangi, an aspiring software developer passionate about software development, web technologies, data analytics, and artificial intelligence. I enjoy building practical applications, solving problems through code, and exploring innovative technologies to create smarter digital solutions. I'm continuously learning, developing my technical skills, and turning ideas into meaningful projects.
+            I'm Lakshima Madurangi, a Software Engineering Graduate (2:1 Hons, London Metropolitan University / ESOFT Metro Campus) based in Colombo, Sri Lanka. I build full-stack systems with C# .NET, React, and SQL — including a transport management system with BCrypt auth and PDF/Excel reporting, an event ticketing platform with QR e-tickets, and a hotel suite where I owned billing + check-in/check-out.
+          </p>
+          <p>
+            Open to Intern / Junior Software Engineer roles — on-site, hybrid, or remote. Currently deepening backend + data analytics skills.
           </p>
         </div>
         <div class="about-details card">
@@ -79,7 +100,7 @@
           <div class="detail-row"><strong>University</strong><span>London Metropolitan University</span></div>
           <div class="detail-row"><strong>Campus</strong><span>ESOFT Metro Campus</span></div>
           <div class="detail-row"><strong>Classification</strong><span>Upper Second Class Honours (2:1)</span></div>
-          <div class="detail-row"><strong>Focus Areas</strong><span>MERN, Data Analytics, Networking</span></div>
+          <div class="detail-row"><strong>Focus Areas</strong><span>C# .NET, React, SQL, Data Analytics</span></div>
         </div>
       </div>
     </section>
@@ -126,37 +147,43 @@
       <div class="container project-grid">
         <article class="project-card card project-card--premium">
           <div class="project-visual project-visual--compact">
-            <img src="images/eshift/login.png" alt="eShift Management System login with global logistics visual" loading="lazy" />
+            <img src="images/eshift/login.png" alt="eShift Management System login with global logistics visual" loading="lazy" decoding="async" width="1200" height="750" />
           </div>
           <div class="card-content">
             <h3>eShift Household Goods Transport Management System</h3>
-            <p>Desktop-based transport management system automating operations for a household goods transportation company.</p>
-            <p>Features role-based access, transport bookings, vehicle and driver management, plus PDF and Excel reporting.</p>
+            <p><strong>Problem:</strong> manual transport bookings, fleet tracking &amp; reports took ~15 min per job on paper.</p>
+            <p><strong>My role:</strong> solo build — auth + bookings + SQL design. Role-based login with BCrypt, 6 forms, PDF/Excel export.</p>
+            <p><strong>Result:</strong> end-to-end flow from booking to delivery cuts manual entry to ~2 min per job.</p>
             <div class="project-tags"><span>C#</span><span>Windows Forms</span><span>SQL Server</span></div>
             <div class="project-actions">
               <a href="eshift.html" class="button small">View Details</a>
+              <a href="https://github.com/Lakshima409?tab=repositories" class="button small secondary" target="_blank" rel="noopener noreferrer">&lt;&gt; Code</a>
             </div>
           </div>
         </article>
         <article class="project-card card">
-          <img src="Mind%20Mate%20Chatbot/Screenshot%202025-05-15%20115943.png" alt="Mind Mate mental health chatbot conversation screen" onerror="this.style.display='none'" />
+          <img src="images/chatbot/mindmate-welcome.png" alt="MindMate mental health chatbot conversation screen" loading="lazy" decoding="async" width="1200" height="800" onerror="this.style.display='none'" />
           <div class="card-content">
             <h3>AI Mental Health Chatbot</h3>
-            <p>A team-built conversational chatbot offering mental wellness guidance through a natural language interface and knowledge base.</p>
+            <p><strong>Problem:</strong> students needed always-available, stigma-free first-line wellness support.</p>
+            <p><strong>My role (team):</strong> design + NLP intents + knowledge base + docs.</p>
             <div class="project-tags"><span>AI concepts</span><span>NLP</span><span>Team project</span></div>
             <div class="project-actions">
               <a href="chatbot.html" class="button small">View Details</a>
+              <a href="https://github.com/Lakshima409?tab=repositories" class="button small secondary" target="_blank" rel="noopener noreferrer">&lt;&gt; Code</a>
             </div>
           </div>
         </article>
         <article class="project-card card">
-          <img src="Pantry%20pal%20Interface%20ss/Screen/Screenshot%202025-07-24%20110549%20Copy.png" alt="PantryPal interface screenshot" onerror="this.style.display='none'" />
+          <img src="Pantry%20pal%20Interface%20ss/Screen/Screenshot%202025-07-24%20110549%20Copy.png" alt="PantryPal recipe recommendation homepage" loading="lazy" decoding="async" width="1200" height="800" onerror="this.style.display='none'" />
           <div class="card-content">
             <h3>PantryPal Recipe &amp; Meal Planning</h3>
-            <p>A full-stack research application that recommends recipes using pantry items, dietary preferences, and meal-planning needs.</p>
+            <p><strong>Problem:</strong> people have ingredients but can't decide what to cook within diet + budget.</p>
+            <p><strong>Result:</strong> 83% recommendation accuracy, 0.7s API response (final-year research).</p>
             <div class="project-tags"><span>React</span><span>Node.js</span><span>Python</span><span>Machine learning</span></div>
             <div class="project-actions">
               <a href="pantrypal.html" class="button small">View Research</a>
+              <a href="https://github.com/Lakshima409?tab=repositories" class="button small secondary" target="_blank" rel="noopener noreferrer">&lt;&gt; Code</a>
             </div>
           </div>
         </article>
@@ -166,10 +193,12 @@
           </div>
           <div class="card-content">
             <h3>Luxora Hotel Suite</h3>
-            <p>A hotel reservation and management system built with an Agile team. I developed billing and check-in/check-out modules.</p>
+            <p><strong>Problem:</strong> hotel needed one flow for reservations, billing &amp; check-in/out.</p>
+            <p><strong>My role (Agile team of 4):</strong> owned billing engine + check-in/check-out — dynamic invoicing, split payments, late-checkout rules.</p>
             <div class="project-tags"><span>PHP</span><span>MySQL</span><span>Bootstrap</span></div>
             <div class="project-actions">
               <a href="luxora.html" class="button small">View Details</a>
+              <a href="https://github.com/Lakshima409?tab=repositories" class="button small secondary" target="_blank" rel="noopener noreferrer">&lt;&gt; Code</a>
             </div>
           </div>
         </article>
@@ -181,6 +210,7 @@
             <div class="project-tags"><span>Systems analysis</span><span>Requirements</span><span>UI/UX</span></div>
             <div class="project-actions">
               <a href="auto-cars.html" class="button small">View Case Study</a>
+              <a href="https://github.com/Lakshima409?tab=repositories" class="button small secondary" target="_blank" rel="noopener noreferrer">&lt;&gt; Code</a>
             </div>
           </div>
         </article>
@@ -312,42 +342,47 @@
       <div class="container project-grid">
         <article class="project-card card project-card--premium">
           <div class="project-visual project-visual--wide">
-            <img src="WEB%20SS/ML1.PNG" alt="Malcolm Lismore Photography homepage screenshot" loading="lazy" />
+            <img src="WEB%20SS/ML1.PNG" alt="Malcolm Lismore Photography homepage screenshot" loading="lazy" decoding="async" width="1200" height="750" />
           </div>
           <div class="card-content">
             <h3>Malcolm Lismore Photography</h3>
             <p>A cinematic, multipage photography website presenting Scotland's landscapes and wildlife alongside services, stories, and booking enquiries.</p>
             <div class="project-tags"><span>UI/UX</span><span>HTML</span><span>CSS</span><span>JavaScript</span><span>PHP</span><span>MySQL</span></div>
-            <div class="project-actions"><a href="malcolm-photography.html" class="button small">View Case Study</a></div>
+            <div class="project-actions"><a href="malcolm-photography.html" class="button small">View Case Study</a>
+              <a href="https://github.com/Lakshima409?tab=repositories" class="button small secondary" target="_blank" rel="noopener noreferrer">&lt;&gt; Code</a></div>
           </div>
         </article>
         <article class="project-card card project-card--premium">
           <div class="project-visual project-visual--wide">
-            <img src="UEID%20SS/SS/UI2%20-%20Copy%20(2).PNG" alt="StarView EVC prototype screenshot" onerror="this.style.display='none'" />
+            <img src="images/evc/onboarding.png" alt="StarView EVC streaming app onboarding prototype" loading="lazy" decoding="async" width="1200" height="800" onerror="this.style.display='none'" />
           </div>
           <div class="card-content">
             <h3>StarView EVC UI/UX Project</h3>
             <p>A user-centred video streaming platform concept shaped by user research, personas, prototyping, and iterative testing.</p>
             <div class="project-tags"><span>Figma</span><span>User research</span><span>Prototyping</span></div>
-            <div class="project-actions"><a href="evc.html" class="button small">View Design</a></div>
+            <div class="project-actions"><a href="evc.html" class="button small">View Design</a>
+              <a href="https://github.com/Lakshima409?tab=repositories" class="button small secondary" target="_blank" rel="noopener noreferrer">&lt;&gt; Code</a></div>
           </div>
         </article>
         <article class="project-card card">
-          <img src="images/eticketing/homepage.png" alt="Event Ticketing homepage with Find Your Next Experience hero" loading="lazy" />
+          <img src="images/eticketing/homepage.png" alt="Event Ticketing homepage with Find Your Next Experience hero" loading="lazy" decoding="async" width="1200" height="750" />
           <div class="card-content">
             <h3>Event Ticket Web Application</h3>
-            <p>A full-stack ticket booking platform with event management, booking history, and QR-code e-tickets.</p>
+            <p><strong>Problem:</strong> organizers needed ticketing with payments + analytics; attendees needed QR e-tickets.</p>
+            <p><strong>What I built:</strong> ASP.NET MVC full-stack app — event CRUD, booking flow, secure checkout, QR validation, organizer dashboard.</p>
             <div class="project-tags"><span>ASP.NET MVC</span><span>Web application</span><span>Authentication</span></div>
-            <div class="project-actions"><a href="event-ticket.html" class="button small">View Details</a></div>
+            <div class="project-actions"><a href="event-ticket.html" class="button small">View Details</a>
+              <a href="https://github.com/Lakshima409?tab=repositories" class="button small secondary" target="_blank" rel="noopener noreferrer">&lt;&gt; Code</a></div>
           </div>
         </article>
         <article class="project-card card">
-          <img src="images/software-design.svg" alt="Software architecture and design principles project illustration" onerror="this.style.display='none'" />
+          <img src="images/software-design.svg" alt="Software architecture and design principles project illustration" loading="lazy" decoding="async" width="1200" height="800" onerror="this.style.display='none'" />
           <div class="card-content">
             <h3>Software Architecture &amp; Design</h3>
             <p>Applied object-oriented design, SOLID principles, design patterns, UML modelling, and testing strategies to a retail system.</p>
             <div class="project-tags"><span>OOP</span><span>SOLID</span><span>Testing</span></div>
-            <div class="project-actions"><a href="taxi.html" class="button small">View Project</a></div>
+            <div class="project-actions"><a href="taxi.html" class="button small">View Project</a>
+              <a href="https://github.com/Lakshima409?tab=repositories" class="button small secondary" target="_blank" rel="noopener noreferrer">&lt;&gt; Code</a></div>
           </div>
         </article>
       </div>
@@ -358,12 +393,12 @@
         <div>
           <span class="section-tag">Resume</span>
           <h2>M.H. Lakshima Madurangi</h2>
-          <p class="resume-role">Software Engineering Graduate</p>
-          <p>Interested in software engineering, web development, AI, and data analytics opportunities.</p>
+          <p class="resume-role">Software Engineering Graduate | C# .NET, React, SQL</p>
+          <p>Colombo, Sri Lanka • Open to Intern / Junior Software Engineer roles — on-site, hybrid, or remote.</p>
         </div>
         <div class="resume-actions">
-          <a class="button primary" href="resume/Lakshima%20_CV.pdf" download>Download CV</a>
-          <a class="button secondary" href="resume/Lakshima%20_CV.pdf" target="_blank" rel="noopener noreferrer">View CV</a>
+          <a class="button primary" href="resume/Lakshima-Madurangi-CV.pdf" download>Download CV</a>
+          <a class="button secondary" href="resume/Lakshima-Madurangi-CV.pdf" target="_blank" rel="noopener noreferrer">View CV</a>
         </div>
       </div>
     </section>
@@ -372,14 +407,29 @@
       <div class="container section-header">
         <span class="section-tag">Contact</span>
         <h2>Let's Work Together</h2>
-        <p class="section-intro">I'm interested in software engineering, web development, AI, and data-related opportunities.</p>
+        <p class="section-intro">Based in Colombo, Sri Lanka • Open to on-site / hybrid / remote • Typically replies within 24 hours</p>
       </div>
       <div class="container contact-grid">
         <div class="contact-card card">
           <h3>Get in touch</h3>
-          <p>Email: <a href="mailto:mhlakshima@gmail.com">mhlakshima@gmail.com</a></p>
-          <p>LinkedIn: <a href="https://www.linkedin.com/in/m-h-lakshima-3a5907288" target="_blank" rel="noopener noreferrer">linkedin.com/in/m-h-lakshima-3a5907288</a></p>
-          <p>GitHub: <a href="https://github.com/Lakshima409" target="_blank" rel="noopener noreferrer">github.com/Lakshima409</a></p>
+          <div class="contact-links">
+            <a class="contact-link" href="mailto:mhlakshima@gmail.com">✉️ Email</a>
+            <a class="contact-link" href="https://www.linkedin.com/in/m-h-lakshima-3a5907288" target="_blank" rel="noopener noreferrer">💼 LinkedIn</a>
+            <a class="contact-link" href="https://github.com/Lakshima409" target="_blank" rel="noopener noreferrer">💻 GitHub</a>
+          </div>
+          <p>Email: <a href="mailto:mhlakshima@gmail.com">mhlakshima@gmail.com</a> <button class="copy-email-btn" id="copyEmailBtn" type="button">Copy email</button></p>
+          <p><a href="resume/Lakshima-Madurangi-CV.pdf" download>Download CV (PDF)</a></p>
+        </div>
+        <div class="contact-card card">
+          <h3>Send a message</h3>
+          <form class="contact-form" action="https://formspree.io/f/mhlakshima@gmail.com" method="POST">
+            <label>Name<input type="text" name="name" placeholder="Your name" required /></label>
+            <label>Email<input type="email" name="email" placeholder="you@company.com" required /></label>
+            <label>Message<textarea name="message" rows="4" placeholder="Hi Lakshima, we'd like to talk about..." required></textarea></label>
+            <button class="button primary" type="submit">Send message</button>
+            <p class="form-note">Powered by Formspree — replace with your form ID. Or email me directly.</p>
+          </form>
+        </div>
         </div>
       </div>
     </section>
@@ -387,7 +437,7 @@
 
   <footer class="site-footer">
     <div class="container footer-inner">
-      <p>© 2026 M.H. Lakshima Madurangi. Built for MERN Stack internship applications.</p>
+      <p>© 2026 M.H. Lakshima Madurangi • Colombo, Sri Lanka</p>
     </div>
   </footer>
 
