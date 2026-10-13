@@ -84,6 +84,41 @@
       margin: 25px 0;
       line-height: 1.8;
     }
+    .screenshot-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 28px;
+      margin: 30px 0 10px;
+    }
+    @media (min-width: 700px) {
+      .screenshot-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+      .screenshot-grid figure.wide {
+        grid-column: 1 / -1;
+      }
+    }
+    .screenshot-grid figure {
+      margin: 0;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    .screenshot-grid img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-bottom: 1px solid var(--border);
+    }
+    .screenshot-grid figcaption {
+      padding: 16px 20px;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+    .screenshot-grid figcaption strong {
+      color: var(--text);
+    }
   </style>
 </head>
 <body>
@@ -188,6 +223,66 @@
           <li>Admin dashboard with ride history and reporting</li>
         </ul>
         <p>All designs applied UX principles around responsive design, interactive maps, and dashboard usability for both drivers and administrators.</p>
+
+        <h2>System Screenshots</h2>
+        <div class="screenshot-grid">
+          <figure class="wide">
+            <img src="images/auto-cars/home.jpg" alt="Auto Cars home page with taxi booking" loading="lazy" decoding="async" />
+            <figcaption><strong>Home — Booking Entry.</strong> Main landing with ride search and service overview.</figcaption>
+          </figure>
+          <figure>
+            <img src="images/auto-cars/landing.jpg" alt="Auto Cars open page" loading="lazy" decoding="async" />
+            <figcaption><strong>Landing.</strong> Open page introducing Auto Cars services.</figcaption>
+          </figure>
+          <figure>
+            <img src="images/auto-cars/login.jpg" alt="Auto Cars login screen" loading="lazy" decoding="async" />
+            <figcaption><strong>Login.</strong> Customer / driver sign-in.</figcaption>
+          </figure>
+          <figure>
+            <img src="images/auto-cars/customer-register.jpg" alt="Auto Cars customer registration form" loading="lazy" decoding="async" />
+            <figcaption><strong>Customer Registration.</strong> New customer sign-up with contact details.</figcaption>
+          </figure>
+          <figure>
+            <img src="images/auto-cars/driver-register.jpg" alt="Auto Cars driver registration form" loading="lazy" decoding="async" />
+            <figcaption><strong>Driver Registration.</strong> Driver onboarding with vehicle details.</figcaption>
+          </figure>
+          <figure>
+            <img src="images/auto-cars/book-ride.jpg" alt="Auto Cars book ride screen" loading="lazy" decoding="async" />
+            <figcaption><strong>Book Ride.</strong> Taxi booking interface with vehicle selection.</figcaption>
+          </figure>
+          <figure>
+            <img src="images/auto-cars/cars-for-rent.jpg" alt="Auto Cars cars for rent listing" loading="lazy" decoding="async" />
+            <figcaption><strong>Cars for Rent.</strong> Available fleet browsing.</figcaption>
+          </figure>
+          <figure class="wide">
+            <img src="images/auto-cars/admin-dashboard.jpg" alt="Auto Cars admin car dashboard" loading="lazy" decoding="async" />
+            <figcaption><strong>Admin Dashboard.</strong> Fleet overview with ride history and reporting.</figcaption>
+          </figure>
+          <figure>
+            <img src="images/auto-cars/ride-review.jpg" alt="Auto Cars ride review screen" loading="lazy" decoding="async" />
+            <figcaption><strong>Ride Review.</strong> Customer feedback and driver rating.</figcaption>
+          </figure>
+          <figure>
+            <img src="images/auto-cars/erd.jpg" alt="Auto Cars ER diagram" loading="lazy" decoding="async" />
+            <figcaption><strong>ER Diagram.</strong> Customer, Driver, Booking, Vehicle, Feedback entities.</figcaption>
+          </figure>
+          <figure>
+            <img src="images/auto-cars/use-case.jpg" alt="Auto Cars use case diagram" loading="lazy" decoding="async" />
+            <figcaption><strong>Use Case.</strong> Registration, booking, assignment, rating flows.</figcaption>
+          </figure>
+          <figure>
+            <img src="images/auto-cars/class-diagram.jpg" alt="Auto Cars class diagram" loading="lazy" decoding="async" />
+            <figcaption><strong>Class Diagram.</strong> OO design for booking domain.</figcaption>
+          </figure>
+          <figure>
+            <img src="images/auto-cars/level-0-dfd.png" alt="Auto Cars level 0 DFD" loading="lazy" decoding="async" />
+            <figcaption><strong>Level 0 DFD.</strong> System context and major data flows.</figcaption>
+          </figure>
+          <figure>
+            <img src="images/auto-cars/dfd-detail.jpg" alt="Auto Cars detailed DFD" loading="lazy" decoding="async" />
+            <figcaption><strong>Detailed DFD.</strong> Booking / assignment process breakdown.</figcaption>
+          </figure>
+        </div>
 
         <h2>Skills Demonstrated</h2>
         <div class="skills-box">
