@@ -174,16 +174,6 @@ public class BusReservationSystem {
         bus.displayReservations();
     }
 }</pre>
-<h3>How the code works (summary)</h3>
-<ul>
-<li><strong>Customer</strong> — name, mobile, email, city, age + toString.</li>
-<li><strong>Bus</strong> — number, seats, route, time, fare + boolean[] seats + LinkedBlockingQueue for FIFO.</li>
-<li><strong>reserveSeat</strong> — first free seat scan, mark true, enqueue. Returns false if full.</li>
-<li><strong>cancelReservation</strong> — free seat, dequeue. Handles empty queue.</li>
-<li><strong>Demo</strong> — Alice, Bob, Charlie on B123, then Bob cancelled.</li>
-</ul>
-<div class="outblock">Reservations for bus B123: Alice (30), Bob (25), Charlie (40)
-After cancel Bob: Alice (30), Charlie (40)</div>
 <h3>Why queue + stack</h3>
 <ul>
 <li><strong>Queue FIFO:</strong> fair chronological order, O(1) enqueue/dequeue, waitlist + notifications. Limit: search O(n).</li>
