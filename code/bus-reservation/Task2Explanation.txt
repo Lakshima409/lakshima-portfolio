@@ -1,0 +1,249 @@
+Java Implementation of Bus Reservation System
+To implement a bus reservation system in Java, you'd need classes to represent customers, buses, and reservations. Here's an example implementation for customer and bus registration, using arrays and linked lists.
+
+java
+Copy code
+import java.util.*;
+
+class Customer {
+    String name;
+    String mobile;
+    String email;
+    String city;
+    int age;
+
+    public Customer(String name, String mobile, String email, String city, int age) {
+        this.name = name;
+        this.mobile = mobile;
+        this.email = email;
+        this.city = city;
+        this.age = age;
+    }
+
+    @Override
+    public String toString() {
+        return name + " (" + age + ")";
+    }
+}
+
+class Bus {
+    String busNumber;
+    int totalSeats;
+    String startingPoint;
+    String endingPoint;
+    String startingTime;
+    double fare;
+
+    public Bus(String busNumber, int totalSeats, String startingPoint, String endingPoint, String startingTime, double fare) {
+        this.busNumber = busNumber;
+        this.totalSeats = totalSeats;
+        this.startingPoint = startingPoint;
+        this.endingPoint = endingPoint;
+        this.startingTime = startingTime;
+        this.fare = fare;
+    }
+
+    @Override
+    public String toString() {
+        return busNumber + ": " + startingPoint + " to " + endingPoint + ", Starts at " + startingTime + ", Fare: " + fare;
+    }
+}
+
+public class BusReservationSystem {
+    private List<Customer> customers = new LinkedList<>();
+    private List<Bus> buses = new LinkedList<>();
+    private Map<String, Stack<String>> reservationHistory = new HashMap<>();
+
+    public void registerCustomer(String name, String mobile, String email, String city, int age) {
+        Customer newCustomer = new Customer(name, mobile, email, city, age);
+        customers.add(newCustomer);
+    }
+
+    public void registerBus(String busNumber, int totalSeats, String startingPoint, String endingPoint, String startingTime, double fare) {
+        Bus newBus = new Bus(busNumber, totalSeats, startingPoint, endingPoint, startingTime, fare);
+        buses.add(newBus);
+    }
+
+    public void printCustomers() {
+        System.out.println("Registered Customers:");
+        for (Customer c : customers) {
+            System.out.println(c);
+        }
+    }
+
+    public void printBuses() {
+        System.out.println("Registered Buses:");
+        for (Bus b : buses) {
+            System.out.println(b);
+        }
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        BusReservationSystem system = new BusReservationSystem();
+        
+        // Customer registration
+        System.out.println("Registering customers...");
+        system.registerCustomer("Alice", "1234567890", "alice@example.com", "New York", 30);
+        system.registerCustomer("Bob", "0987654321", "bob@example.com", "Los Angeles", 25);
+        
+        // Bus registration
+        System.out.println("Registering buses...");
+        system.registerBus("B001", 40, "New York", "Los Angeles", "08:00 AM", 50.0);
+        system.registerBus("B002", 50, "Los Angeles", "New York", "09:00 AM", 55.0);
+
+        // Display registered customers and buses
+        system.printCustomers();
+        system.printBuses();
+    }
+}
+In this code, I created classes for Customer and Bus, with methods to register customers and buses. The BusReservationSystem class manages these registrations using linked lists for easy insertion and deletion. A Stack is used to maintain a history of reservations. Error handling can be added to manage invalid inputs or out-of-range operations.
+EXPLANATION
+
+Import Statement
+java
+Copy code
+import java.util.*;
+This import statement allows the use of various utility classes from the java.util package, such as LinkedList, List, HashMap, Map, Scanner, etc. It provides the necessary functionalities to create and manage collections in Java.
+Customer Class Definition
+java
+Copy code
+class Customer {
+    String name;
+    String mobile;
+    String email;
+    String city;
+    int age;
+This code snippet defines a class Customer with five fields: name, mobile, email, city, and age. These fields represent the basic attributes of a customer in the bus reservation system.
+Customer Class Constructor
+java
+Copy code
+    public Customer(String name, String mobile, String email, String city, int age) {
+        this.name = name;
+        this.mobile = mobile;
+        this.email = email;
+        this.city = city;
+        this.age = age;
+    }
+The constructor initializes a Customer instance with specific values for name, mobile, email, city, and age. This allows for easy creation of customer objects with the required attributes.
+Customer toString() Method
+java
+Copy code
+    @Override
+    public String toString() {
+        return name + " (" + age + ")";
+    }
+This method overrides the toString() method to return a string representation of the customer, displaying the name and age. This is useful when printing customer information.
+Bus Class Definition
+java
+Copy code
+class Bus {
+    String busNumber;
+    int totalSeats;
+    String startingPoint;
+    String endingPoint;
+    String startingTime;
+    double fare;
+This code snippet defines the Bus class with attributes such as busNumber, totalSeats, startingPoint, endingPoint, startingTime, and fare. These fields represent the characteristics of a bus in the system.
+Bus Class Constructor
+java
+Copy code
+    public Bus(String busNumber, int totalSeats, String startingPoint, String endingPoint, String startingTime, double fare) {
+        this.busNumber = busNumber;
+        this.totalSeats = totalSeats;
+        this.startingPoint = startingPoint;
+        this.endingPoint = endingPoint;
+        this.startingTime = startingTime;
+        this.fare = fare;
+    }
+The constructor initializes a Bus instance with specific values for each field. This allows easy creation of bus objects with the necessary details.
+Bus toString() Method
+java
+Copy code
+    @Override
+    public String toString() {
+        return busNumber + ": " + startingPoint + " to " + endingPoint + ", Starts at " + startingTime + ", Fare: " + fare;
+    }
+This method overrides the toString() method to return a string representation of the bus, displaying key details like the route, start time, and fare.
+BusReservationSystem Class Definition
+java
+Copy code
+public class BusReservationSystem {
+    private List<Customer> customers = new LinkedList<>();
+    private List<Bus> buses = new LinkedList<>();
+    private Map<String, Stack<String>> reservationHistory = new HashMap<>();
+This class represents the overall bus reservation system. It has three primary data structures: a list of customers (customers), a list of buses (buses), and a map for reservation history (reservationHistory). The lists are implemented as linked lists for flexibility in adding or removing items, and the map uses a stack for reservation history.
+Register Customer and Bus Methods
+java
+Copy code
+    public void registerCustomer(String name, String mobile, String email, String city, int age) {
+        Customer newCustomer = new Customer(name, mobile, email, city, age);
+        customers.add(newCustomer);
+    }
+This method creates a new Customer object and adds it to the list of customers (customers). It takes the customer's details as arguments.
+java
+Copy code
+    public void registerBus(String busNumber, int totalSeats, String startingPoint, String endingPoint, String startingTime, double fare) {
+        Bus newBus = new Bus(busNumber, totalSeats, startingPoint, endingPoint, startingTime, fare);
+        buses.add(newBus);
+    }
+This method creates a new Bus object and adds it to the list of buses (buses). It takes the bus details as arguments.
+Print Customer and Bus Methods
+java
+Copy code
+    public void printCustomers() {
+        System.out.println("Registered Customers:");
+        for (Customer c : customers) {
+            System.out.println(c);
+        }
+    }
+This method prints a list of all registered customers. It iterates through the customers list and prints each customer using the overridden toString() method.
+java
+Copy code
+    public void printBuses() {
+        System.out.println("Registered Buses:");
+        for (Bus b : buses) {
+            System.out.println(b);
+        }
+    }
+This method prints a list of all registered buses, iterating through the buses list and printing each bus's string representation.
+Main Method and Output Explanation
+java
+Copy code
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        BusReservationSystem system = new BusReservationSystem();
+        
+        // Customer registration
+        System.out.println("Registering customers...");
+        system.registerCustomer("Alice", "1234567890", "alice@example.com", "New York", 30);
+        system.registerCustomer("Bob", "0987654321", "bob@example.com", "Los Angeles", 25);
+        
+        // Bus registration
+        System.out.println("Registering buses...");
+        system.registerBus("B001", 40, "New York", "Los Angeles", "08:00 AM", 50.0);
+        system.registerBus("B002", 50, "Los Angeles", "New York", "09:00 AM", 55.0);
+
+        // Display registered customers and buses
+        system.printCustomers();
+        system.printBuses();
+    }
+The main() method creates an instance of the BusReservationSystem class and then registers customers and buses.
+It first registers two customers (Alice and Bob) with their respective details.
+It then registers two buses (B001 and B002) with specific details.
+Finally, it prints the registered customers and buses to the console.
+Given the code, the expected output would be:
+
+vbnet
+Copy code
+Registering customers...
+Registering buses...
+Registered Customers:
+Alice (30)
+Bob (25)
+Registered Buses:
+B001: New York to Los Angeles, Starts at 08:00 AM, Fare: 50.0
+B002: Los Angeles to New York, Starts at 09:00 AM, Fare: 55.0
+This output confirms that customers and buses were registered successfully and that the system can display the registered customers and buses in a user-friendly format. The toString() methods ensure that the information is presented in a readable and informative way, allowing quick review and confirmation of the data stored in the bus reservation system.

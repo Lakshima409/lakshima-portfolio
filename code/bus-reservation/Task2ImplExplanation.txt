@@ -1,0 +1,39 @@
+In this Java code snippet, I will explain the lines step-by-step to clarify how the bus reservation system works. The implementation features two key classes: Customer and Bus, each with specific attributes and operations. The main class, BusReservationSystem, demonstrates the functionality of reserving and canceling bus seats.
+
+Customer Class
+Line 4: We import required Java utilities, including LinkedBlockingQueue, to use for reservation queues.
+Line 7-15: The Customer class is defined, encapsulating details about a customer in the bus reservation system.
+Line 8-12: These lines define the attributes of a Customer: name, mobile, email, city, and age.
+Line 14: This constructor initializes a Customer instance with the given values.
+Line 16-18: The toString() method is overridden to provide a human-readable representation of a Customer with their name and age.
+Bus Class
+Line 20-54: The Bus class is defined with attributes and methods to manage seat reservations and cancellations.
+Line 21-26: These lines define the bus attributes: busNumber, totalSeats, startingPoint, endingPoint, startingTime, and fare.
+Line 28: A boolean array, seats, indicates whether a seat is reserved (true) or available (false).
+Line 29: A reservationQueue using LinkedBlockingQueue to manage the queue of customers for seat reservations.
+Line 31-39: The constructor initializes a Bus instance with the given attributes and sets the seats as unreserved.
+Line 41-47: The reserveSeat() method reserves a seat for a given Customer. It iterates over the seats, finds the first available seat, marks it as reserved, and adds the Customer to the reservation queue.
+Line 49-53: The cancelReservation() method cancels a seat reservation for a given Customer. It finds the reserved seat, marks it as available, and removes the customer from the reservation queue.
+Line 55-58: The displayReservations() method prints all reservations for the bus by iterating over the reservation queue and outputting each customer using their toString() representation.
+BusReservationSystem Class
+Line 60-81: The BusReservationSystem is the test application that demonstrates how the bus reservation system works.
+Line 62-66: We create five Customer instances with various attributes like name, mobile, email, city, and age.
+Line 68-71: We create a Bus instance with a specific bus number, total seats, starting point, ending point, starting time, and fare.
+Line 73-75: We reserve seats for Alice, Bob, and Charlie on the bus. This operation uses the reserveSeat() method.
+Line 77: We call displayReservations() to print the current reservations. The output shows the reserved seats and the customers who reserved them.
+Line 79: We cancel the reservation for Bob using cancelReservation().
+Line 81: We display the updated reservations. The output reflects that Bob's reservation has been removed, demonstrating the successful cancellation of a seat.
+Expected Output
+The expected output from the code snippet would look like this:
+
+rust
+Copy code
+Reservations for bus B123:
+Alice (30)
+Bob (25)
+Charlie (40)
+
+Reservations for bus B123:
+Alice (30)
+Charlie (40)
+This output reflects the initial reservations (with Alice, Bob, and Charlie) and then the updated reservations after canceling Bob's seat.

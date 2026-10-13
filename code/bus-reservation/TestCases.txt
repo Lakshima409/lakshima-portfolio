@@ -1,0 +1,67 @@
+Test Cases
+Here's a set of 12 test cases, including conditions for error handling:
+
+Test Case 1: Register Valid Customer
+Input: Name: Alice, Mobile: 1234567890, Email: alice@example.com, City: New York, Age: 30
+Expected Result: Successful registration of the customer.
+Actual Result: (This depends on the system's response)
+Test Case 2: Register Invalid Customer (Invalid Mobile Number)
+Input: Name: Bob, Mobile: 12345, Email: bob@example.com, City: Los Angeles, Age: 25
+Expected Result: Error message indicating invalid mobile number.
+Actual Result: (This depends on the system's response)
+Test Case 3: Register Bus with Valid Data
+Input: Bus Number: B001, Total Seats: 40, Starting Point: New York, Ending Point: Los Angeles, Starting Time: 08:00 AM, Fare: 50.0
+Expected Result: Successful registration of the bus.
+Actual Result: (This depends on the system's response)
+Test Case 4: Register Bus with Negative Seats
+Input: Bus Number: B002, Total Seats: -5, Starting Point: Los Angeles, Ending Point: New York, Starting Time: 09:00 AM, Fare: 55.0
+Expected Result: Error message indicating invalid total seats.
+Actual Result: (This depends on the system's response)
+Test Case 5: Reserve Seat for Existing Customer and Bus
+Input: Customer Name: Alice, Bus Number: B001
+Expected Result: Successful reservation, seat reserved for Alice on bus B001.
+Actual Result: (This depends on the system's response)
+Test Case 6: Reserve Seat on Full Bus
+Input: Customer Name: Charlie, Bus Number: B001 (when it's already full)
+Expected Result: Error message indicating the bus is full.
+Actual Result: (This depends on the system's response)
+Test Case 7: Cancel Reservation when Queue is Not Empty
+Input: (Reservation Queue has entries, cancel the first reservation)
+Expected Result: Successful cancellation, with a message indicating which reservation was canceled.
+Actual Result: (This depends on the system's response)
+Test Case 8: Cancel Reservation when Queue is Empty
+Input: (Reservation Queue is empty, try to cancel)
+Expected Result: Error message indicating no reservations to cancel.
+Actual Result: (This depends on the system's response)
+Test Case 9: Display Reservations
+Input: (Check reservations in the system)
+Expected Result: A list of current reservations, in the order they were made.
+Actual Result: (This depends on the system's response)
+Test Case 10: Check If Queue is Empty
+Input: (Reservation Queue may be empty)
+Expected Result: Returns true if the queue is empty.
+Actual Result: (This depends on the system's response)
+Test Case 11: Check If Queue is Full
+Input: (Reservation Queue might be full, depending on implementation limitations)
+Expected Result: Returns false if the queue is not full, unless there is an explicit limit.
+Actual Result: (This depends on the system's response)
+Test Case 12: Register Customer with Duplicate Name
+Input: Name: Alice, Mobile: 1234567890, Email: alice@example.com, City: New York, Age: 30
+Expected Result: Error message indicating duplicate customer.
+Actual Result: (This depends on the system's response)
+Example Output Table
+Below is a table structure to track the results of these test cases, comparing expected results with actual results:
+
+Test Case	Expected Result	Actual Result
+TC1	Successful registration of the customer	Successful (or error if there's an issue)
+TC2	Error message (invalid mobile number)	Error or success depending on the system
+TC3	Successful registration of the bus	Successful
+TC4	Error message (negative total seats)	Error or success depending on the system
+TC5	Successful reservation for Alice	Success
+TC6	Error (bus is full)	Error or success depending on capacity
+TC7	Successful cancellation	Success
+TC8	Error (no reservations to cancel)	Error
+TC9	List of current reservations	Success
+TC10	Returns true if queue is empty	True/False depending on system
+TC11	Returns false if queue is not full	True/False depending on system
+TC12	Error (duplicate customer)	Error or success depending on the system

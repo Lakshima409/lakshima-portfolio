@@ -1,0 +1,68 @@
+In the bus reservation system, robust error handling is crucial to ensure the system's reliability, usability, and security. Given the diverse scenarios involved in customer registration, bus registration, seat reservations, and cancellations, errors can occur due to user input, system limitations, or logical inconsistencies. As the author, I focused on incorporating error handling mechanisms to address these potential issues. Below is a detailed explanation of the error handling strategies employed in this system.
+
+Validating Customer Registration
+One common area for errors is during customer registration. To handle potential issues, I implemented validation checks to ensure that customers provide correct and complete information. For example, the system checks whether:
+
+The customer's name is non-empty, ensuring that a valid identifier is provided.
+The mobile number consists of exactly 10 digits, maintaining consistency and avoiding incorrect phone numbers.
+The email address contains an "@" symbol, indicating a valid email format.
+The city and age are also provided with valid data types.
+If any of these checks fail, the system throws an exception or prints a clear error message, allowing the user to correct the input.
+
+Validating Bus Registration
+When registering buses, error handling ensures that the bus information is consistent and complete. The system checks:
+
+The bus number is unique, preventing the registration of duplicate buses.
+The total number of seats is a positive integer, ensuring that the bus can accommodate passengers.
+The starting and ending points are valid locations.
+The starting time is in a recognizable format, such as "HH:MM AM/PM."
+The fare is a positive number.
+If any validation fails, the system provides a relevant error message, guiding the user to correct the issue.
+
+Handling Seat Reservations
+The reservation process can encounter various errors. To address these, the system checks:
+
+If the customer exists in the system before attempting a reservation.
+If the bus exists and has available seats. If the bus is full, an appropriate error message is displayed, preventing overbooking.
+If the same customer has already reserved a seat on the bus, preventing duplicate reservations.
+These checks ensure that reservations are handled appropriately and users receive clear feedback in case of errors.
+
+Handling Reservation Cancellations
+The cancellation process requires error handling to prevent inconsistencies. The system checks:
+
+If there are any reservations in the queue to cancel. If the queue is empty, it displays a relevant error message, avoiding unnecessary operations.
+If the correct reservation is being canceled, ensuring that the system doesn't accidentally remove a different reservation.
+If the cancellation process triggers the proper notifications, maintaining a consistent user experience.
+Error Handling for User Interface
+Beyond core functionality, error handling extends to the user interface, providing clear guidance to users. For example, when input is required, the system prompts the user with descriptive messages, indicating the expected format and valid values. This reduces user errors and enhances the overall user experience.
+
+Exception Handling
+To manage exceptions, the system uses try-catch blocks in critical areas. This approach allows for graceful error handling, capturing exceptions and providing useful feedback to the user. Additionally, custom exceptions can be employed to handle specific error scenarios, allowing for more detailed error reporting.
+
+Conclusion
+In summary, the error handling strategy in the bus reservation system covers a broad range of scenarios, from customer and bus registration to seat reservations and cancellations. By implementing robust validation checks, informative error messages, and appropriate exception handling, the system provides a reliable and user-friendly experience, minimizing disruptions and ensuring data integrity. This comprehensive approach to error handling enhances the overall quality of the system, making it more resilient to errors and providing a better experience for users.
+In a bus reservation system, the use of isEmpty and isFull operations can greatly improve error handling, especially when dealing with queues or other data structures that manage customer registrations, bus information, and seat reservations. The following paragraphs explain how these operations are integrated into the system to ensure error-free operations, providing additional robustness and consistency.
+
+Implementing isEmpty in Reservation Queue
+The isEmpty operation is crucial for checking whether a queue or list has any items. In the context of a bus reservation system, this operation is used to:
+
+Determine whether there are any existing reservations. For example, when a customer cancels a reservation, the system checks if the reservation queue is empty before attempting to remove an item. This prevents unnecessary errors and provides a meaningful message to the user, like "No reservations to cancel."
+Ensure there are customers registered in the system before performing certain operations. If the customer list is empty, operations like reserving a seat or canceling a reservation would be invalid, so the system displays a relevant error message.
+Implementing isFull in Reservation Queue
+The isFull operation helps determine if a data structure has reached its capacity. Although this might not always be a concern with dynamically sized data structures like lists or linked lists, it can be useful in specific contexts, such as:
+
+Checking if a bus has reached its total seating capacity. Before allowing a reservation, the system checks if the bus is full, using a method like isFull(), which compares the total seats against the current reservations. If the bus is full, the system displays a message like "The bus is at full capacity. No more reservations can be made."
+Ensuring that customer data structures, like a registration queue, do not exceed predefined limits, which might be set for resource management or performance reasons. If the system has a maximum capacity, isFull helps prevent overflows and subsequent errors.
+Error Handling with isEmpty and isFull
+Incorporating isEmpty and isFull operations into error handling ensures that the system checks the state of critical data structures before performing operations. This helps avoid invalid operations and provides clear error messages when issues arise. Here's how these operations contribute to error handling:
+
+During Reservation:
+The system checks if the bus is full using isFull(). If it is, it avoids reserving more seats than the bus can accommodate.
+It also checks if the customer registration list is empty with isEmpty(). If there's no customer registered, it prevents reservation attempts and displays a relevant error message.
+During Cancellation:
+Before canceling a reservation, the system uses isEmpty() to check if the reservation queue has any entries. If the queue is empty, it avoids performing an invalid operation and shows an error message like "No reservations to cancel."
+General Operations:
+The system ensures the customer list is not empty before displaying customer information or performing operations related to customers.
+If there's a maximum limit for bus or customer data, isFull() checks help prevent exceeding those limits, avoiding overflows or data corruption.
+Conclusion
+The integration of isEmpty and isFull operations into the error handling strategy for the bus reservation system enhances robustness and reliability. These operations allow the system to verify the state of critical data structures, ensuring that operations like reservations and cancellations are valid. The use of these checks leads to meaningful error messages, preventing unexpected behavior, and providing a smoother user experience. This comprehensive approach to error handling reduces the risk of errors and contributes to a more stable and reliable bus reservation system.

@@ -1,0 +1,24 @@
+Complexity Analysis of Chosen ADT Algorithm for the Bus Reservation System
+When designing a bus reservation system, it is essential to consider the complexity of the data structures and algorithms used in the system. Complexity analysis allows you to estimate the time and space resources needed to perform various operations, helping you evaluate the system's performance under different conditions. Let's critically evaluate the complexity of the chosen ADTs for this bus reservation system.
+
+Queue (FIFO) for Bus Reservations
+In this system, a First-In-First-Out (FIFO) queue is used to manage bus reservations. Operations like adding a new reservation (enqueue) and removing an existing reservation (dequeue) are critical to system functionality. By using a linked list as the underlying data structure, these operations are efficient with a time complexity of O(1).
+
+The FIFO queue is ideal for maintaining the sequence of reservations, as it naturally represents a queue where the first reservation made is the first to be processed. This design ensures that the system can quickly handle operations related to reservations, such as adding new customers and processing existing reservations.
+
+However, one critical aspect of the FIFO queue is that it does not allow random access to elements. To access a specific reservation, you must traverse the list, resulting in a worst-case complexity of O(n). This can be a bottleneck if the system needs to perform frequent searches or updates on specific reservations.
+
+Stack (LIFO) for Customer Retrieval
+A Last-In-First-Out (LIFO) stack is used to reverse the order of customers to retrieve the most recent first. This approach leverages the stack's push and pop operations, which have constant time complexity (O(1)). Using a stack to reverse the order is a common pattern in many algorithms, and it suits this scenario, where you want to reverse the sequence of customer registrations.
+
+The main limitation of using a stack for retrieval is that it doesn't allow efficient retrieval of elements in the middle. Like the queue, you would need to traverse the stack to find a specific item, resulting in a time complexity of O(n). This can impact performance if the system requires frequent searches or updates within the stack.
+
+Impact of Complexity on the System
+Overall, the chosen ADTs provide efficient operations for adding and removing items, which are critical for the bus reservation system. The use of a queue ensures that reservations are processed in the correct order, while the stack allows for reversing the order of customer retrieval.
+
+The key to managing complexity in this system is balancing efficiency and flexibility. While the chosen ADTs offer low time complexity for basic operations, they may not be ideal for scenarios requiring frequent searches or random access to elements. This could lead to performance bottlenecks as the system scales.
+
+Additionally, the space complexity of these data structures is generally manageable, with a linear relationship between the number of elements and the memory required. However, it's crucial to consider scenarios with large data volumes, as memory usage may become a concern.
+
+Conclusion
+The complexity analysis of the chosen ADTs indicates that the system is well-suited for basic queue and stack operations. However, critical evaluation reveals potential limitations in scenarios requiring frequent searches or random access to elements. Addressing these limitations would require additional data structures or optimization techniques to maintain system performance as the system scales.
