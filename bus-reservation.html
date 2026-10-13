@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bus Reservation System - Java DSA | Lakshima Madurangi</title>
+  <meta name="description" content="Java Bus Reservation System - DSA, sorting, shortest-path, complexity analysis." />
+  <link rel="canonical" href="https://lakshima409.github.io/lakshima-portfolio/bus-reservation.html" />
+  <link rel="icon" type="image/jpeg" href="images/profile.jpg" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .project-hero{background:linear-gradient(135deg,rgba(245,158,11,.22),rgba(59,130,246,.22));padding:60px 0;margin-bottom:40px}
+    .project-header{margin-bottom:30px}
+    .project-header h1{font-size:2.5rem;margin-bottom:15px}
+    .project-meta{display:flex;gap:20px;flex-wrap:wrap;margin-bottom:20px;color:var(--muted);font-size:.95rem}
+    .project-content{max-width:900px}
+    .project-content h2{font-size:1.8rem;margin-top:40px;margin-bottom:20px;color:var(--accent)}
+    .project-content h3{font-size:1.3rem;margin-top:30px;margin-bottom:15px}
+    .project-content p{line-height:1.8;margin-bottom:15px}
+    .project-content ul{margin-left:24px;margin-bottom:15px}
+    .project-content li{margin-bottom:10px;line-height:1.6}
+    .back-link{display:inline-flex;gap:8px;margin-bottom:30px;color:var(--accent);text-decoration:none}
+    .skills-box{background:var(--surface);padding:20px;border-radius:8px;border-left:4px solid var(--accent);margin:25px 0;line-height:1.8}
+    .hero-visual{margin:0 0 28px;background:var(--surface);border:1px solid var(--border);border-radius:12px;overflow:hidden}
+    .hero-visual img{width:100%;height:auto;display:block}
+    .hero-visual figcaption{padding:14px 18px;color:var(--muted);font-size:.95rem}
+    .ctable{width:100%;border-collapse:collapse;margin:18px 0;font-size:.96rem}
+    .ctable th,.ctable td{border:1px solid var(--border);padding:10px 12px;text-align:left}
+    .ctable th{background:var(--surface)}
+  </style>
+</head>
+<body>
+<header class="site-header"><div class="container header-inner">
+<a href="index.html" class="brand">Lakshima</a>
+<nav class="site-nav" id="siteNav"><a href="index.html#home">Home</a><a href="index.html#about">About</a><a href="index.html#skills">Skills</a><a href="index.html#projects">Projects</a><a href="index.html#education">Education</a><a href="index.html#certificates">Certificates</a><a href="index.html#contact">Contact</a></nav>
+<div class="header-actions"><button class="icon-button" id="themeToggle">🌙</button><button class="icon-button mobile-menu" id="mobileMenuBtn">☰</button></div>
+</div></header>
+<main>
+<section class="project-hero"><div class="container">
+<a href="index.html#projects" class="back-link">← Back to Projects</a>
+<div class="project-header"><h1>Bus Reservation System</h1>
+<p style="font-size:1.2rem;color:var(--muted)">Data Structures and Algorithms in Java</p>
+<div class="project-meta"><span>📅 Academic Project</span><span>💻 Java · DSA · OOP</span><span>📂 Academic · CS · Algorithm Design</span></div>
+</div></div></section>
+<section class="section" style="padding-top:0"><div class="container project-content">
+<figure class="hero-visual"><img src="images/bus-reservation.svg" alt="Bus Reservation System overview" width="1200" height="750" /><figcaption><strong>Focus:</strong> applying data structures to reservation scenarios and evaluating algorithm efficiency.</figcaption></figure>
+<h2>Project Overview</h2>
+<p>This project explores the practical application of Data Structures and Algorithms (DSA) through a Java-based Bus Reservation System. It organizes customer, bus, and reservation information using appropriate data structures while examining efficiency of algorithms in common tasks.</p>
+<p>Alongside reservations, it investigates fundamental structures, sorting, shortest-path algorithms, OOP principles, and complexity analysis.</p>
+<h2>Objectives</h2>
+<ul><li>Implement fundamental data structures in Java.</li><li>Model customer registration, bus registration, seat reservations.</li><li>Explore queues and stacks with different processing orders.</li><li>Implement and compare sorting and shortest-path algorithms.</li><li>Evaluate efficiency via time and space complexity.</li><li>Apply OOP, encapsulation, data hiding.</li><li>Examine error handling and test cases.</li></ul>
+
+<h2>Key Features</h2>
+<h3>Customer and Bus Registration</h3>
+<p>Customer: customer ID, name, mobile, email, city, age. Bus: bus number, seat capacity, start, destination, departure time, fare.</p>
+<h3>Seat Reservation Management</h3>
+<p>Records with reservation ID, customer ID, bus number, seat number, time, status. Covers success, full bus, cancellations, current listings.</p>
+<h3>Data Structures</h3>
+<ul><li><strong>Arrays:</strong> indexed collections.</li><li><strong>Linked Lists:</strong> dynamic insertion/deletion.</li><li><strong>Stacks (LIFO):</strong> last-in first-out + retrieval.</li><li><strong>Queues (FIFO):</strong> reservation + waiting-list order.</li><li><strong>Graphs:</strong> route networks.</li><li><strong>Sets and Maps:</strong> unique + key-value storage.</li><li><strong>Binary Trees:</strong> hierarchy + traversal.</li></ul>
+<h3>Sorting Algorithms</h3>
+<p>Bubble, Selection, Insertion, Merge, Quick, Heap Sort — compared on approach and cost.</p>
+<h3>Shortest-Path Algorithms</h3>
+<p>Dijkstra, Bellman-Ford, Floyd-Warshall — graph representation, route calc, complexity.</p>
+<h3>Error Handling and Testing</h3>
+<p>Tests for registration, invalid mobiles, negative seats, success, full-bus, cancellations, listing, queue checks.</p>
+<h2>Complexity Analysis</h2>
+<p>Evaluates insert, remove, search costs + memory as data grows. Queue enqueue/dequeue O(1) with linked list holding both ends; search O(n). Discusses stack/queue trade-offs for random access.</p>
+<table class="ctable"><thead><tr><th>Operation</th><th>Complexity</th><th>Note</th></tr></thead><tbody>
+<tr><td>Queue enqueue/dequeue</td><td>O(1)</td><td>Linked list both ends</td></tr>
+<tr><td>Queue search</td><td>O(n)</td><td>No random access</td></tr>
+<tr><td>Bubble/Selection/Insertion</td><td>O(n2)</td><td>Slow large n</td></tr>
+<tr><td>Merge/Quick/Heap</td><td>O(n log n)</td><td>Efficient</td></tr>
+<tr><td>Dijkstra heap</td><td>O((V+E) log V)</td><td>Non-negative</td></tr>
+<tr><td>Bellman-Ford</td><td>O(V*E)</td><td>Negative weights</td></tr>
+<tr><td>Floyd-Warshall</td><td>O(V3)</td><td>All-pairs</td></tr>
+</tbody></table>
+<h2>Technical Concepts</h2>
+<div class="skills-box"><strong>Java</strong> · <strong>ADTs</strong> · <strong>OOP</strong> · <strong>Encapsulation</strong> · <strong>Sorting + Graphs</strong> · <strong>Big O / Omega / Theta</strong> · <strong>Testing</strong></div>
+<h2>Learning Outcomes</h2>
+<p>Strengthened understanding of how structures shape design + performance, theory vs practice trade-offs, choosing right structures, plus OOP, testing, efficiency analysis.</p>
+<div style="margin-top:50px;padding-top:30px;border-top:1px solid var(--border)"><a href="index.html#projects" class="button primary">← Back to All Projects</a></div>
+</div></section></main>
+<footer class="site-footer"><div class="container footer-inner"><p>© 2026 M.H. Lakshima Madurangi • Colombo, Sri Lanka</p></div></footer>
+<script src="script.js"></script></body></html>
