@@ -3,7 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Taxi Reservation System | Lakshima Madurangi</title>
+  <title>Sales Analysis System for Sampath Food City | Lakshima Madurangi</title>
+  <meta name="description" content="Python sales analysis system for Sampath Food City - Pandas, Matplotlib, SOLID, design patterns, Pytest." />
+  <link rel="canonical" href="https://lakshima409.github.io/lakshima-portfolio/taxi.html" />
+  <link rel="icon" type="image/jpeg" href="images/profile.jpg" />
   <link rel="stylesheet" href="style.css" />
   <style>
     .project-hero {
@@ -98,14 +101,14 @@
       <div class="container">
         <a href="index.html#projects" class="back-link">← Back to Projects</a>
         <div class="project-header">
-          <h1>Taxi Reservation System</h1>
-          <p style="font-size: 1.2rem; color: var(--muted);">Design and implementation of a reservation platform</p>
+          <h1>Sales Analysis System for Sampath Food City</h1>
+          <p style="font-size: 1.2rem; color: var(--muted);">Python · Pandas · Matplotlib · SOLID · Design Patterns · Pytest · Tox — CLI</p>
           <div class="project-meta">
             <div class="meta-item">
-              <span>🚕</span> Database & Backend Project
+              <span>🎓</span> Academic Project — Applied Programming and Design Principles
             </div>
             <div class="meta-item">
-              <span>🎓</span> University Project
+              <span>💻</span> Software Engineering · Data Analysis
             </div>
           </div>
         </div>
@@ -114,45 +117,54 @@
 
     <section class="section">
       <div class="container project-content">
-        <h2>Software Architecture & Design Principles</h2>
+        <h2>Project Overview</h2>
+        <p>The Sales Analysis System was developed as an academic software engineering project to address the challenges of manually analysing sales data across Sampath Food City's supermarket branches.</p>
+        <p>The proposed system processes sales data collected from point-of-sale (POS) systems and helps management identify sales trends, compare branch performance, examine product pricing, understand customer product preferences, and analyse purchase amounts. It was designed to make sales analysis more structured, consistent, and efficient than a manual process.</p>
+        <p>The project focused not only on implementing the analysis features but also on applying software engineering principles to improve code readability, maintainability, extensibility, and reliability.</p>
 
-        <h3>Overview</h3>
-        <p>This project explores how core object-oriented design principles translate into a real software system — using a fictional supermarket chain, <strong>Sampath Food City</strong>, as the case study. The work spans two layers: the theoretical foundations of good software design (OOP, UML, SOLID, design patterns, clean code) and their practical application to a retail data system, from raw data collection through to visualization and quality assurance.</p>
+        <h3>Key Features</h3>
 
-        <h3>What I did</h3>
+        <h4>1. Monthly Sales Analysis</h4>
+        <p>Analyses monthly sales performance across individual supermarket branches, allowing sales figures to be grouped and compared by month and branch.</p>
 
-        <h4>1. Object-Oriented Design Foundations</h4>
-        <p>Modeled system entities using encapsulation, abstraction, inheritance, and polymorphism. Explored relationship types between classes — association, aggregation, and composition — and applied them to real class structures such as a university-department relationship and a house-room composition. Produced UML class and inheritance diagrams to document system architecture and class relationships before implementation.</p>
+        <h4>2. Weekly Sales Analysis</h4>
+        <p>Examines sales performance over weekly periods across the supermarket network. Charts help illustrate changes in sales and differences between branches.</p>
 
-        <h4>2. Design Patterns</h4>
-        <p>Implemented and documented examples across all three categories:</p>
+        <h4>3. Product Price Analysis</h4>
+        <p>Examines product pricing and compares average unit prices across different product categories and months, helping identify price changes and trends.</p>
+
+        <h4>4. Product Preference Analysis</h4>
+        <p>Analyses product sales and preferences to identify categories that attract greater customer interest. Visualisations help present the distribution of product preferences.</p>
+
+        <h4>5. Purchase Amount Distribution Analysis</h4>
+        <p>Examines the distribution of total purchase amounts to help understand customer spending patterns. The assignment includes distribution visualisations, including a kernel density estimate (KDE).</p>
+
+        <h4>6. Data Processing and Visualisation</h4>
+        <p>The system's documented workflow covers loading sales data from CSV files, preparing and filtering the data, performing calculations, and presenting results through charts and reports.</p>
+
+        <h3>Software Engineering Principles</h3>
+        <h4>SOLID Principles</h4>
+
+        <p>The project explores and applies the five SOLID principles to support a modular and maintainable design:</p>
         <ul>
-          <li><strong>Creational:</strong> Factory Method, Abstract Factory, Singleton, Builder, Prototype</li>
-          <li><strong>Structural:</strong> Adapter, Bridge, Composite, Decorator, Facade, Proxy</li>
-          <li><strong>Behavioral:</strong> Command, Mediator, Observer, Strategy, State</li>
+          <li><strong>SRP:</strong> Separating responsibilities such as loading data, processing information, and generating results.</li>
+          <li><strong>OCP:</strong> Supporting extensions without changing existing components.</li>
+          <li><strong>LSP:</strong> Considering substitutability when designing related classes.</li>
+          <li><strong>ISP:</strong> Promoting focused interfaces and responsibilities.</li>
+          <li><strong>DIP:</strong> Encouraging dependencies on abstractions.</li>
         </ul>
-        <p>Wrote Java code samples demonstrating each pattern's structure and use case, with a focus on what problem each pattern solves.</p>
-
-        <h4>3. SOLID Principles & Clean Code</h4>
-        <p>Applied all five SOLID principles (Single Responsibility, Open-Closed, Liskov Substitution, Interface Segregation, Dependency Inversion) to Java examples and refactored problem code into compliant versions. Documented clean coding practices including naming conventions, modularization, formatting, and maintainable folder structures.</p>
-
-        <h4>4. Data Pipeline Design</h4>
-        <p>Designed a full data pipeline for the Sampath Food City case study:</p>
         <ul>
-          <li><strong>Data Integration:</strong> Consolidating data from manual systems and POS terminals into one analysis-ready dataset</li>
-          <li><strong>Data Preprocessing:</strong> Cleaning, transforming, and validating data for accuracy and consistency</li>
-          <li><strong>Data Analysis:</strong> Applying descriptive statistics, correlation, regression, clustering and sentiment-style analysis to sales, pricing, and customer preference data</li>
-          <li><strong>Data Visualization:</strong> Selecting and justifying chart types for dashboards and reporting requirements</li>
+          <li><strong>Factory:</strong> structuring monthly sales analysis.</li>
+          <li><strong>Template:</strong> organising product price analysis.</li>
+          <li><strong>Strategy:</strong> product preference analysis.</li>
+          <li><strong>Facade:</strong> simplifying total purchase amount workflow.</li>
         </ul>
-
-        <h4>5. Automated Testing Strategy</h4>
-        <p>Evaluated automation tools such as Selenium, Appium, Cypress, Katalon, Postman, and JMeter against language support, CI/CD integration, and cost. Designed a testing approach spanning unit, integration, smoke, performance, and regression testing. Wrote practical PyTest examples covering setup, parameterized inputs, and exception handling.</p>
-
-        <h3>Skills demonstrated</h3>
-        <p>Object-Oriented Programming · Java · Python · UML Modeling · Design Patterns · SOLID Principles · Clean Code · Data Integration · Data Preprocessing · Data Analysis · Data Visualization · Test Automation (PyTest, Selenium) · Technical Documentation</p>
-
-        <h3>Why it matters</h3>
-        <p>This project ties together software architecture theory and a practical, end-to-end data system — showing not just that I can write pattern-compliant code, but that I can reason about why a given principle, pattern, or tool fits a business problem from initial design through testing and deployment readiness.</p>
+        <p>Clean coding: meaningful naming, small focused functions, modularisation, abstraction, DRY.</p>
+        <p><strong>Pytest</strong> for data loading, filtering, analysis, visualisation. <strong>Tox</strong> for test execution in configured environments. Covers data loading, monthly/weekly analysis, preferences, pricing, integrity, purchase distribution.</p>
+        <h3>Learning Outcomes</h3>
+        <ul><li>Processing structured datasets with Python.</li><li>OOP + SOLID in practice.</li><li>Design patterns for data workflows.</li><li>Charts for trends and findings.</li><li>Automated tests + modular clean design.</li></ul>
+        <h3>Project Summary</h3>
+        <p>This project brought together Python, data analysis, software design principles, visualisation, and automated testing to turn raw sales information into insights that support business decision-making.</p>
 
         <div style="margin-top: 50px; padding-top: 30px; border-top: 1px solid var(--border);">
           <a href="index.html#projects" class="button primary">← Back to All Projects</a>
