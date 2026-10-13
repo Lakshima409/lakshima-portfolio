@@ -7,9 +7,30 @@
 /Eshift/
 /Eticketing/
 /Luxora/
+/Autocars Images/
+/Sampath Food City/
 check_images.py
 /images/ETicketing ss/
 /images/Eshift SS interfaces/
+# Loose raw screenshots accidentally copied to images root - keep only curated subfolders
+/images/*.JPG
+/images/*.jpg
+/images/*.PNG
+/images/*.png
+!/images/*.svg
+# keep curated subfolders + profile images
+!/images/auto-cars/
+!/images/sampath/
+!/images/chatbot/
+!/images/eshift/
+!/images/eticketing/
+!/images/evc/
+!/images/luxora/
+!/images/profile.jpg
+!/images/profile-old.jpg
+!/images/profile-graduation.png
+# Old duplicate CV filename
+/resume/Lakshima_CV.pdf
 # Microsoft Office temporary lock files
 ~$*
 
