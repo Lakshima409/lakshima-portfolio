@@ -19,6 +19,13 @@ Live site: https://lakshima409.github.io/lakshima-portfolio/
 
 Code: https://github.com/Lakshima409?tab=repositories — pin eShift, EventTicket, Luxora, PantryPal with READMEs + setup steps.
 
+## Research
+
+| Study | Page | Focus |
+|---|---|---|
+| PantryPal — Intelligent Recipe Recommendations (final-year) | [pantrypal-research.html](pantrypal-research.html) | Lit review, hybrid TF-IDF + collaborative filtering, UAT |
+| Big Data, Marketing & Consumer Behaviour | [research.html](research.html) | 55-participant survey, SPSS + Excel |
+
 ## Run locally
 
 No build step — static site. Open `index.html` in a browser, or serve it:

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PantryPal Research — Intelligent Recipe Recommendations | Lakshima Madurangi</title>
+  <meta name="description" content="PantryPal final-year research: ML and pantry-aware personalisation for meal planning. Literature review, hybrid TF-IDF + collaborative filtering, testing and evaluation." />
+  <link rel="canonical" href="https://lakshima409.github.io/lakshima-portfolio/pantrypal-research.html" />
+  <link rel="icon" type="image/jpeg" href="images/profile.jpg" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header class="site-header">
+<div class="container header-inner">
+<a href="index.html" class="brand">Lakshima</a>
+<nav class="site-nav" id="siteNav">
+<a href="index.html#home">Home</a>
+<a href="index.html#about">About</a>
+<a href="index.html#skills">Skills</a>
+<a href="index.html#projects">Projects</a>
+<a href="index.html#research">Research</a>
+<a href="index.html#resume">Resume</a>
+<a href="index.html#contact">Contact</a>
+</nav>
+<div class="header-actions">
+<button class="icon-button" id="themeToggle" aria-label="Toggle theme">🌙</button>
+<button class="icon-button mobile-menu" id="mobileMenuBtn" aria-label="Toggle menu">☰</button>
+</div>
+</div>
+</header>
+<main>
+<section class="section" id="pantrypal-hero">
+<div class="container section-header">
+<span class="section-tag">Research Project · Final-Year Project</span>
+<h2>PantryPal — Intelligent Recipe Recommendation System</h2>
+<p class="section-intro">How machine learning and personalised food recommendations can simplify meal planning, support healthier eating, and reduce household food waste.</p>
+</div>
+<div class="container research-layout">
+<div class="research-summary card">
+<h3>Research overview</h3>
+<p>Individual final-year research + build investigating limits in recipe/meal-planning platforms (Yummly, Eat This Much, Whisk) and proposing one integrated system: pantry + nutrition + recommendations + shopping lists.</p>
+<p>Areas: ML, recommendation systems, personalised nutrition, food sustainability. Method: literature review, system analysis, iterative build, testing + evaluation.</p>
+<div class="project-actions"><a href="pantrypal.html" class="button small">View build case study</a><a href="https://github.com/Lakshima409?tab=repositories" class="button small secondary" target="_blank" rel="noopener noreferrer">&lt;&gt; Code</a></div>
+</div>
+<div class="research-methods card">
+<h3>At a glance</h3>
+<ul>
+<li>Hybrid TF-IDF + cosine similarity + collaborative filtering (Python Flask service)</li>
+<li>React + Node/Express + MySQL full-stack system</li>
+<li>UAT + feedback: 83% accuracy, 0.7s API, 90–95% objectives</li>
+</ul>
+<h3>Tags</h3>
+<p>Research · Literature Review · Machine Learning · System Evaluation</p>
+</div>
+</div>
+</section>
+<section class="section" id="pp-problem">
+<div class="container section-header">
+<span class="section-tag">01 · Research &amp; problem discovery</span>
+<h2>Problem, gaps &amp; research question</h2>
+</div>
+<div class="container research-layout">
+<div class="research-summary card">
+<h3>Problem statement</h3>
+<p>People have ingredients at home yet still struggle to decide what to cook within diet, nutrition and budget. Existing apps split recipe discovery, diet management, pantry tracking and grocery planning — adding effort, extra purchases and food waste.</p>
+<h3>Literature review &amp; gap</h3>
+<p>Reviewed intelligent food recommenders, personalised nutrition, pantry-aware suggestions, auto shopping lists, and ML/NLP recipe techniques; compared Yummly, Eat This Much, Whisk. Gaps: fragmented workflows, weak contextual personalisation, poor pantry utilisation, no combined decision support.</p>
+</div>
+<div class="research-methods card">
+<h3>Research question</h3>
+<p><strong>How can ML + automated pantry management deliver personalised recipes, maximise pantry use, and support healthier eating?</strong></p>
+<h3>Aim &amp; objectives</h3>
+<ul>
+<li>Survey existing systems; pick ML techniques for personalised recipes</li>
+<li>Use pantry + diet signals in ranking; build weekly plans + missing-item lists</li>
+<li>Evaluate via unit, integration, UAT and feedback</li>
+</ul>
+</div>
+</div>
+</section>
+<section class="section" id="pp-method">
+<div class="container section-header">
+<span class="section-tag">02 · Methodology &amp; solution</span>
+<h2>How the research became a system</h2>
+</div>
+<div class="container research-layout">
+<div class="research-summary card">
+<h3>Methodology</h3>
+<p>Literature review + requirements + architecture/UML + Agile/Scrum build (React, Node/Express, MySQL, Python Flask recommender) + multi-stage testing.</p>
+<h3>Proposed solution</h3>
+<p>One workflow: personalised recipes, pantry management, dietary/nutritional filters, weekly plans, auto shopping lists, saved recipes.</p>
+</div>
+<div class="research-methods card">
+<h3>ML approach</h3>
+<ul>
+<li>Content-based: TF-IDF recipe/ingredient vectors + cosine similarity ranking</li>
+<li>Collaborative: ratings + saved-recipe patterns for personalisation</li>
+<li>Flask service behind Node API; time/season context signals</li>
+</ul>
+<h3>Technical honesty</h3>
+<p>Results below are the project evaluation scope — positive relevance/usability signals, not proof of waste or health outcomes.</p>
+</div>
+</div>
+</section>
+<section class="section" id="pp-eval">
+<div class="container section-header">
+<span class="section-tag">03 · Evaluation &amp; reflection</span>
+<h2>Testing, findings &amp; next steps</h2>
+</div>
+<div class="container research-layout">
+<div class="research-summary card">
+<h3>Evaluation</h3>
+<p>Unit + integration + UAT + feedback on usability and relevance. Reported: 83% recommendation accuracy, 0.7s API response, ~90–95% objectives met, 85%+ satisfaction.</p>
+<h3>Limitations → future work</h3>
+<p>Prototype scope; needs larger/diverse cohorts, bigger benchmarks, image-based pantry, deeper nutrition personalisation, longitudinal waste studies.</p>
+</div>
+<div class="research-methods card">
+<h3>What this proves about me</h3>
+<ul>
+<li>Lit review → gaps → requirements → architecture → ML integration → evaluation</li>
+<li>Research-to-shipping discipline, not just coding</li>
+<li>Foundation for recommender + sustainable-systems work</li>
+</ul>
+<div class="project-actions"><a href="index.html#research" class="button small">Back to Research</a><a href="pantrypal.html" class="button small secondary">View build</a></div>
+</div>
+</div>
+</section>
+</main>
+<footer class="site-footer">
+<div class="container footer-inner">
+<p>© 2026 M.H. Lakshima Madurangi • Colombo, Sri Lanka</p>
+</div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
