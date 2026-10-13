@@ -174,30 +174,7 @@ public class BusReservationSystem {
         bus.displayReservations();
     }
 }</pre>
-<h3>Why queue + stack</h3>
-<ul>
-<li><strong>Queue FIFO:</strong> fair chronological order, O(1) enqueue/dequeue, waitlist + notifications. Limit: search O(n).</li>
-<li><strong>Stack LIFO:</strong> newest-first retrieval, undo/backtrack, O(1) push/pop. Limit: middle access O(n).</li>
-<li><strong>Encapsulation:</strong> fields hidden, reserve/cancel/display exposed; validates 10-digit mobile, @ email, positive seats/fare, unique bus.</li>
-</ul>
-<h3>Sorting — QuickSort vs MergeSort (by age)</h3>
-<ul>
-<li><strong>QuickSort:</strong> avg O(n log n), in-place O(log n) extra, fast. Worst O(n2) on bad pivot.</li>
-<li><strong>MergeSort:</strong> always O(n log n), stable (keeps equal-age order), needs O(n) extra.</li>
-<li><strong>Pick:</strong> speed + low memory = QuickSort; stability + predictability = MergeSort.</li>
-</ul>
-<h3>Error handling + 12 tests</h3>
-<ul>
-<li>Valid/invalid customer (bad mobile), valid/negative-seat bus, reserve OK / full-bus error.</li>
-<li>Cancel OK / cancel-empty error, FIFO display, isEmpty/isFull, duplicate rejected.</li>
-</ul>
-<h3>Trade-offs</h3>
-<ul>
-<li>ArrayList fast scan vs LinkedList cheap insert/delete + node overhead.</li>
-<li>Locking = consistency but slower; real-time updates = better UX but more load.</li>
-<li>Full notes kept as downloads below.</li>
-</ul>
-<p>Full write-ups: <a href="code/bus-reservation/QueueJustification.txt">queue</a> · <a href="code/bus-reservation/StackJustification.txt">stack</a> · <a href="code/bus-reservation/QueueComplexity.txt">complexity</a> · <a href="code/bus-reservation/ErrorHandlingTask2.txt">errors</a> · <a href="code/bus-reservation/TestCases.txt">tests</a> · <a href="code/bus-reservation/Tradeoffs.txt">trade-offs</a> · <a href="code/bus-reservation/SortingEvaluationWithCodes.txt">sorting</a></p>
+<h3>Design notes</h3><ul><li><b>Queue FIFO:</b> fair order, O(1); search O(n).</li><li><b>Stack LIFO:</b> newest-first + undo, O(1).</li><li><b>Sorting:</b> QuickSort fast vs MergeSort stable.</li><li><b>Tests:</b> 12 cases.</li></ul><p>Details: <a href="code/bus-reservation/QueueJustification.txt">queue</a> <a href="code/bus-reservation/StackJustification.txt">stack</a> <a href="code/bus-reservation/TestCases.txt">tests</a> <a href="code/bus-reservation/SortingEvaluationWithCodes.txt">sorting</a></p>
 <h2>Complexity Analysis</h2>
 <p>Evaluates insert, remove, search costs + memory as data grows. Queue enqueue/dequeue O(1) with linked list holding both ends; search O(n). Discusses stack/queue trade-offs for random access.</p>
 <table class="ctable"><thead><tr><th>Operation</th><th>Complexity</th><th>Note</th></tr></thead><tbody>
