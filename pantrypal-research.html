@@ -47,7 +47,10 @@
 <ul>
 <li>Hybrid TF-IDF + cosine similarity + collaborative filtering (Python Flask service)</li>
 <li>React + Node/Express + MySQL full-stack system</li>
+<li>Two Flask microservices (:5001 recommender, :5002 diet planner) behind Node/Express; React never calls Flask/MySQL directly</li>
+<li>Local heuristic fallback keeps endpoints live if an AI service is offline</li>
 <li>UAT + feedback: 83% accuracy, 0.7s API, 90–95% objectives</li>
+<li>231 server unit tests, PyTest for AI services, 37-assertion journey-check.js, GitHub Actions CI</li>
 </ul>
 <h3>Tags</h3>
 <p>Research · Literature Review · Machine Learning · System Evaluation</p>
@@ -94,6 +97,7 @@
 <h3>ML approach</h3>
 <ul>
 <li>Content-based: TF-IDF recipe/ingredient vectors + cosine similarity ranking</li>
+<li>Hybrid scoring with tunable weights: pantry match, dietary hard-filter, nutrition proximity, preference affinity, collaborative filtering, cold-start fallback</li>
 <li>Collaborative: ratings + saved-recipe patterns for personalisation</li>
 <li>Flask service behind Node API; time/season context signals</li>
 </ul>
@@ -110,7 +114,7 @@
 <div class="container research-layout">
 <div class="research-summary card">
 <h3>Evaluation</h3>
-<p>Unit + integration + UAT + feedback on usability and relevance. Reported: 83% recommendation accuracy, 0.7s API response, ~90–95% objectives met, 85%+ satisfaction.</p>
+<p>Unit + integration + UAT + feedback on usability and relevance. Reported: 83% recommendation accuracy, 0.7s API response, ~90–95% objectives met, 85%+ satisfaction. Backed by 231 server unit tests, PyTest for both AI services, and a 37-assertion end-to-end journey harness, with GitHub Actions CI running Node + Python + MySQL integration tests.</p>
 <h3>Limitations → future work</h3>
 <p>Prototype scope; needs larger/diverse cohorts, bigger benchmarks, image-based pantry, deeper nutrition personalisation, longitudinal waste studies.</p>
 </div>

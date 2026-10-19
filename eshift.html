@@ -153,7 +153,7 @@
             <span>Duration: 12 weeks</span><span>Team: Solo</span><span>My Role: Backend + DB</span><span>Stack: C# WinForms, SQL Server</span>
           </div>
           <div class="project-actions" style="margin-top: 18px;">
-            <a href="https://github.com/Lakshima409?tab=repositories" class="button small secondary" target="_blank" rel="noopener noreferrer">&lt;&gt; Code</a>
+            <a href="https://github.com/Lakshima409/eShift" class="button small secondary" target="_blank" rel="noopener noreferrer">&lt;&gt; Code</a>
             <a href="index.html#projects" class="button small">All projects</a>
           </div>
         </div>
@@ -162,41 +162,57 @@
 
     <section class="section">
       <div class="container project-content">
-        <h2>eShift – Household Goods Transport Management System</h2>
+<section class="section">
+<div class="container project-content">
+<h2>eShift – Household Goods Transport Management System</h2>
 
-        <h3>Project Overview</h3>
-        <p>A desktop-based transport management system designed to automate and streamline operations for a household goods transportation company. The system handles end-to-end transport logistics from booking through to delivery and payment.</p>
+<div class="case-study-grid">
+<div class="case-study-card">
+<h3>Overview</h3>
+<p>A desktop transport management system automating operations for a household goods transportation company. End-to-end flow from booking and dispatch through delivery, payment, and reporting.</p>
+<h3>Project type</h3>
+<p>Solo build · C# Windows Forms + SQL Server · 2025</p>
+</div>
+<div class="case-study-card">
+<h3>My Role</h3>
+<p>Owned auth, bookings, and the SQL design. Role-based login with BCrypt, six forms, PDF/Excel reporting, and a job-request workflow.</p>
+<h3>Key outcomes</h3>
+<ul>
+<li>BCrypt role-based login (admin/customer)</li>
+<li>Six forms across booking, fleet, vehicles, and reports</li>
+<li>PDF and Excel export; manual entry cut from ~15 min to ~2 min per job</li>
+</ul>
+</div>
+</div>
 
-        <h3>Key Features</h3>
-        <ul>
-          <li><strong>Role-based Authentication:</strong> Secure user access with differentiated permissions for operators, drivers, and administrators</li>
-          <li><strong>Transport Booking:</strong> Customer request management, quote generation, and booking confirmation</li>
-          <li><strong>Vehicle & Driver Management:</strong> Fleet tracking, driver allocation, and vehicle maintenance scheduling</li>
-          <li><strong>Route Optimization:</strong> Efficient route planning and delivery tracking</li>
-          <li><strong>Reporting:</strong> PDF and Excel export for performance analytics and compliance</li>
-        </ul>
+<h3>Architecture</h3>
+<p>Layered architecture with clear separation of concerns: C# Windows Forms client, SQL Server storage, and a dedicated reporting service. BCrypt-encrypted credentials gate admin and customer role paths.</p>
+<div class="screenshot-grid">
+<figure class="wide">
+<img src="images/eshift/login.png" alt="eShift Management System role-based login form" loading="lazy" decoding="async" width="1200" height="750" />
+<figcaption><strong>Login – Role-Based Access.</strong> Admin / Customer role selection with secure username and password authentication.</figcaption>
+</figure>
+<figure class="wide">
+<img src="images/eshift/admin-dashboard.png" alt="eShift Admin Dashboard" loading="lazy" decoding="async" width="1200" height="750" />
+<figcaption><strong>Admin Dashboard.</strong> Customer overview with navigation to drivers, vehicles, jobs, and reports.</figcaption>
+</figure>
+<figure>
+<img src="images/eshift/customer-dashboard.png" alt="eShift Customer Dashboard" loading="lazy" decoding="async" width="1200" height="750" />
+<figcaption><strong>Customer Dashboard.</strong> Pending, Active, and Completed job counters with Job ID search.</figcaption>
+</figure>
+</div>
 
-        <h3>Technology Stack</h3>
-        <ul>
-          <li><strong>Platform:</strong> C# Windows Forms desktop application</li>
-          <li><strong>Database:</strong> SQL Server with advanced querying</li>
-          <li><strong>Security:</strong> BCrypt password encryption, role-based access control</li>
-          <li><strong>Architecture:</strong> Layered architecture with clear separation of concerns</li>
-        </ul>
-
-        <h3>Development Practices</h3>
-        <ul>
-          <li>Object-Oriented Programming principles and design patterns</li>
-          <li>Database normalization and optimization</li>
-          <li>Comprehensive system and unit testing</li>
-          <li>Secure credential storage and encryption</li>
-        </ul>
-
-        <h3>Skills Demonstrated</h3>
-        <div class="skills-box">
-          <strong>C# Windows Forms</strong> · <strong>SQL Server</strong> · <strong>Desktop Application Development</strong> · <strong>Business Logic Implementation</strong> · <strong>Database Normalization</strong> · <strong>Security & Encryption</strong>
-        </div>
-
+<h3>Challenges &amp; Improvements</h3>
+<ul>
+<li><strong>Data integrity</strong> – validated against representative booking datasets and manual spot-checks.</li>
+<li><strong>Refinements</strong> – move to web deployment, add role-based dashboards, and expand reporting exports.</li>
+</ul>
+<h3>Skills Demonstrated</h3>
+<div class="skills-box">
+<strong>C# Windows Forms</strong> · <strong>SQL Server</strong> · <strong>Desktop Application Development</strong> · <strong>Business Logic Implementation</strong> · <strong>Database Normalization</strong> · <strong>Security &amp; Encryption</strong>
+</div>
+</div>
+</section>
         <h3>System Screenshots</h3>
         <div class="screenshot-grid">
           <figure class="wide">

@@ -13,7 +13,7 @@ Live site: https://lakshima409.github.io/lakshima-portfolio/
 | [eShift Transport System](eshift.html) | C# WinForms, SQL Server | Solo — auth + bookings + DB | BCrypt role login, 6 forms, PDF/Excel export |
 | [Event Ticketing Platform](event-ticket.html) | ASP.NET MVC, SQL Server | Full-stack | Event CRUD, checkout, QR validation, analytics |
 | [Luxora Hotel Suite](luxora.html) | PHP, MySQL, Bootstrap | Team of 4 — billing + check-in/out | Invoicing, split payments, late-checkout rules |
-| [PantryPal (final-year research)](pantrypal.html) | React, Node.js, Python | Research + full-stack | 83% accuracy, 0.7s API response |
+| [PantryPal (final-year research)](pantrypal.html) | React 19, Node/Express, MySQL 8.4, Flask microservices | Research + full-stack | 83% accuracy, 0.7s API · 231 unit tests · PyTest · 37-assertion journey test · GitHub Actions CI |
 | [AI Mental Health Chatbot](chatbot.html) | Python, NLP | Team — design + NLP + docs | Intent classification, knowledge base |
 | [Sales analysis (Sampath Food City)](taxi.html) — [code](https://github.com/Lakshima409/sampath-food-city-analytics) | Python, Pandas, Matplotlib, Pytest | Solo — analysis + CLI | Branch trends, pricing, preferences, KDE |
 
@@ -23,7 +23,7 @@ Code: https://github.com/Lakshima409?tab=repositories — pin eShift, EventTicke
 
 | Study | Page | Focus |
 |---|---|---|
-| PantryPal — Intelligent Recipe Recommendations (final-year) | [pantrypal-research.html](pantrypal-research.html) | Lit review, hybrid TF-IDF + collaborative filtering, UAT |
+| PantryPal — Intelligent Recipe Recommendations (final-year) | [pantrypal-research.html](pantrypal-research.html) | Lit review, hybrid TF-IDF + collaborative filtering, UAT · 231 server tests + PyTest + journey-check.js |
 | Big Data, Marketing & Consumer Behaviour | [research.html](research.html) | 55-participant survey, SPSS + Excel |
 
 ## Run locally

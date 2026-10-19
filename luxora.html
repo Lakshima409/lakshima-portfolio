@@ -155,29 +155,24 @@
       <div class="container project-content">
         <h2>Luxora Hotel Suite – Property Management System</h2>
 
-        <h3>Project Overview</h3>
-        <p>A comprehensive full-stack web-based hotel reservation and property management system built collaboratively with a 4-person Agile team. The system handles end-to-end hotel operations from online reservations through to guest check-out and billing.</p>
-
-        <h3>Role & Responsibilities</h3>
-        <p>Full-Stack Developer responsible for designing and implementing the billing engine and check-in/check-out modules, with emphasis on dynamic invoicing, split payments, and flexible reservation handling.</p>
-
-        <h3>Technology Stack</h3>
-        <ul>
-          <li><strong>Frontend:</strong> HTML5, Bootstrap 5, responsive design</li>
-          <li><strong>Backend:</strong> PHP 8+, RESTful API design</li>
-          <li><strong>Database:</strong> MySQL with InnoDB storage engine, database normalization</li>
-          <li><strong>Security:</strong> Role-based access control, audit logging, secure payment handling</li>
-        </ul>
-
-        <h3>Key Features Implemented</h3>
-        <ul>
-          <li>Integrated reservation system with dynamic pricing</li>
-          <li>Tax calculations and automated rule enforcement</li>
-          <li>Late-checkout penalty system and no-show detection</li>
-          <li>Split payment processing and flexible invoicing</li>
-          <li>Role-based administration dashboards</li>
-          <li>Comprehensive audit logging and compliance tracking</li>
-        </ul>
+        <div class="case-study-grid">
+          <div class="case-study-card">
+            <h3>Overview</h3>
+            <p>A comprehensive full-stack web-based hotel reservation and property management system built collaboratively with a 4-person Agile team. The system handles end-to-end hotel operations from online reservations through to guest check-out and billing in a single workflow.</p>
+            <h3>Project type</h3>
+            <p>Agile team project · Full-Stack · PHP 8+, MySQL, Bootstrap · 2025–2026</p>
+          </div>
+          <div class="case-study-card">
+            <h3>My Role</h3>
+            <p>Full-Stack Developer — owned the billing engine and the check-in/check-out modules. Responsible for dynamic invoicing, split payments, late-checkout penalty rules, and no-show detection, plus the real-time occupancy &amp; revenue admin screens.</p>
+            <h3>Key outcomes</h3>
+            <ul>
+              <li>Dynamic invoicing and split payments across rooms/rooms-services</li>
+              <li>Late-checkout penalty + no-show detection with automated enforcement</li>
+              <li>Role-based admin dashboards with audit logging</li>
+            </ul>
+          </div>
+        </div>
 
         <h3>Project Screenshots</h3>
         <p>Live captures from the running Luxora Hotel Suite system (localhost), including the authenticated admin dashboard.</p>
@@ -252,6 +247,27 @@
           </figure>
         </div>
 
+<h3>Architecture</h3>
+        <p>Layered architecture with a PHP 8+ RESTful backend, MySQL InnoDB storage, and a Bootstrap 5 frontend. Role-based access separates admin, clerk, and guest journeys into independent routes and controllers.</p>
+        <div class="screenshot-grid">
+          <figure class="wide">
+            <img src="images/luxora/cron-settings.png" alt="Luxora Cron Jobs and Settings panels" loading="lazy" />
+            <figcaption><strong>Cron Jobs + Settings.</strong> 7PM Cancel, 11PM No-Show, Midnight Report and Archive runners, plus tax rate, late fee and currency (LKR).</figcaption>
+          </figure>
+          <figure>
+            <img src="images/luxora/audit-logs.png" alt="Luxora Recent Audit Logs table" loading="lazy" />
+            <figcaption><strong>Audit Logs — Compliance Tracking.</strong> Timestamped LOGIN events (admin1, manager1, clerk1) for security auditing.</figcaption>
+          </figure>
+        </div>
+
+        <h3>Challenges &amp; Improvements</h3>
+        <ul>
+          <li><strong>Multi-role UX</strong> — coordinated booking, billing, check-in and reporting across three user roles; solved with role-based route guards and a shared dashboard shell.</li>
+          <li><strong>Payment handling</strong> — no live gateway; encoded fallback to simulated split payments and manual reconciliation runs.</li>
+          <li><strong>Refinements</strong> — extend reporting with a booking-prepaid dashboard, mobile-responsive clerk workflows, and CI with automated schema migrations.</li>
+        </ul>
+
+<h3>Skills Demonstrated</h3>
         <h3>Skills Demonstrated</h3>
         <div class="skills-box">
           <strong>Full-Stack Web Development</strong> · <strong>PHP 8+</strong> · <strong>MySQL Database Design</strong> · <strong>Agile Teamwork</strong> · <strong>Payment Integration</strong> · <strong>Business Logic Implementation</strong>

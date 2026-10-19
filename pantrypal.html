@@ -181,7 +181,7 @@
             </div>
           </div>
           <div class="project-meta-row">
-            <span>Duration: 24 weeks</span><span>Team: Solo</span><span>My Role: Research + full-stack</span><span>Stack: React, Node.js, Python, MySQL</span>
+            <span>Duration: 24 weeks</span><span>Team: Solo</span><span>My Role: Research + full-stack</span><span>Stack: React 19 · Node/Express · MySQL 8.4 · Flask microservices</span>
           </div>
           <div class="project-actions" style="margin-top: 18px;">
             <a href="https://github.com/Lakshima409/Pantrypal" class="button small secondary" target="_blank" rel="noopener noreferrer">&lt;&gt; Code</a>
@@ -203,11 +203,15 @@
 
         <p>To address this problem, I designed and developed PantryPal as a full-stack web application. The system allows users to create profiles, specify dietary preferences, manage pantry ingredients, receive personalized recipes, generate weekly meal plans and automatically identify missing ingredients for shopping lists.</p>
 
-        <p>The technical architecture combines <strong>React.js for the frontend, Node.js and Express.js for the backend, MySQL for structured data storage, and Python/Flask microservices for AI functionality</strong>. The recommendation component applies machine-learning techniques including <strong>TF-IDF, cosine similarity, content-based filtering, collaborative filtering and neural embeddings</strong>, while contextual information such as time of day and season can also contribute to personalization.</p>
+        <p>PantryPal is a layered full-stack system: a <strong>React 19</strong> client talks only to a <strong>Node.js/Express :5000</strong> API, which owns auth and writes to <strong>MySQL 8.4 (`recipe_db`)</strong>. Two <strong>Python/Flask microservices</strong> run behind it — a recommender on :5001 (TF-IDF + cosine similarity + hybrid scoring) and a diet planner on :5002 (7-day × 4-slot meal plans). The frontend never calls Flask or MySQL directly, and Flask never handles auth. If an AI service is offline, a local pantry-overlap heuristic keeps every endpoint answering. Recommendations use TF-IDF content similarity, cosine ranking, pantry-ingredient match, dietary hard-filters, nutrition proximity, preference affinity, and user-user collaborative filtering, with a cold-start fallback.</p>
 
         <div class="tech-stack">
           <strong>Technology Stack:</strong><br>
-          React.js · Node.js · Express.js · Python · Flask · MySQL · Scikit-learn · TensorFlow · REST APIs · JWT · Docker · Spoonacular API
+          <strong>Frontend:</strong> React 19 · Vite · Tailwind CSS 4 · react-router-dom<br>
+          <strong>Backend:</strong> Node 20+ · Express ^4.19 · JWT (jsonwebtoken ^9.0) · bcryptjs ^2.4<br>
+          <strong>Database:</strong> MySQL 8.4 · mysql2 connection pool ^3.11<br>
+          <strong>AI Services:</strong> Python 3.12 · Flask >=3.0 · scikit-learn >=1.4 · NumPy >=1.26 · PyMySQL >=1.1<br>
+          <strong>Testing / CI:</strong> node --test · PyTest · journey-check.js · GitHub Actions · Docker Compose
         </div>
 
         <h3>Development Approach</h3>
@@ -216,14 +220,13 @@
 
         <h3>Key Features</h3>
         <ul>
-          <li>AI-powered personalized recipe recommendations</li>
-          <li>Pantry and ingredient management</li>
-          <li>Dietary and nutritional personalization</li>
-          <li>Weekly meal-plan generation</li>
-          <li>Automated shopping-list generation</li>
-          <li>User authentication and profile management</li>
-          <li>Context-aware recommendations</li>
-          <li>Recipe favourites and interaction tracking</li>
+          <li><strong>Hybrid recipe recommendations:</strong> TF-IDF + cosine similarity, pantry-ingredient match, dietary hard-filter, nutrition proximity, preference affinity, collaborative filtering, cold-start fallback</li>
+          <li><strong>Expiry-aware pantry:</strong> add/list/update/delete items with expiry dates; near-expiry items boost matching recipes</li>
+          <li><strong>7-day meal planner:</strong> breakfast/lunch/dinner/snack slots, calorie-target aware, allergen-filtered, no duplicate recipes in a week, weekly nutrition summary</li>
+          <li><strong>Smart shopping list:</strong> missing = max(0, required − pantry) with unit normalization (g/kg, ml/l, tbsp…); fully-stocked items excluded, duplicates merged, grouped by category</li>
+          <li><strong>Authentication:</strong> JWT cookie + Bearer, bcryptjs hashing, strong-password policy, forgot/reset password, protected routes via middleware</li>
+          <li><strong>Ratings system:</strong> upsert, list, retrieve, and remove recipe ratings</li>
+          <li><strong>Graceful degradation:</strong> local heuristic fallback when Flask AI services are offline</li>
         </ul>
 
         <h3>Product Screens</h3>
@@ -290,11 +293,17 @@
           </div>
         </div>
 
+        <h3>Testing & Quality</h3>
+        <p>PantryPal is backed by automated testing at every layer: <strong>231 server unit tests</strong> (<code>node --test</code>) covering auth/JWT, shopping-list math, ratings, recipes, NLP search, validation and security; <strong>PyTest</strong> for both AI services (recommender: 8 tests, diet-planner: 5 tests); and <strong>journey-check.js</strong>, a live end-to-end harness with <strong>37 assertions</strong> simulating full user journeys. The client passes a Vite production build and ESLint, and <strong>GitHub Actions CI</strong> runs Node tests, Python pytest, client lint/build, and MySQL-gated integration tests.</p>
+
         <h3>Skills & Learning Outcomes</h3>
 
         <p>Beyond the technical outcome, the project gave me valuable experience in combining <strong>research, artificial intelligence, machine learning, full-stack development, database engineering, API integration, cybersecurity, UI/UX design and project management</strong> within a single real-world application.</p>
 
         <p>Most importantly, the project taught me how to transform a research problem into a working technological solution and how to evaluate that solution critically rather than focusing only on implementation.</p>
+
+        <h3>Repository & Deployment</h3>
+        <p>The codebase is split into <strong>client/</strong> (React SPA), <strong>server/</strong> (Express routes, controllers, models, MySQL pool, middleware), <strong>ai-services/</strong> (recommender and diet-planner Flask apps), and <strong>database/</strong> (schema, migrations, seed and dev corpus). It ships with per-service <strong>Docker Compose</strong> files and is validated by <strong>GitHub Actions CI</strong> (Node + Python + MySQL service container).</p>
 
         <h3>Research Focus</h3>
 
