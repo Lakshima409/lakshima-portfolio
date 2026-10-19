@@ -1,4 +1,4 @@
-# Deployment to GitHub Pages — Setup Guide
+# Deployment to GitHub Pages Setup Guide
 
 ## Step 1: Create GitHub Repository (One-time setup)
 

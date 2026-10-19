@@ -4,11 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>PantryPal - AI Recipe & Meal Planning | Lakshima Madurangi</title>
-  <meta name="description" content="PantryPal final-year research — React + Node.js + Python recipe recommendation system, 83% accuracy, pantry-aware meal planning." />
+  <meta name="description" content="PantryPal final-year research React + Node.js + Python recipe recommendation system, 83% accuracy, pantry-aware meal planning." />
   <link rel="canonical" href="https://lakshima409.github.io/lakshima-portfolio/pantrypal.html" />
   <link rel="icon" type="image/jpeg" href="images/profile.jpg" />
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="PantryPal AI Recipe System — Lakshima Madurangi" />
+  <meta property="og:title" content="PantryPal AI Recipe System Lakshima Madurangi" />
   <link rel="stylesheet" href="style.css" />
   <style>
     .project-hero {
@@ -168,7 +168,7 @@
         <a href="index.html#projects" class="back-link">← Back to Projects</a>
         <div class="project-header">
           <h1>PantryPal</h1>
-          <p style="font-size: 1.2rem; color: var(--muted);">Final-year research — 83% recommendation accuracy, 0.7s API response</p>
+          <p style="font-size: 1.2rem; color: var(--muted);">Final-year research 83% recommendation accuracy, 0.7s API response</p>
           <div class="project-meta">
             <div class="meta-item">
               <span>📚</span> Final Year Research Project
@@ -203,7 +203,7 @@
 
         <p>To address this problem, I designed and developed PantryPal as a full-stack web application. The system allows users to create profiles, specify dietary preferences, manage pantry ingredients, receive personalized recipes, generate weekly meal plans and automatically identify missing ingredients for shopping lists.</p>
 
-        <p>PantryPal is a layered full-stack system: a <strong>React 19</strong> client talks only to a <strong>Node.js/Express :5000</strong> API, which owns auth and writes to <strong>MySQL 8.4 (`recipe_db`)</strong>. Two <strong>Python/Flask microservices</strong> run behind it — a recommender on :5001 (TF-IDF + cosine similarity + hybrid scoring) and a diet planner on :5002 (7-day × 4-slot meal plans). The frontend never calls Flask or MySQL directly, and Flask never handles auth. If an AI service is offline, a local pantry-overlap heuristic keeps every endpoint answering. Recommendations use TF-IDF content similarity, cosine ranking, pantry-ingredient match, dietary hard-filters, nutrition proximity, preference affinity, and user-user collaborative filtering, with a cold-start fallback.</p>
+        <p>PantryPal is a layered full-stack system: a <strong>React 19</strong> client talks only to a <strong>Node.js/Express :5000</strong> API, which owns auth and writes to <strong>MySQL 8.4 (`recipe_db`)</strong>. Two <strong>Python/Flask microservices</strong> run behind it a recommender on :5001 (TF-IDF + cosine similarity + hybrid scoring) and a diet planner on :5002 (7-day × 4-slot meal plans). The frontend never calls Flask or MySQL directly, and Flask never handles auth. If an AI service is offline, a local pantry-overlap heuristic keeps every endpoint answering. Recommendations use TF-IDF content similarity, cosine ranking, pantry-ingredient match, dietary hard-filters, nutrition proximity, preference affinity, and user-user collaborative filtering, with a cold-start fallback.</p>
 
         <div class="tech-stack">
           <strong>Technology Stack:</strong><br>
