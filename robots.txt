@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://lakshima409.github.io/lakshima-portfolio/sitemap.xml
