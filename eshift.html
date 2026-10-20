@@ -11,6 +11,19 @@
   <meta property="og:title" content="eShift Transport System Lakshima Madurangi" />
   <meta property="og:image" content="https://lakshima409.github.io/lakshima-portfolio/images/eshift/login.png" />
   <link rel="stylesheet" href="style.css" />
+  <!-- P4: apply the saved theme before first paint to avoid a flash of the wrong theme -->
+  <script>
+    (function () {
+      try {
+        if (localStorage.getItem('portfolioTheme') === 'light') {
+          document.documentElement.classList.add('light-theme');
+        }
+      } catch (e) {
+        /* storage unavailable - keep the default dark theme */
+      }
+    })();
+  </script>
+
   <style>
     .project-hero {
       background: linear-gradient(135deg, rgba(59, 130, 246, 0.2) 0%, rgba(139, 92, 246, 0.2) 100%);
@@ -128,8 +141,8 @@
         <a href="index.html#contact">Contact</a>
       </nav>
       <div class="header-actions">
-        <button class="icon-button" id="themeToggle" aria-label="Toggle theme">🌙</button>
-        <button class="icon-button mobile-menu" id="mobileMenuBtn" aria-label="Toggle menu">☰</button>
+        <button class="icon-button" id="themeToggle" type="button" aria-label="Switch to light theme" title="Switch theme">🌙</button>
+        <button class="icon-button mobile-menu" id="mobileMenuBtn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="siteNav">☰</button>
       </div>
     </div>
   </header>
@@ -189,15 +202,15 @@
 <p>Layered architecture with clear separation of concerns: C# Windows Forms client, SQL Server storage, and a dedicated reporting service. BCrypt-encrypted credentials gate admin and customer role paths.</p>
 <div class="screenshot-grid">
 <figure class="wide">
-<img src="images/eshift/login.webp" alt="eShift Management System role-based login form" loading="lazy" decoding="async" width="1200" height="750" />
+<img src="images/eshift/login.webp" width="1600" height="709" alt="eShift Management System role-based login form" loading="lazy" decoding="async" />
 <figcaption><strong>Login – Role-Based Access.</strong> Admin / Customer role selection with secure username and password authentication.</figcaption>
 </figure>
 <figure class="wide">
-<img src="images/eshift/admin-dashboard.webp" alt="eShift Admin Dashboard" loading="lazy" decoding="async" width="1200" height="750" />
+<img src="images/eshift/admin-dashboard.webp" width="1600" height="706" alt="eShift Admin Dashboard" loading="lazy" decoding="async" />
 <figcaption><strong>Admin Dashboard.</strong> Customer overview with navigation to drivers, vehicles, jobs, and reports.</figcaption>
 </figure>
 <figure>
-<img src="images/eshift/customer-dashboard.png" alt="eShift Customer Dashboard" loading="lazy" decoding="async" width="1200" height="750" />
+<img src="images/eshift/customer-dashboard.png" width="1581" height="740" alt="eShift Customer Dashboard" loading="lazy" decoding="async" />
 <figcaption><strong>Customer Dashboard.</strong> Pending, Active, and Completed job counters with Job ID search.</figcaption>
 </figure>
 </div>
@@ -216,27 +229,27 @@
         <h3>System Screenshots</h3>
         <div class="screenshot-grid">
           <figure class="wide">
-            <img src="images/eshift/login.webp" alt="eShift Management System role-based login form" loading="lazy" decoding="async" width="1200" height="750" />
+            <img src="images/eshift/login.webp" width="1600" height="709" alt="eShift Management System role-based login form" loading="lazy" decoding="async" />
             <figcaption><strong>Login Role-Based Access.</strong> Admin / Customer role selection with secure username and password authentication.</figcaption>
           </figure>
           <figure class="wide">
-            <img src="images/eshift/admin-dashboard.webp" alt="eShift Admin Dashboard with navigation" loading="lazy" />
+            <img src="images/eshift/admin-dashboard.webp" width="1600" height="706" alt="eShift Admin Dashboard with navigation" loading="lazy" />
             <figcaption><strong>Admin Dashboard.</strong> Central hub with customer overview and navigation to drivers, vehicles, jobs and reports.</figcaption>
           </figure>
           <figure>
-            <img src="images/eshift/customer-dashboard.png" alt="eShift Customer Dashboard with pending, active and completed jobs" loading="lazy" />
+            <img src="images/eshift/customer-dashboard.png" width="1581" height="740" alt="eShift Customer Dashboard with pending, active and completed jobs" loading="lazy" />
             <figcaption><strong>Customer Dashboard.</strong> Pending, Active and Completed job counters with Job ID search.</figcaption>
           </figure>
           <figure>
-            <img src="images/eshift/job-request.png" alt="eShift Job Request Form from Galle to Colombo" loading="lazy" />
+            <img src="images/eshift/job-request.png" width="1465" height="904" alt="eShift Job Request Form from Galle to Colombo" loading="lazy" />
             <figcaption><strong>Job Request Form.</strong> Start / destination locations, product type, weight, and assistant requirement.</figcaption>
           </figure>
           <figure>
-            <img src="images/eshift/report-generator.png" alt="eShift Report Generator" loading="lazy" />
+            <img src="images/eshift/report-generator.png" width="1073" height="710" alt="eShift Report Generator" loading="lazy" />
             <figcaption><strong>Report Generator.</strong> Customer / job reports with PDF and Excel export for analytics.</figcaption>
           </figure>
           <figure>
-            <img src="images/eshift/job-report.png" alt="eShift System Job Report document" loading="lazy" />
+            <img src="images/eshift/job-report.png" width="1841" height="935" alt="eShift System Job Report document" loading="lazy" />
             <figcaption><strong>Job Report.</strong> Generated job sheet with route, product details, vehicle, driver and authorization.</figcaption>
           </figure>
         </div>

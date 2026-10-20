@@ -16,13 +16,27 @@
   <meta name="twitter:image" content="https://lakshima409.github.io/lakshima-portfolio/images/og-card.png" />
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"M.H. Lakshima Madurangi","jobTitle":"Software Engineering Graduate","address":{"@type":"PostalAddress","addressLocality":"Colombo","addressCountry":"LK"},"alumniOf":["London Metropolitan University","ESOFT Metro Campus"],"knowsAbout":["C#","ASP.NET","React","SQL","SQL Server","MySQL"],"url":"https://lakshima409.github.io/lakshima-portfolio/","sameAs":["https://github.com/Lakshima409","https://www.linkedin.com/in/m-h-lakshima-3a5907288"]}</script>
   <link rel="stylesheet" href="style.css" />
+  <!-- P4: apply the saved theme before first paint to avoid a flash of the wrong theme -->
+  <script>
+    (function () {
+      try {
+        if (localStorage.getItem('portfolioTheme') === 'light') {
+          document.documentElement.classList.add('light-theme');
+        }
+      } catch (e) {
+        /* storage unavailable - keep the default dark theme */
+      }
+    })();
+  </script>
 </head>
 <body>
   <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
   <div class="command-palette" id="commandPalette" hidden>
-    <div class="palette-panel" role="dialog" aria-label="Quick navigation">
-      <input type="text" id="paletteInput" placeholder="Type a section or action..." autocomplete="off" />
-      <div class="palette-list" id="paletteList"></div>
+    <div class="palette-panel" role="dialog" aria-modal="true" aria-labelledby="paletteTitle" id="palettePanel">
+      <h2 class="palette-title" id="paletteTitle">Quick navigation</h2>
+      <label class="visually-hidden" for="paletteInput">Search sections and actions</label>
+      <input type="text" id="paletteInput" placeholder="Type a section or action..." autocomplete="off" role="combobox" aria-expanded="true" aria-controls="paletteList" aria-autocomplete="list" />
+      <div class="palette-list" id="paletteList" role="listbox" aria-label="Navigation results"></div>
       <p class="palette-hint">Enter to open · Esc to close · Ctrl+K anywhere</p>
     </div>
   </div>
@@ -39,8 +53,8 @@
         <a href="#contact">Contact</a>
       </nav>
       <div class="header-actions">
-        <button class="icon-button" id="themeToggle" aria-label="Toggle theme">🌙</button>
-        <button class="icon-button mobile-menu" id="mobileMenuBtn" aria-label="Toggle menu">☰</button>
+        <button class="icon-button" id="themeToggle" type="button" aria-label="Switch to light theme" title="Switch theme">🌙</button>
+        <button class="icon-button mobile-menu" id="mobileMenuBtn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="siteNav">☰</button>
       </div>
     </div>
   </header>
@@ -78,7 +92,7 @@
         </div>
         <div class="hero-card">
           <div class="profile-frame">
-            <img src="images/profile.webp" alt="Graduation portrait of Lakshima Madurangi" width="600" height="750" fetchpriority="high" decoding="async" />
+            <img src="images/profile.webp" width="941" height="1672" alt="Graduation portrait of Lakshima Madurangi" fetchpriority="high" decoding="async" />
           </div>
           <div class="hero-stats">
             <div>
@@ -101,7 +115,7 @@
             I'm Lakshima Madurangi, a Software Engineering Graduate (2:1 Hons, London Metropolitan University / ESOFT Metro Campus) based in Colombo, Sri Lanka. I build full-stack systems with C# .NET, React, and SQL including a transport management system with BCrypt auth and PDF/Excel reporting, an event ticketing platform with QR e-tickets and REST APIs, and a hotel suite where I owned billing + check-in/check-out.
           </p>
           <p>
-            I also build with AI/ML and data: NLP intents and knowledge bases for a mental-health chatbot, an ML-powered recipe engine in PantryPal (83% accuracy, 0.7s API response), and data analysis with Python, SPSS and Excel currently completing Google Data Analytics.
+            I also build with AI/ML and data: NLP intents and knowledge bases for a mental-health chatbot, an ML-powered recipe engine in PantryPal (final-year research reporting 83% accuracy, 0.7s API response), and data analysis with Python, SPSS and Excel currently completing Google Data Analytics.
           </p>
           <p>
             Open to Intern / Junior Software Engineer roles on-site, hybrid, or remote. Currently deepening backend, REST API design + data analytics skills.
@@ -126,54 +140,54 @@
         <article class="skill-card card">
           <h3>Languages</h3>
           <div class="skill-proficiency">
-            <div class="skill-label"><span class="skill-name">C#</span><span class="skill-bar"><span class="skill-fill" style="width: 90%;"></span></span><span class="skill-level">90%</span></div>
-            <div class="skill-label"><span class="skill-name">Python</span><span class="skill-bar"><span class="skill-fill" style="width: 75%;"></span></span><span class="skill-level">75%</span></div>
-            <div class="skill-label"><span class="skill-name">JavaScript</span><span class="skill-bar"><span class="skill-fill" style="width: 70%;"></span></span><span class="skill-level">70%</span></div>
-            <div class="skill-label"><span class="skill-name">PHP</span><span class="skill-bar"><span class="skill-fill" style="width: 60%;"></span></span><span class="skill-level">60%</span></div>
-            <div class="skill-label"><span class="skill-name">SQL</span><span class="skill-bar"><span class="skill-fill" style="width: 80%;"></span></span><span class="skill-level">80%</span></div>
+            <div class="skill-label"><span class="skill-name">C#</span><span class="skill-bar"><span class="skill-fill" style="width: 90%;"></span></span></div>
+            <div class="skill-label"><span class="skill-name">Python</span><span class="skill-bar"><span class="skill-fill" style="width: 75%;"></span></span></div>
+            <div class="skill-label"><span class="skill-name">JavaScript</span><span class="skill-bar"><span class="skill-fill" style="width: 70%;"></span></span></div>
+            <div class="skill-label"><span class="skill-name">PHP</span><span class="skill-bar"><span class="skill-fill" style="width: 60%;"></span></span></div>
+            <div class="skill-label"><span class="skill-name">SQL</span><span class="skill-bar"><span class="skill-fill" style="width: 80%;"></span></span></div>
           </div>
         </article>
         <article class="skill-card card">
           <h3>Web Development</h3>
           <div class="skill-proficiency">
-            <div class="skill-label"><span class="skill-name">React</span><span class="skill-bar"><span class="skill-fill" style="width: 65%;"></span></span><span class="skill-level">65%</span></div>
-            <div class="skill-label"><span class="skill-name">Node.js</span><span class="skill-bar"><span class="skill-fill" style="width: 60%;"></span></span><span class="skill-level">60%</span></div>
-            <div class="skill-label"><span class="skill-name">HTML / CSS</span><span class="skill-bar"><span class="skill-fill" style="width: 85%;"></span></span><span class="skill-level">85%</span></div>
-            <div class="skill-label"><span class="skill-name">Express</span><span class="skill-bar"><span class="skill-fill" style="width: 55%;"></span></span><span class="skill-level">55%</span></div>
+            <div class="skill-label"><span class="skill-name">React</span><span class="skill-bar"><span class="skill-fill" style="width: 65%;"></span></span></div>
+            <div class="skill-label"><span class="skill-name">Node.js</span><span class="skill-bar"><span class="skill-fill" style="width: 60%;"></span></span></div>
+            <div class="skill-label"><span class="skill-name">HTML / CSS</span><span class="skill-bar"><span class="skill-fill" style="width: 85%;"></span></span></div>
+            <div class="skill-label"><span class="skill-name">Express</span><span class="skill-bar"><span class="skill-fill" style="width: 55%;"></span></span></div>
           </div>
         </article>
         <article class="skill-card card">
           <h3>Databases</h3>
           <div class="skill-proficiency">
-            <div class="skill-label"><span class="skill-name">SQL Server</span><span class="skill-bar"><span class="skill-fill" style="width: 80%;"></span></span><span class="skill-level">80%</span></div>
-            <div class="skill-label"><span class="skill-name">MySQL</span><span class="skill-bar"><span class="skill-fill" style="width: 70%;"></span></span><span class="skill-level">70%</span></div>
-            <div class="skill-label"><span class="skill-name">MongoDB</span><span class="skill-bar"><span class="skill-fill" style="width: 50%;"></span></span><span class="skill-level">50%</span></div>
+            <div class="skill-label"><span class="skill-name">SQL Server</span><span class="skill-bar"><span class="skill-fill" style="width: 80%;"></span></span></div>
+            <div class="skill-label"><span class="skill-name">MySQL</span><span class="skill-bar"><span class="skill-fill" style="width: 70%;"></span></span></div>
+            <div class="skill-label"><span class="skill-name">MongoDB</span><span class="skill-bar"><span class="skill-fill" style="width: 50%;"></span></span></div>
           </div>
         </article>
         <article class="skill-card card">
           <h3>AI &amp; Data</h3>
           <div class="skill-proficiency">
-            <div class="skill-label"><span class="skill-name">Machine Learning</span><span class="skill-bar"><span class="skill-fill" style="width: 65%;"></span></span><span class="skill-level">65%</span></div>
-            <div class="skill-label"><span class="skill-name">NLP</span><span class="skill-bar"><span class="skill-fill" style="width: 60%;"></span></span><span class="skill-level">60%</span></div>
-            <div class="skill-label"><span class="skill-name">Data Analysis</span><span class="skill-bar"><span class="skill-fill" style="width: 75%;"></span></span><span class="skill-level">75%</span></div>
-            <div class="skill-label"><span class="skill-name">SPSS / Excel</span><span class="skill-bar"><span class="skill-fill" style="width: 70%;"></span></span><span class="skill-level">70%</span></div>
+            <div class="skill-label"><span class="skill-name">Machine Learning</span><span class="skill-bar"><span class="skill-fill" style="width: 65%;"></span></span></div>
+            <div class="skill-label"><span class="skill-name">NLP</span><span class="skill-bar"><span class="skill-fill" style="width: 60%;"></span></span></div>
+            <div class="skill-label"><span class="skill-name">Data Analysis</span><span class="skill-bar"><span class="skill-fill" style="width: 75%;"></span></span></div>
+            <div class="skill-label"><span class="skill-name">SPSS / Excel</span><span class="skill-bar"><span class="skill-fill" style="width: 70%;"></span></span></div>
           </div>
         </article>
         <article class="skill-card card">
           <h3>Tools</h3>
           <div class="skill-proficiency">
-            <div class="skill-label"><span class="skill-name">Git / GitHub</span><span class="skill-bar"><span class="skill-fill" style="width: 90%;"></span></span><span class="skill-level">90%</span></div>
-            <div class="skill-label"><span class="skill-name">VS Code</span><span class="skill-bar"><span class="skill-fill" style="width: 90%;"></span></span><span class="skill-level">90%</span></div>
-            <div class="skill-label"><span class="skill-name">Visual Studio</span><span class="skill-bar"><span class="skill-fill" style="width: 70%;"></span></span><span class="skill-level">70%</span></div>
+            <div class="skill-label"><span class="skill-name">Git / GitHub</span><span class="skill-bar"><span class="skill-fill" style="width: 90%;"></span></span></div>
+            <div class="skill-label"><span class="skill-name">VS Code</span><span class="skill-bar"><span class="skill-fill" style="width: 90%;"></span></span></div>
+            <div class="skill-label"><span class="skill-name">Visual Studio</span><span class="skill-bar"><span class="skill-fill" style="width: 70%;"></span></span></div>
           </div>
         </article>
         <article class="skill-card card">
           <h3>Development Practices</h3>
           <div class="skill-proficiency">
-            <div class="skill-label"><span class="skill-name">OOP / SOLID</span><span class="skill-bar"><span class="skill-fill" style="width: 85%;"></span></span><span class="skill-level">85%</span></div>
-            <div class="skill-label"><span class="skill-name">REST APIs</span><span class="skill-bar"><span class="skill-fill" style="width: 70%;"></span></span><span class="skill-level">70%</span></div>
-            <div class="skill-label"><span class="skill-name">Testing (Unit/UAT)</span><span class="skill-bar"><span class="skill-fill" style="width: 65%;"></span></span><span class="skill-level">65%</span></div>
-            <div class="skill-label"><span class="skill-name">Wireframes &amp; UI/UX</span><span class="skill-bar"><span class="skill-fill" style="width: 75%;"></span></span><span class="skill-level">75%</span></div>
+            <div class="skill-label"><span class="skill-name">OOP / SOLID</span><span class="skill-bar"><span class="skill-fill" style="width: 85%;"></span></span></div>
+            <div class="skill-label"><span class="skill-name">REST APIs</span><span class="skill-bar"><span class="skill-fill" style="width: 70%;"></span></span></div>
+            <div class="skill-label"><span class="skill-name">Testing (Unit/UAT)</span><span class="skill-bar"><span class="skill-fill" style="width: 65%;"></span></span></div>
+            <div class="skill-label"><span class="skill-name">Wireframes &amp; UI/UX</span><span class="skill-bar"><span class="skill-fill" style="width: 75%;"></span></span></div>
           </div>
         </article>
       </div>
@@ -188,7 +202,7 @@
       <div class="container project-grid">
         <article class="project-card card project-card--premium">
           <div class="project-visual project-visual--compact">
-            <img src="images/eshift/login.webp" alt="eShift Management System login with global logistics visual" loading="lazy" decoding="async" width="1200" height="750" />
+            <img src="images/eshift/login.webp" width="1600" height="709" alt="eShift Management System login with global logistics visual" loading="lazy" decoding="async" />
           </div>
           <div class="card-content">
             <h3>eShift Household Goods Transport Management System</h3>
@@ -204,7 +218,7 @@
         </article>
         <article class="project-card card">
           <div class="project-visual">
-            <img src="images/chatbot/mindmate-welcome.png" alt="MindMate mental health chatbot conversation screen" loading="lazy" decoding="async" width="1200" height="800" onerror="this.style.display='none'" />
+            <img src="images/chatbot/mindmate-welcome.png" width="1918" height="915" alt="MindMate mental health chatbot conversation screen" loading="lazy" decoding="async" onerror="this.style.display='none'" />
           </div>
           <div class="card-content">
             <h3>AI Mental Health Chatbot</h3>
@@ -219,12 +233,12 @@
         </article>
         <article class="project-card card">
           <div class="project-visual">
-            <img src="images/pantrypal/screenshot-2025-07-24-110549-copy.webp" alt="PantryPal recipe recommendation homepage" loading="lazy" decoding="async" width="1200" height="800" onerror="this.style.display='none'" />
+            <img src="images/pantrypal/screenshot-2025-07-24-110549-copy.webp" width="905" height="584" alt="PantryPal recipe recommendation homepage" loading="lazy" decoding="async" onerror="this.style.display='none'" />
           </div>
           <div class="card-content">
             <h3>PantryPal Recipe &amp; Meal Planning</h3>
             <p><strong>Problem:</strong> people have ingredients but can't decide what to cook within diet + budget.</p>
-            <p><strong>Result:</strong> 83% recommendation accuracy, 0.7s API response (final-year research) · 231 unit tests · 37-assertion E2E journey test · GitHub Actions CI.</p>
+            <p><strong>Highlights:</strong> 83% recommendation accuracy and 0.7s API response as reported in final-year research · 249 server unit tests passing · 40-assertion E2E journey test · GitHub Actions CI.</p>
             <div class="project-tags"><span>React</span><span>Node.js</span><span>MySQL</span><span>Flask</span><span>JWT auth</span><span>Machine learning</span></div>
             <div class="project-actions">
               <a href="pantrypal.html" class="button small">View Research</a>
@@ -249,7 +263,7 @@
         </article>
         <article class="project-card card">
           <div class="project-visual">
-            <img src="images/auto-cars/home.jpg" alt="Auto Cars taxi reservation platform home page" loading="lazy" decoding="async" />
+            <img src="images/auto-cars/home.jpg" width="911" height="646" alt="Auto Cars taxi reservation platform home page" loading="lazy" decoding="async" />
           </div>
           <div class="card-content">
             <h3>Auto Cars Systems Analysis &amp; Design</h3>
@@ -263,7 +277,7 @@
         </article>
         <article class="project-card card">
           <div class="project-visual">
-            <img src="images/bus-reservation.svg" alt="Bus Reservation System Java data structures illustration" loading="lazy" decoding="async" width="1200" height="750" />
+            <img src="images/bus-reservation.svg" width="800" height="500" alt="Bus Reservation System Java data structures illustration" loading="lazy" decoding="async" />
           </div>
           <div class="card-content">
             <h3>Bus Reservation System | Java &amp; Data Structures</h3>
@@ -289,7 +303,7 @@
           <div class="timeline-date">2025-2026</div>
           <div class="timeline-content">
             <h3>Final-Year Research PantryPal (ML + Personalised Meal Planning)</h3>
-            <p>Investigated how machine learning and pantry-aware personalisation simplify meal planning, support healthier eating, and reduce food waste. Designed and built a full-stack system (React, Node.js, Python Flask, MySQL) with hybrid TF-IDF + cosine similarity + collaborative filtering. Evaluation: 83% recommendation accuracy, 0.7s API response, 90–95% objectives, 85%+ satisfaction.</p>
+            <p>Investigated how machine learning and pantry-aware personalisation simplify meal planning, support healthier eating, and reduce food waste. Designed and built a full-stack system (React, Node.js, Python Flask, MySQL) with hybrid TF-IDF + cosine similarity + collaborative filtering. Evaluation as reported in final-year research: 83% recommendation accuracy, 0.7s API response, 90–95% objectives, 85%+ satisfaction.</p>
             <div class="project-tags"><span>React</span><span>Node.js</span><span>Python</span><span>Machine Learning</span></div>
             <div class="project-actions"><a href="pantrypal-research.html" class="button small">Case Study</a><a href="https://github.com/Lakshima409/Pantrypal" class="button small secondary" target="_blank" rel="noopener noreferrer">&lt;&gt; Code</a></div>
           </div>
@@ -441,7 +455,7 @@
       <div class="container research-layout">
         <div class="research-summary card">
           <h3>PantryPal Intelligent Recipe Recommendations</h3>
-          <p><strong>Final-year research:</strong> how ML + pantry-aware personalisation simplify meal planning. Lit review, hybrid TF-IDF + collaborative filtering, UAT (83% accuracy).</p>
+          <p><strong>Final-year research:</strong> how ML + pantry-aware personalisation simplify meal planning. Lit review, hybrid TF-IDF + collaborative filtering, UAT (reported 83% accuracy).</p>
           <p>Research · Literature Review · Machine Learning · System Evaluation</p>
           <a href="pantrypal-research.html" class="button primary">Explore Research</a>
         </div>
@@ -480,7 +494,7 @@
       <div class="container project-grid">
         <article class="project-card card project-card--premium">
           <div class="project-visual project-visual--wide">
-            <img src="images/webss/ml1.webp" alt="Malcolm Lismore Photography homepage screenshot" loading="lazy" decoding="async" width="1200" height="750" />
+            <img src="images/webss/ml1.webp" width="1366" height="646" alt="Malcolm Lismore Photography homepage screenshot" loading="lazy" decoding="async" />
           </div>
           <div class="card-content">
             <h3>Malcolm Lismore Photography</h3>
@@ -492,7 +506,7 @@
         </article>
         <article class="project-card card project-card--premium">
           <div class="project-visual project-visual--wide">
-            <img src="images/evc/onboarding.webp" alt="StarView EVC streaming app onboarding prototype" loading="lazy" decoding="async" width="1200" height="800" onerror="this.style.display='none'" />
+            <img src="images/evc/onboarding.webp" width="742" height="525" alt="StarView EVC streaming app onboarding prototype" loading="lazy" decoding="async" onerror="this.style.display='none'" />
           </div>
           <div class="card-content">
             <h3>StarView EVC UI/UX Project</h3>
@@ -503,7 +517,7 @@
           </div>
         </article>
         <article class="project-card card">
-          <img src="images/eticketing/homepage.webp" alt="Event Ticketing homepage with Find Your Next Experience hero" loading="lazy" decoding="async" width="1200" height="750" />
+          <img src="images/eticketing/homepage.webp" width="1600" height="728" alt="Event Ticketing homepage with Find Your Next Experience hero" loading="lazy" decoding="async" />
           <div class="card-content">
             <h3>Event Ticket Web Application</h3>
             <p><strong>Problem:</strong> organizers needed ticketing with payments + analytics; attendees needed QR e-tickets.</p>
@@ -515,7 +529,7 @@
         </article>
         <article class="project-card card">
           <div class="project-visual">
-            <img src="images/sampath/monthly-chart.png" alt="Sales Analysis System for Sampath Food City monthly sales chart" loading="lazy" decoding="async" />
+            <img src="images/sampath/monthly-chart.png" width="831" height="633" alt="Sales Analysis System for Sampath Food City monthly sales chart" loading="lazy" decoding="async" />
           </div>
           <div class="card-content">
             <h3>Sales Analysis System | Python</h3>
@@ -563,11 +577,13 @@
         <div class="contact-card card">
           <h3>Send a message</h3>
           <form id="contactForm" class="contact-form" action="https://formsubmit.co/ajax/mhlakshima@gmail.com" method="POST">
-            <label>Name<input type="text" name="name" placeholder="Your name" required /></label>
-            <label>Email<input type="email" name="email" placeholder="you@company.com" required /></label>
-            <label>Message<textarea name="message" rows="4" placeholder="Hi Lakshima, we'd like to talk about..." required></textarea></label>
+            <label for="contactName">Name<input type="text" id="contactName" name="name" placeholder="Your name" required /></label>
+            <label for="contactEmail">Email<input type="email" id="contactEmail" name="email" placeholder="you@company.com" required /></label>
+            <label for="contactMessage">Message<textarea id="contactMessage" name="message" rows="4" placeholder="Hi Lakshima, we'd like to talk about..." required></textarea></label>
             <input type="hidden" name="_subject" value="New message from lakshima409.github.io" />
             <input type="hidden" name="_captcha" value="false" />
+            <!-- P4: FormSubmit honeypot - hidden from people, filled in by bots; submissions with a value are silently ignored -->
+            <input type="text" name="_honey" class="visually-hidden" tabindex="-1" autocomplete="off" aria-hidden="true" />
             <button class="button primary" type="submit">Send message</button>
             <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
           </form>

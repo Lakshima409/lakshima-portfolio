@@ -4,7 +4,26 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Final Year Research - Big Data & Consumer Behaviour | Lakshima Madurangi</title>
+  <meta name="description" content="Final-year research report on big data in retail marketing and consumer behaviour: a 55-participant quantitative survey analysed with SPSS and Excel." />
+  <link rel="canonical" href="https://lakshima409.github.io/lakshima-portfolio/research.html" />
+  <link rel="icon" type="image/png" href="images/favicon.png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Final Year Research - Big Data & Consumer Behaviour | Lakshima Madurangi" />
+  <meta property="og:description" content="Final-year research report on big data in retail marketing and consumer behaviour: a 55-participant quantitative survey analysed with SPSS and Excel." />
   <link rel="stylesheet" href="style.css" />
+  <!-- P4: apply the saved theme before first paint to avoid a flash of the wrong theme -->
+  <script>
+    (function () {
+      try {
+        if (localStorage.getItem('portfolioTheme') === 'light') {
+          document.documentElement.classList.add('light-theme');
+        }
+      } catch (e) {
+        /* storage unavailable - keep the default dark theme */
+      }
+    })();
+  </script>
+
   <style>
     .project-hero {
       background: linear-gradient(135deg, rgba(59, 130, 246, 0.2) 0%, rgba(139, 92, 246, 0.2) 100%);
@@ -102,8 +121,8 @@
         <a href="index.html#contact">Contact</a>
       </nav>
       <div class="header-actions">
-        <button class="icon-button" id="themeToggle" aria-label="Toggle theme">🌙</button>
-        <button class="icon-button mobile-menu" id="mobileMenuBtn" aria-label="Toggle menu">☰</button>
+        <button class="icon-button" id="themeToggle" type="button" aria-label="Switch to light theme" title="Switch theme">🌙</button>
+        <button class="icon-button mobile-menu" id="mobileMenuBtn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="siteNav">☰</button>
       </div>
     </div>
   </header>

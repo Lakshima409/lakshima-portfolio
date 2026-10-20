@@ -4,7 +4,26 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Systems Analysis & Design – Auto Cars | Lakshima Madurangi</title>
+  <meta name="description" content="Case study of Auto Cars, a web-based taxi reservation platform: SDLC methodology selection, feasibility study, requirements engineering, system diagrams (DFD, ERD, use case, class) and interface design." />
+  <link rel="canonical" href="https://lakshima409.github.io/lakshima-portfolio/auto-cars.html" />
+  <link rel="icon" type="image/png" href="images/favicon.png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Systems Analysis & Design – Auto Cars | Lakshima Madurangi" />
+  <meta property="og:description" content="Case study of Auto Cars, a web-based taxi reservation platform: SDLC methodology selection, feasibility study, requirements engineering, system diagrams and interface design." />
   <link rel="stylesheet" href="style.css" />
+  <!-- P4: apply the saved theme before first paint to avoid a flash of the wrong theme -->
+  <script>
+    (function () {
+      try {
+        if (localStorage.getItem('portfolioTheme') === 'light') {
+          document.documentElement.classList.add('light-theme');
+        }
+      } catch (e) {
+        /* storage unavailable - keep the default dark theme */
+      }
+    })();
+  </script>
+
   <style>
     .project-hero {
       background: linear-gradient(135deg, rgba(34, 197, 94, 0.2) 0%, rgba(59, 130, 246, 0.2) 100%);
@@ -135,8 +154,8 @@
         <a href="index.html#contact">Contact</a>
       </nav>
       <div class="header-actions">
-        <button class="icon-button" id="themeToggle" aria-label="Toggle theme">🌙</button>
-        <button class="icon-button mobile-menu" id="mobileMenuBtn" aria-label="Toggle menu">☰</button>
+        <button class="icon-button" id="themeToggle" type="button" aria-label="Switch to light theme" title="Switch theme">🌙</button>
+        <button class="icon-button mobile-menu" id="mobileMenuBtn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="siteNav">☰</button>
       </div>
     </div>
   </header>
@@ -227,55 +246,55 @@
         <h2>System Screenshots</h2>
         <div class="screenshot-grid">
           <figure class="wide">
-            <img src="images/auto-cars/home.jpg" alt="Auto Cars home page with taxi booking" loading="lazy" decoding="async" />
+            <img src="images/auto-cars/home.jpg" width="911" height="646" alt="Auto Cars home page with taxi booking" loading="lazy" decoding="async" />
             <figcaption><strong>Home Booking Entry.</strong> Main landing with ride search and service overview.</figcaption>
           </figure>
           <figure>
-            <img src="images/auto-cars/landing.jpg" alt="Auto Cars open page" loading="lazy" decoding="async" />
+            <img src="images/auto-cars/landing.jpg" width="1208" height="680" alt="Auto Cars open page" loading="lazy" decoding="async" />
             <figcaption><strong>Landing.</strong> Open page introducing Auto Cars services.</figcaption>
           </figure>
           <figure>
-            <img src="images/auto-cars/login.jpg" alt="Auto Cars login screen" loading="lazy" decoding="async" />
+            <img src="images/auto-cars/login.jpg" width="893" height="609" alt="Auto Cars login screen" loading="lazy" decoding="async" />
             <figcaption><strong>Login.</strong> Customer / driver sign-in.</figcaption>
           </figure>
           <figure>
-            <img src="images/auto-cars/customer-register.jpg" alt="Auto Cars customer registration form" loading="lazy" decoding="async" />
+            <img src="images/auto-cars/customer-register.jpg" width="1201" height="677" alt="Auto Cars customer registration form" loading="lazy" decoding="async" />
             <figcaption><strong>Customer Registration.</strong> New customer sign-up with contact details.</figcaption>
           </figure>
           <figure>
-            <img src="images/auto-cars/driver-register.jpg" alt="Auto Cars driver registration form" loading="lazy" decoding="async" />
+            <img src="images/auto-cars/driver-register.jpg" width="1198" height="671" alt="Auto Cars driver registration form" loading="lazy" decoding="async" />
             <figcaption><strong>Driver Registration.</strong> Driver onboarding with vehicle details.</figcaption>
           </figure>
           <figure>
-            <img src="images/auto-cars/book-ride.jpg" alt="Auto Cars book ride screen" loading="lazy" decoding="async" />
+            <img src="images/auto-cars/book-ride.jpg" width="693" height="353" alt="Auto Cars book ride screen" loading="lazy" decoding="async" />
             <figcaption><strong>Book Ride.</strong> Taxi booking interface with vehicle selection.</figcaption>
           </figure>
           <figure>
-            <img src="images/auto-cars/cars-for-rent.jpg" alt="Auto Cars cars for rent listing" loading="lazy" decoding="async" />
+            <img src="images/auto-cars/cars-for-rent.jpg" width="905" height="643" alt="Auto Cars cars for rent listing" loading="lazy" decoding="async" />
             <figcaption><strong>Cars for Rent.</strong> Available fleet browsing.</figcaption>
           </figure>
           <figure class="wide">
-            <img src="images/auto-cars/admin-dashboard.jpg" alt="Auto Cars admin car dashboard" loading="lazy" decoding="async" />
+            <img src="images/auto-cars/admin-dashboard.jpg" width="995" height="706" alt="Auto Cars admin car dashboard" loading="lazy" decoding="async" />
             <figcaption><strong>Admin Dashboard.</strong> Fleet overview with ride history and reporting.</figcaption>
           </figure>
           <figure>
-            <img src="images/auto-cars/ride-review.jpg" alt="Auto Cars ride review screen" loading="lazy" decoding="async" />
+            <img src="images/auto-cars/ride-review.jpg" width="907" height="643" alt="Auto Cars ride review screen" loading="lazy" decoding="async" />
             <figcaption><strong>Ride Review.</strong> Customer feedback and driver rating.</figcaption>
           </figure>
           <figure>
-            <img src="images/auto-cars/erd.jpg" alt="Auto Cars ER diagram" loading="lazy" decoding="async" />
+            <img src="images/auto-cars/erd.jpg" width="1288" height="614" alt="Auto Cars ER diagram" loading="lazy" decoding="async" />
             <figcaption><strong>ER Diagram.</strong> Customer, Driver, Booking, Vehicle, Feedback entities.</figcaption>
           </figure>
           <figure>
-            <img src="images/auto-cars/use-case.jpg" alt="Auto Cars use case diagram" loading="lazy" decoding="async" />
+            <img src="images/auto-cars/use-case.jpg" width="746" height="700" alt="Auto Cars use case diagram" loading="lazy" decoding="async" />
             <figcaption><strong>Use Case.</strong> Registration, booking, assignment, rating flows.</figcaption>
           </figure>
           <figure>
-            <img src="images/auto-cars/class-diagram.jpg" alt="Auto Cars class diagram" loading="lazy" decoding="async" />
+            <img src="images/auto-cars/class-diagram.jpg" width="882" height="673" alt="Auto Cars class diagram" loading="lazy" decoding="async" />
             <figcaption><strong>Class Diagram.</strong> OO design for booking domain.</figcaption>
           </figure>
           <figure>
-            <img src="images/auto-cars/dfd-detail.jpg" alt="Auto Cars detailed DFD" loading="lazy" decoding="async" />
+            <img src="images/auto-cars/dfd-detail.jpg" width="1463" height="1201" alt="Auto Cars detailed DFD" loading="lazy" decoding="async" />
             <figcaption><strong>Detailed DFD.</strong> Booking / assignment process breakdown.</figcaption>
           </figure>
         </div>

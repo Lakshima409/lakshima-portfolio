@@ -6,8 +6,24 @@
   <title>PantryPal Research Intelligent Recipe Recommendations | Lakshima Madurangi</title>
   <meta name="description" content="PantryPal final-year research: ML and pantry-aware personalisation for meal planning. Literature review, hybrid TF-IDF + collaborative filtering, testing and evaluation." />
   <link rel="canonical" href="https://lakshima409.github.io/lakshima-portfolio/pantrypal-research.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="PantryPal Research Intelligent Recipe Recommendations | Lakshima Madurangi" />
+  <meta property="og:description" content="PantryPal final-year research: ML and pantry-aware personalisation for meal planning. Literature review, hybrid TF-IDF + collaborative filtering, testing and evaluation." />
   <link rel="icon" type="image/jpeg" href="images/profile.jpg" />
   <link rel="stylesheet" href="style.css" />
+  <!-- P4: apply the saved theme before first paint to avoid a flash of the wrong theme -->
+  <script>
+    (function () {
+      try {
+        if (localStorage.getItem('portfolioTheme') === 'light') {
+          document.documentElement.classList.add('light-theme');
+        }
+      } catch (e) {
+        /* storage unavailable - keep the default dark theme */
+      }
+    })();
+  </script>
+
 </head>
 <body>
 <header class="site-header">
@@ -23,8 +39,8 @@
 <a href="index.html#contact">Contact</a>
 </nav>
 <div class="header-actions">
-<button class="icon-button" id="themeToggle" aria-label="Toggle theme">🌙</button>
-<button class="icon-button mobile-menu" id="mobileMenuBtn" aria-label="Toggle menu">☰</button>
+<button class="icon-button" id="themeToggle" type="button" aria-label="Switch to light theme" title="Switch theme">🌙</button>
+<button class="icon-button mobile-menu" id="mobileMenuBtn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="siteNav">☰</button>
 </div>
 </div>
 </header>
@@ -32,25 +48,25 @@
 <section class="section" id="pantrypal-hero">
 <div class="container section-header">
 <span class="section-tag">Research Project · Final-Year Project</span>
-<h2>PantryPal Intelligent Recipe Recommendation System</h2>
+<h1 style="font-size: clamp(2rem, 2.5vw, 2.8rem); line-height: 1.2;">PantryPal Intelligent Recipe Recommendation System</h1>
 <p class="section-intro">How machine learning and personalised food recommendations can simplify meal planning, support healthier eating, and reduce household food waste.</p>
 </div>
 <div class="container research-layout">
 <div class="research-summary card">
-<h3>Research overview</h3>
+<h2 style="font-size: 1.2rem;">Research overview</h2>
 <p>Individual final-year research + build investigating limits in recipe/meal-planning platforms (Yummly, Eat This Much, Whisk) and proposing one integrated system: pantry + nutrition + recommendations + shopping lists.</p>
 <p>Areas: ML, recommendation systems, personalised nutrition, food sustainability. Method: literature review, system analysis, iterative build, testing + evaluation.</p>
 <div class="project-actions"><a href="pantrypal.html" class="button small">View build case study</a><a href="https://github.com/Lakshima409/Pantrypal" class="button small secondary" target="_blank" rel="noopener noreferrer">&lt;&gt; Code</a></div>
 </div>
 <div class="research-methods card">
-<h3>At a glance</h3>
+<h2 style="font-size: 1.2rem;">At a glance</h2>
 <ul>
 <li>Hybrid TF-IDF + cosine similarity + collaborative filtering (Python Flask service)</li>
 <li>React + Node/Express + MySQL full-stack system</li>
 <li>Two Flask microservices (:5001 recommender, :5002 diet planner) behind Node/Express; React never calls Flask/MySQL directly</li>
 <li>Local heuristic fallback keeps endpoints live if an AI service is offline</li>
-<li>UAT + feedback: 83% accuracy, 0.7s API, 90–95% objectives</li>
-<li>231 server unit tests, PyTest for AI services, 37-assertion journey-check.js, GitHub Actions CI</li>
+<li>UAT + feedback (reported): 83% accuracy, 0.7s API, 90–95% objectives</li>
+<li>249 server unit tests, PyTest for AI services, 40-assertion journey-check.js, GitHub Actions CI</li>
 </ul>
 <h3>Tags</h3>
 <p>Research · Literature Review · Machine Learning · System Evaluation</p>
@@ -114,7 +130,7 @@
 <div class="container research-layout">
 <div class="research-summary card">
 <h3>Evaluation</h3>
-<p>Unit + integration + UAT + feedback on usability and relevance. Reported: 83% recommendation accuracy, 0.7s API response, ~90–95% objectives met, 85%+ satisfaction. Backed by 231 server unit tests, PyTest for both AI services, and a 37-assertion end-to-end journey harness, with GitHub Actions CI running Node + Python + MySQL integration tests.</p>
+<p>Unit + integration + UAT + feedback on usability and relevance. Reported: 83% recommendation accuracy, 0.7s API response, ~90–95% objectives met, 85%+ satisfaction. Backed by 249 server unit tests, PyTest for both AI services, and a 40-assertion end-to-end journey harness, with GitHub Actions CI running Node + Python + MySQL integration tests.</p>
 <h3>Limitations → future work</h3>
 <p>Prototype scope; needs larger/diverse cohorts, bigger benchmarks, image-based pantry, deeper nutrition personalisation, longitudinal waste studies.</p>
 </div>

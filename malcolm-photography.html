@@ -5,7 +5,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Case study for Malcolm Lismore Photography, a responsive multipage photography website." />
   <title>Malcolm Lismore Photography | Case Study</title>
+  <link rel="canonical" href="https://lakshima409.github.io/lakshima-portfolio/malcolm-photography.html" />
+  <link rel="icon" type="image/png" href="images/favicon.png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Malcolm Lismore Photography | Case Study" />
+  <meta property="og:description" content="Case study for Malcolm Lismore Photography, a responsive multipage photography website." />
   <link rel="stylesheet" href="style.css" />
+  <!-- P4: apply the saved theme before first paint to avoid a flash of the wrong theme -->
+  <script>
+    (function () {
+      try {
+        if (localStorage.getItem('portfolioTheme') === 'light') {
+          document.documentElement.classList.add('light-theme');
+        }
+      } catch (e) {
+        /* storage unavailable - keep the default dark theme */
+      }
+    })();
+  </script>
+
   <style>
     .case-hero { padding: 56px 0 72px; background: radial-gradient(circle at 85% 15%, rgba(16, 185, 129, 0.16), transparent 35%), var(--bg); }
     .case-hero-grid, .case-split, .case-gallery, .case-facts { display: grid; gap: 24px; }
@@ -55,8 +73,8 @@
         <a href="index.html#contact">Contact</a>
       </nav>
       <div class="header-actions">
-        <button class="icon-button" id="themeToggle" aria-label="Toggle theme">🌙</button>
-        <button class="icon-button mobile-menu" id="mobileMenuBtn" aria-label="Toggle menu">☰</button>
+        <button class="icon-button" id="themeToggle" type="button" aria-label="Switch to light theme" title="Switch theme">🌙</button>
+        <button class="icon-button mobile-menu" id="mobileMenuBtn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="siteNav">☰</button>
       </div>
     </div>
   </header>
@@ -72,7 +90,7 @@
           <p>I designed and developed a responsive, multipage photography website for a photographer specialising in Scotland's landscapes, wildlife, coastal scenes, weddings, and special events.</p>
           <div class="case-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>PHP</span><span>MySQL</span><span>Apache</span></div>
         </div>
-        <div class="case-hero-visual"><img src="images/webss/ml1.webp" alt="Homepage design for Malcolm Lismore Photography" /></div>
+        <div class="case-hero-visual"><img src="images/webss/ml1.webp" width="1366" height="646" alt="Homepage design for Malcolm Lismore Photography" /></div>
       </div>
     </section>
 
@@ -122,15 +140,15 @@
         <h2>One connected photography experience</h2>
         <p>The multipage structure brings the photographer's introduction, portfolio, services, editorial content, and customer enquiry journey together.</p>
         <div class="case-gallery">
-          <figure><img src="images/webss/ml1.webp" alt="Photography website homepage and landscape hero" loading="lazy" /><figcaption>Home · A visual introduction to Malcolm's photography and Scotland's landscapes.</figcaption></figure>
-          <figure><img src="images/webss/ml2.webp" alt="About page introducing the photographer" loading="lazy" /><figcaption>About · The photographer's background, creative perspective, and connection to nature.</figcaption></figure>
-          <figure><img src="images/webss/ml4.webp" alt="Photography portfolio layout" loading="lazy" /><figcaption>Portfolio · Featured photography and routes into the image collections.</figcaption></figure>
-          <figure><img src="images/webss/ml5.webp" alt="Photography blog section" loading="lazy" /><figcaption>Blog · An editorial space for photography stories and updates.</figcaption></figure>
-          <figure><img src="images/webss/ml9.webp" alt="Photography gallery with category-led image browsing" loading="lazy" /><figcaption>Gallery · Photography organised for browsing across subjects.</figcaption></figure>
-          <figure><img src="images/webss/ml16.webp" alt="Photography services and pricing cards" loading="lazy" /><figcaption>Services &amp; pricing · Clear entry points for photography services.</figcaption></figure>
-          <figure><img src="images/webss/ml14.png" alt="Photography enquiry or contact page" loading="lazy" /><figcaption>Enquiry · A contact route for potential photography bookings.</figcaption></figure>
-          <figure><img src="images/webss/ml7.png" alt="Photography customer feedback section" loading="lazy" /><figcaption>Customer feedback · A testimonial section supporting trust.</figcaption></figure>
-          <figure><img src="images/webss/ml13.png" alt="Photography website frequently asked questions" loading="lazy" /><figcaption>FAQ · Answers to common visitor questions.</figcaption></figure>
+          <figure><img src="images/webss/ml1.webp" width="1366" height="646" alt="Photography website homepage and landscape hero" loading="lazy" /><figcaption>Home · A visual introduction to Malcolm's photography and Scotland's landscapes.</figcaption></figure>
+          <figure><img src="images/webss/ml2.webp" width="1366" height="638" alt="About page introducing the photographer" loading="lazy" /><figcaption>About · The photographer's background, creative perspective, and connection to nature.</figcaption></figure>
+          <figure><img src="images/webss/ml4.webp" width="1366" height="649" alt="Photography portfolio layout" loading="lazy" /><figcaption>Portfolio · Featured photography and routes into the image collections.</figcaption></figure>
+          <figure><img src="images/webss/ml5.webp" width="1366" height="643" alt="Photography blog section" loading="lazy" /><figcaption>Blog · An editorial space for photography stories and updates.</figcaption></figure>
+          <figure><img src="images/webss/ml9.webp" width="1366" height="640" alt="Photography gallery with category-led image browsing" loading="lazy" /><figcaption>Gallery · Photography organised for browsing across subjects.</figcaption></figure>
+          <figure><img src="images/webss/ml16.webp" width="1365" height="645" alt="Photography services and pricing cards" loading="lazy" /><figcaption>Services &amp; pricing · Clear entry points for photography services.</figcaption></figure>
+          <figure><img src="images/webss/ml14.png" width="1366" height="643" alt="Photography enquiry or contact page" loading="lazy" /><figcaption>Enquiry · A contact route for potential photography bookings.</figcaption></figure>
+          <figure><img src="images/webss/ml7.png" width="1357" height="642" alt="Photography customer feedback section" loading="lazy" /><figcaption>Customer feedback · A testimonial section supporting trust.</figcaption></figure>
+          <figure><img src="images/webss/ml13.png" width="1366" height="656" alt="Photography website frequently asked questions" loading="lazy" /><figcaption>FAQ · Answers to common visitor questions.</figcaption></figure>
         </div>
       </div>
     </section>

@@ -11,6 +11,19 @@
   <meta property="og:title" content="Event Ticketing Platform Lakshima Madurangi" />
   <meta property="og:image" content="https://lakshima409.github.io/lakshima-portfolio/images/eticketing/homepage.png" />
   <link rel="stylesheet" href="style.css" />
+  <!-- P4: apply the saved theme before first paint to avoid a flash of the wrong theme -->
+  <script>
+    (function () {
+      try {
+        if (localStorage.getItem('portfolioTheme') === 'light') {
+          document.documentElement.classList.add('light-theme');
+        }
+      } catch (e) {
+        /* storage unavailable - keep the default dark theme */
+      }
+    })();
+  </script>
+
   <style>
     .project-hero {
       background: linear-gradient(135deg, rgba(59, 130, 246, 0.2) 0%, rgba(139, 92, 246, 0.2) 100%);
@@ -128,8 +141,8 @@
         <a href="index.html#contact">Contact</a>
       </nav>
       <div class="header-actions">
-        <button class="icon-button" id="themeToggle" aria-label="Toggle theme">🌙</button>
-        <button class="icon-button mobile-menu" id="mobileMenuBtn" aria-label="Toggle menu">☰</button>
+        <button class="icon-button" id="themeToggle" type="button" aria-label="Switch to light theme" title="Switch theme">🌙</button>
+        <button class="icon-button mobile-menu" id="mobileMenuBtn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="siteNav">☰</button>
       </div>
     </div>
   </header>
@@ -152,14 +165,8 @@
           <div class="project-meta-row">
             <span>Duration: 10 weeks</span><span>Team: Solo</span><span>My Role: Full-stack</span><span>Stack: ASP.NET MVC, SQL Server</span>
           </div>
-            <div class="project-actions" style="margin-top: 18px;">
-              <a href="https://github.com/Lakshima409/Event-Ticket" class="button small secondary" target="_blank" rel="noopener noreferrer">&lt;&gt; Code</a>
-              <a href="index.html#projects" class="button small">All projects</a>
-            </div>
-          </div>
-        </div>
-      </section>-actions" style="margin-top: 18px;">
-            <a href="https://github.com/Lakshima409?tab=repositories" class="button small secondary" target="_blank" rel="noopener noreferrer">&lt;&gt; Code</a>
+          <div class="project-actions" style="margin-top: 18px;">
+            <a href="https://github.com/Lakshima409/Event-Ticket" class="button small secondary" target="_blank" rel="noopener noreferrer">&lt;&gt; Code</a>
             <a href="index.html#projects" class="button small">All projects</a>
           </div>
         </div>
@@ -206,9 +213,7 @@
 
         <h3>Additional Capabilities</h3>
         <ul>
-          <li>Discount &amp; promo codes, venue &amp; seating config</li>
-          <li>Capacity management, audit logs, compliance tracking</li>
-        </ul>
+          <li>Discount &amp; promo codes</li>
           <li>Venue and seating configuration</li>
           <li>Capacity management and real-time availability</li>
           <li>Comprehensive audit logs and compliance tracking</li>
@@ -222,27 +227,27 @@
         <h3>System Screenshots</h3>
         <div class="screenshot-grid">
           <figure class="wide">
-            <img src="images/eticketing/homepage.webp" alt="E-Ticketing homepage with Find Your Next Experience hero" loading="lazy" decoding="async" width="1200" height="750" />
+            <img src="images/eticketing/homepage.webp" width="1600" height="728" alt="E-Ticketing homepage with Find Your Next Experience hero" loading="lazy" decoding="async" />
             <figcaption><strong>Homepage Discover Events.</strong> Hero search with featured events and category browsing.</figcaption>
           </figure>
           <figure class="wide">
-            <img src="images/eticketing/event-listing.webp" alt="E-Ticketing event listing with filters" loading="lazy" />
+            <img src="images/eticketing/event-listing.webp" width="1600" height="727" alt="E-Ticketing event listing with filters" loading="lazy" />
             <figcaption><strong>Event Listing.</strong> Filterable event catalogue with ratings, pricing and location.</figcaption>
           </figure>
           <figure class="wide">
-            <img src="images/eticketing/booking-flow.webp" alt="E-Ticketing exclusive VIP concert booking flow" loading="lazy" />
+            <img src="images/eticketing/booking-flow.webp" width="1600" height="731" alt="E-Ticketing exclusive VIP concert booking flow" loading="lazy" />
             <figcaption><strong>Booking Flow.</strong> Ticket tier selection with live price summary and capacity handling.</figcaption>
           </figure>
           <figure>
-            <img src="images/eticketing/payment.webp" alt="E-Ticketing secure checkout and payment" loading="lazy" />
+            <img src="images/eticketing/payment.webp" width="1600" height="690" alt="E-Ticketing secure checkout and payment" loading="lazy" />
             <figcaption><strong>Secure Checkout.</strong> Payment step with order summary and buyer protection.</figcaption>
           </figure>
           <figure>
-            <img src="images/eticketing/ticket-validation.webp" alt="E-Ticketing ticket validation and capacity check" loading="lazy" />
+            <img src="images/eticketing/ticket-validation.webp" width="1146" height="760" alt="E-Ticketing ticket validation and capacity check" loading="lazy" />
             <figcaption><strong>Validation.</strong> Real-time ticket availability and overbooking prevention.</figcaption>
           </figure>
           <figure class="wide">
-            <img src="images/eticketing/dashboard.webp" alt="E-Ticketing organizer dashboard with analytics" loading="lazy" />
+            <img src="images/eticketing/dashboard.webp" width="1600" height="648" alt="E-Ticketing organizer dashboard with analytics" loading="lazy" />
             <figcaption><strong>Organizer Dashboard.</strong> Sales analytics, event performance and booking management.</figcaption>
           </figure>
         </div>

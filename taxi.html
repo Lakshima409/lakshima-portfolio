@@ -6,8 +6,24 @@
   <title>Sales Analysis System for Sampath Food City | Lakshima Madurangi</title>
   <meta name="description" content="Python sales analysis system for Sampath Food City - Pandas, Matplotlib, SOLID, design patterns, Pytest." />
   <link rel="canonical" href="https://lakshima409.github.io/lakshima-portfolio/taxi.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Sales Analysis System for Sampath Food City | Lakshima Madurangi" />
+  <meta property="og:description" content="Python sales analysis system for Sampath Food City - Pandas, Matplotlib, SOLID, design patterns, Pytest." />
   <link rel="icon" type="image/jpeg" href="images/profile.jpg" />
   <link rel="stylesheet" href="style.css" />
+  <!-- P4: apply the saved theme before first paint to avoid a flash of the wrong theme -->
+  <script>
+    (function () {
+      try {
+        if (localStorage.getItem('portfolioTheme') === 'light') {
+          document.documentElement.classList.add('light-theme');
+        }
+      } catch (e) {
+        /* storage unavailable - keep the default dark theme */
+      }
+    })();
+  </script>
+
   <style>
     .project-hero {
       background: linear-gradient(135deg, rgba(59, 130, 246, 0.2) 0%, rgba(139, 92, 246, 0.2) 100%);
@@ -125,8 +141,8 @@
         <a href="index.html#contact">Contact</a>
       </nav>
       <div class="header-actions">
-        <button class="icon-button" id="themeToggle" aria-label="Toggle theme">🌙</button>
-        <button class="icon-button mobile-menu" id="mobileMenuBtn" aria-label="Toggle menu">☰</button>
+        <button class="icon-button" id="themeToggle" type="button" aria-label="Switch to light theme" title="Switch theme">🌙</button>
+        <button class="icon-button mobile-menu" id="mobileMenuBtn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="siteNav">☰</button>
       </div>
     </div>
   </header>
@@ -206,47 +222,47 @@
         <h2>System Screenshots</h2>
         <div class="screenshot-grid">
           <figure class="wide">
-            <img src="images/sampath/monthly-chart.png" alt="Sampath Food City monthly sales chart by branch" loading="lazy" decoding="async" />
+            <img src="images/sampath/monthly-chart.png" width="831" height="633" alt="Sampath Food City monthly sales chart by branch" loading="lazy" decoding="async" />
             <figcaption><strong>Monthly Sales.</strong> Branch performance grouped by month.</figcaption>
           </figure>
           <figure class="wide">
-            <img src="images/sampath/weekly-chart.png" alt="Sampath Food City weekly sales chart" loading="lazy" decoding="async" />
+            <img src="images/sampath/weekly-chart.png" width="827" height="609" alt="Sampath Food City weekly sales chart" loading="lazy" decoding="async" />
             <figcaption><strong>Weekly Sales.</strong> Weekly trends across branches.</figcaption>
           </figure>
           <figure class="wide">
-            <img src="images/sampath/price-chart.png" alt="Sampath Food City product price analysis chart" loading="lazy" decoding="async" />
+            <img src="images/sampath/price-chart.png" width="819" height="633" alt="Sampath Food City product price analysis chart" loading="lazy" decoding="async" />
             <figcaption><strong>Price Analysis.</strong> Average unit prices by category and month.</figcaption>
           </figure>
           <figure class="wide">
-            <img src="images/sampath/preferences-chart.png" alt="Sampath Food City product preferences chart" loading="lazy" decoding="async" />
+            <img src="images/sampath/preferences-chart.png" width="807" height="600" alt="Sampath Food City product preferences chart" loading="lazy" decoding="async" />
             <figcaption><strong>Preferences.</strong> Category interest distribution.</figcaption>
           </figure>
           <figure class="wide">
-            <img src="images/sampath/distribution-chart.png" alt="Sampath Food City purchase amount distribution KDE" loading="lazy" decoding="async" />
+            <img src="images/sampath/distribution-chart.png" width="834" height="622" alt="Sampath Food City purchase amount distribution KDE" loading="lazy" decoding="async" />
             <figcaption><strong>Distribution + KDE.</strong> Total purchase spending patterns.</figcaption>
           </figure>
           <figure>
-            <img src="images/sampath/monthly-test1.png" alt="Monthly sales pytest output" loading="lazy" decoding="async" />
+            <img src="images/sampath/monthly-test1.png" width="950" height="511" alt="Monthly sales pytest output" loading="lazy" decoding="async" />
             <figcaption><strong>Tests Monthly.</strong> Pytest evidence.</figcaption>
           </figure>
           <figure>
-            <img src="images/sampath/weekly-test1.png" alt="Weekly sales pytest output" loading="lazy" decoding="async" />
+            <img src="images/sampath/weekly-test1.png" width="945" height="463" alt="Weekly sales pytest output" loading="lazy" decoding="async" />
             <figcaption><strong>Tests Weekly.</strong> Pytest evidence.</figcaption>
           </figure>
           <figure>
-            <img src="images/sampath/price-test1.png" alt="Price analysis pytest output" loading="lazy" decoding="async" />
+            <img src="images/sampath/price-test1.png" width="922" height="756" alt="Price analysis pytest output" loading="lazy" decoding="async" />
             <figcaption><strong>Tests Price.</strong> Pytest evidence.</figcaption>
           </figure>
           <figure>
-            <img src="images/sampath/preferences-test1.png" alt="Preferences pytest output" loading="lazy" decoding="async" />
+            <img src="images/sampath/preferences-test1.png" width="921" height="688" alt="Preferences pytest output" loading="lazy" decoding="async" />
             <figcaption><strong>Tests Preferences.</strong> Pytest evidence.</figcaption>
           </figure>
           <figure>
-            <img src="images/sampath/distribution-test1.png" alt="Distribution pytest output" loading="lazy" decoding="async" />
+            <img src="images/sampath/distribution-test1.png" width="1066" height="807" alt="Distribution pytest output" loading="lazy" decoding="async" />
             <figcaption><strong>Tests Distribution.</strong> Pytest evidence.</figcaption>
           </figure>
           <figure>
-            <img src="images/sampath/monthly-test2.png" alt="Monthly sales additional test output" loading="lazy" decoding="async" />
+            <img src="images/sampath/monthly-test2.png" width="972" height="748" alt="Monthly sales additional test output" loading="lazy" decoding="async" />
             <figcaption><strong>Tests Monthly extra.</strong> Additional coverage.</figcaption>
           </figure>
         </div>

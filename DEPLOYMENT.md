@@ -27,15 +27,16 @@ This will:
 
 ## Step 3: Enable GitHub Pages
 
+Deployment is handled automatically by the GitHub Actions workflow in `.github/workflows/static.yml`.
+
 1. Go to your repository on GitHub: `https://github.com/Lakshima409/lakshima-portfolio`
 2. Click **Settings** (top right)
 3. Scroll to **Pages** (left sidebar)
 4. Under "Build and deployment":
-   - **Source**: Select **Deploy from a branch**
-   - **Branch**: Select `main` and folder `/root`
-5. Click **Save**
-6. Wait 1-2 minutes for the site to build
-7. Your portfolio will be live at: **https://lakshima409.github.io/lakshima-portfolio**
+   - **Source**: Select **GitHub Actions**
+5. Your portfolio will be live at: **https://lakshima409.github.io/lakshima-portfolio**
+
+On every push to `main`, the workflow builds and deploys the site automatically — no branch/folder selection is needed.
 
 ## Step 4: Update Portfolio After Changes
 

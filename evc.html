@@ -4,7 +4,26 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>EVC UI/UX Project | Lakshima Madurangi</title>
+  <meta name="description" content="Case study of StarView, an EVC video streaming platform: user research, personas, journey maps, wireframes, prototype iterations and usability feedback." />
+  <link rel="canonical" href="https://lakshima409.github.io/lakshima-portfolio/evc.html" />
+  <link rel="icon" type="image/png" href="images/favicon.png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="EVC UI/UX Project | Lakshima Madurangi" />
+  <meta property="og:description" content="Case study of StarView, an EVC video streaming platform: user research, personas, journey maps, wireframes, prototype iterations and usability feedback." />
   <link rel="stylesheet" href="style.css" />
+  <!-- P4: apply the saved theme before first paint to avoid a flash of the wrong theme -->
+  <script>
+    (function () {
+      try {
+        if (localStorage.getItem('portfolioTheme') === 'light') {
+          document.documentElement.classList.add('light-theme');
+        }
+      } catch (e) {
+        /* storage unavailable - keep the default dark theme */
+      }
+    })();
+  </script>
+
   <style>
     .project-hero {
       background: linear-gradient(135deg, rgba(59, 130, 246, 0.2) 0%, rgba(139, 92, 246, 0.2) 100%);
@@ -122,8 +141,8 @@
         <a href="index.html#contact">Contact</a>
       </nav>
       <div class="header-actions">
-        <button class="icon-button" id="themeToggle" aria-label="Toggle theme">🌙</button>
-        <button class="icon-button mobile-menu" id="mobileMenuBtn" aria-label="Toggle menu">☰</button>
+        <button class="icon-button" id="themeToggle" type="button" aria-label="Switch to light theme" title="Switch theme">🌙</button>
+        <button class="icon-button mobile-menu" id="mobileMenuBtn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="siteNav">☰</button>
       </div>
     </div>
   </header>
@@ -261,27 +280,27 @@
         <h3>UI Screens</h3>
         <div class="screenshot-grid">
           <figure>
-            <img src="images/evc/onboarding.webp" alt="StarView onboarding with Unlimited Choices" loading="lazy" />
+            <img src="images/evc/onboarding.webp" width="742" height="525" alt="StarView onboarding with Unlimited Choices" loading="lazy" />
             <figcaption><strong>Onboarding.</strong> Welcome flow introducing unlimited streaming choices.</figcaption>
           </figure>
           <figure>
-            <img src="images/evc/signin.png" alt="StarView sign in and create account screens" loading="lazy" />
+            <img src="images/evc/signin.png" width="746" height="520" alt="StarView sign in and create account screens" loading="lazy" />
             <figcaption><strong>Sign In / Sign Up.</strong> Clean auth entry with social login and account creation.</figcaption>
           </figure>
           <figure>
-            <img src="images/evc/discovery.png" alt="StarView E-Video Discovery with search and genres" loading="lazy" />
+            <img src="images/evc/discovery.png" width="279" height="539" alt="StarView E-Video Discovery with search and genres" loading="lazy" />
             <figcaption><strong>Discovery.</strong> Search, Filter By, genre chips and Explore More navigation.</figcaption>
           </figure>
           <figure>
-            <img src="images/evc/documentaries.webp" alt="StarView documentaries with popular and top 5 rows" loading="lazy" />
+            <img src="images/evc/documentaries.webp" width="478" height="569" alt="StarView documentaries with popular and top 5 rows" loading="lazy" />
             <figcaption><strong>Documentaries.</strong> Popular and Top 5 rows with recommendations.</figcaption>
           </figure>
           <figure>
-            <img src="images/evc/library.png" alt="StarView Library with owned, gifted and rented videos" loading="lazy" />
+            <img src="images/evc/library.png" width="276" height="449" alt="StarView Library with owned, gifted and rented videos" loading="lazy" />
             <figcaption><strong>Library.</strong> Owned, Gifted and Rented collections with filter.</figcaption>
           </figure>
           <figure>
-            <img src="images/evc/pricing.png" alt="StarView plan pricing Basic Standard Premium" loading="lazy" />
+            <img src="images/evc/pricing.png" width="791" height="528" alt="StarView plan pricing Basic Standard Premium" loading="lazy" />
             <figcaption><strong>Pricing Plans.</strong> Basic / Standard / Premium tiers with Get Started flow.</figcaption>
           </figure>
         </div>

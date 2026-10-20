@@ -9,7 +9,21 @@
   <link rel="icon" type="image/jpeg" href="images/profile.jpg" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="AI Mental Health Chatbot Lakshima Madurangi" />
+  <meta property="og:description" content="AI mental health chatbot - NLP intent classification, knowledge base and a team-built conversational support system." />
   <link rel="stylesheet" href="style.css" />
+  <!-- P4: apply the saved theme before first paint to avoid a flash of the wrong theme -->
+  <script>
+    (function () {
+      try {
+        if (localStorage.getItem('portfolioTheme') === 'light') {
+          document.documentElement.classList.add('light-theme');
+        }
+      } catch (e) {
+        /* storage unavailable - keep the default dark theme */
+      }
+    })();
+  </script>
+
   <style>
     .project-hero {
       background: linear-gradient(135deg, rgba(59, 130, 246, 0.2) 0%, rgba(139, 92, 246, 0.2) 100%);
@@ -127,8 +141,8 @@
         <a href="index.html#contact">Contact</a>
       </nav>
       <div class="header-actions">
-        <button class="icon-button" id="themeToggle" aria-label="Toggle theme">🌙</button>
-        <button class="icon-button mobile-menu" id="mobileMenuBtn" aria-label="Toggle menu">☰</button>
+        <button class="icon-button" id="themeToggle" type="button" aria-label="Switch to light theme" title="Switch theme">🌙</button>
+        <button class="icon-button mobile-menu" id="mobileMenuBtn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="siteNav">☰</button>
       </div>
     </div>
   </header>
@@ -191,7 +205,7 @@
 
 <h3>Architecture Diagram</h3>
 <figure>
-<img src="images/chatbot/architecture-diagram.png" alt="MindMate system architecture diagram" loading="lazy" decoding="async" width="1200" height="750" />
+<img src="images/chatbot/architecture-diagram.png" width="1162" height="637" alt="MindMate system architecture diagram" loading="lazy" decoding="async" />
 <figcaption>Figure 1 System architecture: NLP pipeline, intent classifier, response generator, and knowledge management.</figcaption>
 </figure>
 
@@ -204,39 +218,39 @@
         <p>Luna (early prototype) and MindMate (Streamlit) interfaces plus architecture, use case, and class diagrams.</p>
         <div class="screenshot-grid">
           <figure class="wide">
-            <img src="images/chatbot/luna-stress-coping.png" alt="Luna chatbot stress support conversation" loading="lazy" />
+            <img src="images/chatbot/luna-stress-coping.png" width="1199" height="782" alt="Luna chatbot stress support conversation" loading="lazy" />
             <figcaption><strong>Luna Stress Support.</strong> Coping ideas like muscle relaxation and journaling.</figcaption>
           </figure>
           <figure class="wide">
-            <img src="images/chatbot/luna-exam-anxiety.png" alt="Luna chatbot exam anxiety full window" loading="lazy" />
+            <img src="images/chatbot/luna-exam-anxiety.png" width="1816" height="851" alt="Luna chatbot exam anxiety full window" loading="lazy" />
             <figcaption><strong>Luna Exam Anxiety.</strong> Full chat layout with New Chat and online status.</figcaption>
           </figure>
           <figure>
-            <img src="images/chatbot/luna-lonely-support.png" alt="Luna chatbot lonely feelings conversation" loading="lazy" />
+            <img src="images/chatbot/luna-lonely-support.png" width="1196" height="807" alt="Luna chatbot lonely feelings conversation" loading="lazy" />
             <figcaption><strong>Luna Loneliness Check-In.</strong> Empathetic follow-up prompts.</figcaption>
           </figure>
           <figure>
-            <img src="images/chatbot/mindmate-welcome.png" alt="MindMate chatbot welcome message" loading="lazy" />
+            <img src="images/chatbot/mindmate-welcome.png" width="1918" height="915" alt="MindMate chatbot welcome message" loading="lazy" />
             <figcaption><strong>MindMate Welcome.</strong> New-chat greeting with history controls and live time.</figcaption>
           </figure>
           <figure>
-            <img src="images/chatbot/mindmate-anxiety-answer.webp" alt="MindMate chatbot anxiety explanation" loading="lazy" />
+            <img src="images/chatbot/mindmate-anxiety-answer.webp" width="1600" height="762" alt="MindMate chatbot anxiety explanation" loading="lazy" />
             <figcaption><strong>MindMate Anxiety Answer.</strong> Knowledge-base psychoeducation response.</figcaption>
           </figure>
           <figure>
-            <img src="images/chatbot/mindmate-mental-illness.png" alt="MindMate chatbot mental illness explanation" loading="lazy" />
+            <img src="images/chatbot/mindmate-mental-illness.png" width="1915" height="913" alt="MindMate chatbot mental illness explanation" loading="lazy" />
             <figcaption><strong>MindMate Mental Illness Info.</strong> Supportive answer with chat history view.</figcaption>
           </figure>
           <figure class="wide">
-            <img src="images/chatbot/architecture-diagram.png" alt="MindMate system architecture diagram" loading="lazy" />
+            <img src="images/chatbot/architecture-diagram.png" width="1162" height="637" alt="MindMate system architecture diagram" loading="lazy" />
             <figcaption><strong>System Architecture Diagram.</strong> NLP pipeline, intent classification, response generation, and data management.</figcaption>
           </figure>
           <figure class="wide">
-            <img src="images/chatbot/class-diagram.webp" alt="MindMate system class diagram" loading="lazy" />
+            <img src="images/chatbot/class-diagram.webp" width="810" height="716" alt="MindMate system class diagram" loading="lazy" />
             <figcaption><strong>System Class Diagram.</strong> Chatbot, NLP processor, intent classifier, and response generator.</figcaption>
           </figure>
           <figure>
-            <img src="images/chatbot/use-case-diagram.png" alt="MindMate use case diagram with user and administrator flows" loading="lazy" />
+            <img src="images/chatbot/use-case-diagram.png" width="811" height="677" alt="MindMate use case diagram with user and administrator flows" loading="lazy" />
             <figcaption><strong>System Use Case Diagram.</strong> User support flows and admin model training tasks.</figcaption>
           </figure>
         </div>

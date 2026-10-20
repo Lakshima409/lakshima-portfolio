@@ -4,12 +4,26 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>PantryPal - AI Recipe & Meal Planning | Lakshima Madurangi</title>
-  <meta name="description" content="PantryPal final-year research React + Node.js + Python recipe recommendation system, 83% accuracy, pantry-aware meal planning." />
+  <meta name="description" content="PantryPal final-year research React + Node.js + Python recipe recommendation system with reported 83% accuracy, pantry-aware meal planning." />
   <link rel="canonical" href="https://lakshima409.github.io/lakshima-portfolio/pantrypal.html" />
   <link rel="icon" type="image/jpeg" href="images/profile.jpg" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="PantryPal AI Recipe System Lakshima Madurangi" />
+  <meta property="og:description" content="PantryPal final-year research - React, Node.js and Python recipe recommendation system with reported 83% accuracy and pantry-aware meal planning." />
   <link rel="stylesheet" href="style.css" />
+  <!-- P4: apply the saved theme before first paint to avoid a flash of the wrong theme -->
+  <script>
+    (function () {
+      try {
+        if (localStorage.getItem('portfolioTheme') === 'light') {
+          document.documentElement.classList.add('light-theme');
+        }
+      } catch (e) {
+        /* storage unavailable - keep the default dark theme */
+      }
+    })();
+  </script>
+
   <style>
     .project-hero {
       background: linear-gradient(135deg, rgba(59, 130, 246, 0.2) 0%, rgba(139, 92, 246, 0.2) 100%);
@@ -156,8 +170,8 @@
         <a href="index.html#contact">Contact</a>
       </nav>
       <div class="header-actions">
-        <button class="icon-button" id="themeToggle" aria-label="Toggle theme">🌙</button>
-        <button class="icon-button mobile-menu" id="mobileMenuBtn" aria-label="Toggle menu">☰</button>
+        <button class="icon-button" id="themeToggle" type="button" aria-label="Switch to light theme" title="Switch theme">🌙</button>
+        <button class="icon-button mobile-menu" id="mobileMenuBtn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="siteNav">☰</button>
       </div>
     </div>
   </header>
@@ -168,7 +182,7 @@
         <a href="index.html#projects" class="back-link">← Back to Projects</a>
         <div class="project-header">
           <h1>PantryPal</h1>
-          <p style="font-size: 1.2rem; color: var(--muted);">Final-year research 83% recommendation accuracy, 0.7s API response</p>
+          <p style="font-size: 1.2rem; color: var(--muted);">Final-year research reporting 83% recommendation accuracy and 0.7s API response</p>
           <div class="project-meta">
             <div class="meta-item">
               <span>📚</span> Final Year Research Project
@@ -233,38 +247,38 @@
         <p>A look at the main user flows, from discovering recipes to managing pantry ingredients and personal preferences.</p>
         <div class="pantry-gallery">
           <figure>
-            <img src="images/pantrypal/screenshot-2025-11-20-115401.png" alt="PantryPal landing page introducing meal planning and recipe discovery" loading="lazy" />
+            <img src="images/pantrypal/screenshot-2025-11-20-115401.png" width="1586" height="846" alt="PantryPal landing page introducing meal planning and recipe discovery" loading="lazy" />
             <figcaption>Landing page · Introduces personalized recipes, meal planning, and dietary support.</figcaption>
           </figure>
           <figure>
-            <img src="images/pantrypal/screenshot-2025-07-24-110549-copy.webp" alt="PantryPal homepage with recipe recommendation call to action" loading="lazy" />
+            <img src="images/pantrypal/screenshot-2025-07-24-110549-copy.webp" width="905" height="584" alt="PantryPal homepage with recipe recommendation call to action" loading="lazy" />
             <figcaption>Home · Introduces ingredient-based recipe discovery.</figcaption>
           </figure>
           <figure>
-            <img src="images/pantrypal/screenshot-2025-07-24-111120-copy.webp" alt="PantryPal recipe browsing and recipe cards" loading="lazy" />
+            <img src="images/pantrypal/screenshot-2025-07-24-111120-copy.webp" width="884" height="794" alt="PantryPal recipe browsing and recipe cards" loading="lazy" />
             <figcaption>Recipe discovery · Browse recipe suggestions and apply filters.</figcaption>
           </figure>
           <figure>
-            <img src="images/pantrypal/screenshot-2025-07-24-111215-copy.webp" alt="PantryPal recipe detail with ingredients and cooking information" loading="lazy" />
+            <img src="images/pantrypal/screenshot-2025-07-24-111215-copy.webp" width="911" height="647" alt="PantryPal recipe detail with ingredients and cooking information" loading="lazy" />
             <figcaption>Recipe detail · Review recipe information and preparation details.</figcaption>
           </figure>
           <figure>
-            <img src="images/pantrypal/screenshot-2025-11-21-164532.webp" alt="PantryPal pantry ingredient management screen" loading="lazy" />
+            <img src="images/pantrypal/screenshot-2025-11-21-164532.webp" width="1402" height="792" alt="PantryPal pantry ingredient management screen" loading="lazy" />
             <figcaption>Pantry · Manage available ingredients before generating recipes.</figcaption>
           </figure>
           <figure>
-            <img src="images/pantrypal/screenshot-2025-11-21-164416.webp" alt="PantryPal user preferences for calorie range, allergies, and dietary choices" loading="lazy" />
+            <img src="images/pantrypal/screenshot-2025-11-21-164416.webp" width="1600" height="583" alt="PantryPal user preferences for calorie range, allergies, and dietary choices" loading="lazy" />
             <figcaption>User preferences · Set calorie ranges, allergies, dietary choices, cooking time, and difficulty.</figcaption>
           </figure>
           <figure>
-            <img src="images/pantrypal/screenshot-2025-11-20-152849.webp" alt="PantryPal user profile with health goals and activity sections" loading="lazy" />
+            <img src="images/pantrypal/screenshot-2025-11-20-152849.webp" width="1234" height="543" alt="PantryPal user profile with health goals and activity sections" loading="lazy" />
             <figcaption>Profile &amp; preferences · Personal health goals and activity at a glance.</figcaption>
           </figure>
         </div>
 
         <h3>Results & Performance</h3>
 
-        <p>The final evaluation demonstrated that the system was technically viable and capable of delivering relevant personalized recommendations. The reported technical evaluation achieved:</p>
+        <p>The final-year evaluation assessed whether the system was technically viable and capable of delivering relevant personalized recommendations. The reported technical results were:</p>
 
         <div class="highlights">
           <div class="highlight-card">
@@ -294,7 +308,7 @@
         </div>
 
         <h3>Testing & Quality</h3>
-        <p>PantryPal is backed by automated testing at every layer: <strong>231 server unit tests</strong> (<code>node --test</code>) covering auth/JWT, shopping-list math, ratings, recipes, NLP search, validation and security; <strong>PyTest</strong> for both AI services (recommender: 8 tests, diet-planner: 5 tests); and <strong>journey-check.js</strong>, a live end-to-end harness with <strong>37 assertions</strong> simulating full user journeys. The client passes a Vite production build and ESLint, and <strong>GitHub Actions CI</strong> runs Node tests, Python pytest, client lint/build, and MySQL-gated integration tests.</p>
+        <p>PantryPal is backed by automated testing at every layer: <strong>249 server unit tests</strong> (<code>node --test</code>, all passing) covering auth/JWT, shopping-list math, ratings, recipes, NLP search, validation and security; <strong>PyTest</strong> for both AI services (recommender: 21 tests passing; diet-planner: integration tests that require a live MySQL instance); and <strong>journey-check.js</strong>, a live end-to-end harness with <strong>37 assertions</strong> simulating full user journeys. The client passes a Vite production build and ESLint, and <strong>GitHub Actions CI</strong> runs Node tests, Python pytest, client lint/build, and MySQL-gated integration tests.</p>
 
         <h3>Skills & Learning Outcomes</h3>
 

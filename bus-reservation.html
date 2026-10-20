@@ -6,8 +6,24 @@
   <title>Bus Reservation System - Java DSA | Lakshima Madurangi</title>
   <meta name="description" content="Java Bus Reservation System - DSA, sorting, shortest-path, complexity analysis." />
   <link rel="canonical" href="https://lakshima409.github.io/lakshima-portfolio/bus-reservation.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Bus Reservation System - Java DSA | Lakshima Madurangi" />
+  <meta property="og:description" content="Java Bus Reservation System - DSA, sorting, shortest-path, complexity analysis." />
   <link rel="icon" type="image/jpeg" href="images/profile.jpg" />
   <link rel="stylesheet" href="style.css" />
+  <!-- P4: apply the saved theme before first paint to avoid a flash of the wrong theme -->
+  <script>
+    (function () {
+      try {
+        if (localStorage.getItem('portfolioTheme') === 'light') {
+          document.documentElement.classList.add('light-theme');
+        }
+      } catch (e) {
+        /* storage unavailable - keep the default dark theme */
+      }
+    })();
+  </script>
+
   <style>
     .project-hero{background:linear-gradient(135deg,rgba(245,158,11,.22),rgba(59,130,246,.22));padding:60px 0;margin-bottom:40px}
     .project-header{margin-bottom:30px}
@@ -24,9 +40,14 @@
     .hero-visual{margin:0 0 28px;background:var(--surface);border:1px solid var(--border);border-radius:12px;overflow:hidden}
     .hero-visual img{width:100%;height:auto;display:block}
     .hero-visual figcaption{padding:14px 18px;color:var(--muted);font-size:.95rem}
-    .ctable{width:100%;border-collapse:collapse;margin:18px 0;font-size:.96rem}
-    .ctable th,.ctable td{border:1px solid var(--border);padding:10px 12px;text-align:left}
+    .table-scroll{width:100%;margin:18px 0;overflow-x:auto;-webkit-overflow-scrolling:touch;border:1px solid var(--border);border-radius:8px}
+    .ctable{width:100%;min-width:520px;border-collapse:collapse;margin:0;font-size:.96rem}
+    .ctable th,.ctable td{border:1px solid var(--border);padding:10px 12px;text-align:left;white-space:nowrap}
     .ctable th{background:var(--surface)}
+    .table-scroll .ctable tr>*:first-child{border-left:0}
+    .table-scroll .ctable tr>*:last-child{border-right:0}
+    .table-scroll .ctable tr:last-child>*{border-bottom:0}
+    .table-scroll .ctable tr:first-child>*{border-top:0}
     .codeblock{background:#0f172a;color:#e2e8f0;padding:18px;border-radius:10px;overflow-x:auto;font-family:Consolas,Menlo,monospace;font-size:.86rem;line-height:1.6;margin:16px 0 22px;border:1px solid var(--border)}
     .codeblock .c{color:#94a3b8}.codeblock .k{color:#7dd3fc}.codeblock .s{color:#fbbf24}
     .outblock{background:var(--surface);border:1px dashed var(--border);padding:16px 18px;border-radius:10px;font-family:Consolas,Menlo,monospace;font-size:.87rem;line-height:1.7;margin:12px 0 22px;white-space:pre-wrap}
@@ -38,7 +59,7 @@
 <header class="site-header"><div class="container header-inner">
 <a href="index.html" class="brand">Lakshima</a>
 <nav class="site-nav" id="siteNav"><a href="index.html#home">Home</a><a href="index.html#about">About</a><a href="index.html#skills">Skills</a><a href="index.html#projects">Projects</a><a href="index.html#education">Education</a><a href="index.html#certificates">Certificates</a><a href="index.html#contact">Contact</a></nav>
-<div class="header-actions"><button class="icon-button" id="themeToggle">🌙</button><button class="icon-button mobile-menu" id="mobileMenuBtn">☰</button></div>
+<div class="header-actions"><button class="icon-button"  id="themeToggle" type="button" aria-label="Switch to light theme" title="Switch theme">🌙</button><button class="icon-button mobile-menu"  id="mobileMenuBtn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="siteNav">☰</button></div>
 </div></header>
 <main>
 <section class="project-hero"><div class="container">
@@ -48,7 +69,7 @@
 <div class="project-meta"><span>📅 Academic Project</span><span>💻 Java · DSA · OOP</span><span>📂 Academic · CS · Algorithm Design</span></div>
 </div></div></section>
 <section class="section" style="padding-top:0"><div class="container project-content">
-<figure class="hero-visual"><img src="images/bus-reservation.svg" alt="Bus Reservation System overview" width="1200" height="750" /><figcaption><strong>Focus:</strong> applying data structures to reservation scenarios and evaluating algorithm efficiency.</figcaption></figure>
+<figure class="hero-visual"><img src="images/bus-reservation.svg" width="800" height="500" alt="Bus Reservation System overview" /><figcaption><strong>Focus:</strong> applying data structures to reservation scenarios and evaluating algorithm efficiency.</figcaption></figure>
 <h2>Project Overview</h2>
 <p>This project explores the practical application of Data Structures and Algorithms (DSA) through a Java-based Bus Reservation System. It organizes customer, bus, and reservation information using appropriate data structures while examining efficiency of algorithms in common tasks.</p>
 <p>Alongside reservations, it investigates fundamental structures, sorting, shortest-path algorithms, OOP principles, and complexity analysis.</p>
@@ -173,11 +194,11 @@ public class BusReservationSystem {
         // Display updated reservations
         bus.displayReservations();
     }
-}</pre>
+}</pre></details>
 <h3>Design notes</h3><ul><li><b>Queue FIFO:</b> fair order, O(1); search O(n).</li><li><b>Stack LIFO:</b> newest-first + undo, O(1).</li><li><b>Sorting:</b> QuickSort fast vs MergeSort stable.</li><li><b>Tests:</b> 12 cases.</li></ul><p>Details: <a href="code/bus-reservation/QueueJustification.txt">queue</a> <a href="code/bus-reservation/StackJustification.txt">stack</a> <a href="code/bus-reservation/TestCases.txt">tests</a> <a href="code/bus-reservation/SortingEvaluationWithCodes.txt">sorting</a></p>
 <h2>Complexity Analysis</h2>
 <p>Evaluates insert, remove, search costs + memory as data grows. Queue enqueue/dequeue O(1) with linked list holding both ends; search O(n). Discusses stack/queue trade-offs for random access.</p>
-<table class="ctable"><thead><tr><th>Operation</th><th>Complexity</th><th>Note</th></tr></thead><tbody>
+<div class="table-scroll"><table class="ctable"><thead><tr><th>Operation</th><th>Complexity</th><th>Note</th></tr></thead><tbody>
 <tr><td>Queue enqueue/dequeue</td><td>O(1)</td><td>Linked list both ends</td></tr>
 <tr><td>Queue search</td><td>O(n)</td><td>No random access</td></tr>
 <tr><td>Bubble/Selection/Insertion</td><td>O(n2)</td><td>Slow large n</td></tr>
@@ -185,7 +206,7 @@ public class BusReservationSystem {
 <tr><td>Dijkstra heap</td><td>O((V+E) log V)</td><td>Non-negative</td></tr>
 <tr><td>Bellman-Ford</td><td>O(V*E)</td><td>Negative weights</td></tr>
 <tr><td>Floyd-Warshall</td><td>O(V3)</td><td>All-pairs</td></tr>
-</tbody></table>
+</tbody></table></div>
 <h2>Technical Concepts</h2>
 <div class="skills-box"><strong>Java</strong> · <strong>ADTs</strong> · <strong>OOP</strong> · <strong>Encapsulation</strong> · <strong>Sorting + Graphs</strong> · <strong>Big O / Omega / Theta</strong> · <strong>Testing</strong></div>
 <h2>Learning Outcomes</h2>

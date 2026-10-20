@@ -10,7 +10,8 @@
   --shadow: 0 24px 50px rgba(15, 23, 42, 0.15);
 }
 
-body.light-theme {
+/* P4: theme class is applied to <html> so it can be pre-painted before <body> renders */
+:root.light-theme {
   color-scheme: light;
   --bg: #f8fafc;
   --surface: #ffffff;
@@ -30,6 +31,26 @@ html {
   scroll-behavior: smooth;
 }
 
+/* P4: consistent, visible keyboard focus ring (keeps native outlines in place) */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+/* P4: screen-reader-only text (also used to hide the FormSubmit honeypot field) */
+.visually-hidden {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
 body {
   margin: 0;
   min-height: 100vh;
@@ -40,6 +61,7 @@ body {
 
 img {
   max-width: 100%;
+  height: auto;
   display: block;
 }
 
@@ -72,21 +94,21 @@ button {
   border-bottom: 1px solid rgba(148, 163, 184, 0.08);
 }
 
-body.light-theme .site-header {
+.light-theme .site-header {
   background: rgba(255, 255, 255, 0.9);
 }
 
-body.light-theme .site-footer {
+.light-theme .site-footer {
   background: rgba(255, 255, 255, 0.95);
 }
 
-body.light-theme .site-nav.open,
-body.light-theme .site-nav {
+.light-theme .site-nav.open,
+.light-theme .site-nav {
   background: rgba(255, 255, 255, 0.98);
 }
 
 @media (max-width: 780px) {
-  body.light-theme .site-nav {
+  .light-theme .site-nav {
     background: rgba(255, 255, 255, 0.98);
   }
 }
@@ -106,7 +128,7 @@ body.light-theme .site-nav {
   margin: 0 0 14px;
 }
 
-body.light-theme .availability-badge {
+.light-theme .availability-badge {
   color: #047857;
   background: rgba(16, 185, 129, 0.14);
 }
@@ -206,12 +228,6 @@ body.light-theme .availability-badge {
   background: var(--surface);
   color: var(--text);
   font-size: 0.82rem;
-}
-
-.form-note {
-  font-size: 0.82rem;
-  color: var(--muted);
-  margin: 0;
 }
 
 /* P0: project meta row on detail pages */
@@ -533,28 +549,6 @@ h3 {
   color: var(--muted);
   line-height: 1.75;
 }
-
-.skill-bar {
-  background: rgba(148, 163, 184, 0.14);
-  border-radius: 999px;
-  height: 14px;
-  overflow: hidden;
-}
-
-.skill-level {
-  display: block;
-  height: 100%;
-  border-radius: 999px;
-  background: linear-gradient(90deg, var(--accent), rgba(59, 130, 246, 0.7));
-}
-
-.level-95 { width: 95%; }
-.level-90 { width: 90%; }
-.level-85 { width: 85%; }
-.level-80 { width: 80%; }
-.level-75 { width: 75%; }
-.level-70 { width: 70%; }
-.level-65 { width: 65%; }
 
 .project-grid {
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -921,6 +915,11 @@ h3 {
   padding: 14px 16px;
 }
 
+/* P5A: honeypot must stay 1px even though .contact-form input forces 100% width */
+.contact-form input.visually-hidden {
+  width: 1px;
+}
+
 /* P1: Skills with proficiency */
 .skill-proficiency {
   display: flex;
@@ -952,13 +951,6 @@ h3 {
   height: 100%;
   border-radius: 999px;
   background: linear-gradient(90deg, var(--accent), #3b82f6);
-}
-.skill-level {
-  font-size: 0.75rem;
-  font-weight: 700;
-  color: var(--muted);
-  min-width: 34px;
-  text-align: right;
 }
 
 /* P1: Experience timeline */
@@ -998,14 +990,19 @@ h3 {
 /* P1: case-study sections */
 .case-study-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 24px;
 }
 .case-study-card {
+  min-width: 0;
   padding: 22px;
   border: 1px solid var(--border);
   border-radius: 14px;
   background: rgba(255, 255, 255, 0.04);
+}
+.case-study-card img {
+  max-width: 100%;
+  height: auto;
 }
 .case-study-card h3 {
   margin-top: 10px;
@@ -1034,6 +1031,9 @@ h3 {
     grid-template-columns: 1fr;
   }
   .skills-grid {
+    grid-template-columns: 1fr;
+  }
+  .case-study-grid {
     grid-template-columns: 1fr;
   }
 }
@@ -1177,6 +1177,32 @@ textarea::placeholder {
     transform: none;
     transition: none;
   }
+
+  /* P4: suppress nonessential movement, keep all content visible */
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .pulse-dot {
+    animation: none !important;
+  }
+
+  .button:hover,
+  .button:active,
+  .project-card--premium:hover,
+  .project-card--premium:hover .project-visual img,
+  .project-card--premium:hover .project-visual iframe {
+    transform: none !important;
+  }
 }
 
 /* P2: command palette (Ctrl/Cmd+K) */
@@ -1202,6 +1228,17 @@ textarea::placeholder {
   box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
   overflow: hidden;
 }
+/* P4: the dialog title is for screen readers only, so the panel keeps its current look */
+.palette-title {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
 .palette-panel input {
   width: 100%;
   border: none;
@@ -1210,7 +1247,10 @@ textarea::placeholder {
   color: var(--text);
   font-size: 1rem;
   padding: 16px 18px;
-  outline: none;
+}
+.palette-panel input:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: -2px;
 }
 .palette-list {
   max-height: 320px;
