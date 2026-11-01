@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PantryPal Software QA Case Study | M.H. Lakshima</title>
+  <meta name="description" content="Explore a practical software quality assurance case study covering manual testing, test case design, defect investigation, API validation and regression testing." />
+  <link rel="canonical" href="https://lakshima409.github.io/lakshima-portfolio/pantrypal-qa.html" />
+  <link rel="icon" type="image/jpeg" href="images/profile.jpg" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="PantryPal Software QA Case Study | M.H. Lakshima" />
+  <meta property="og:description" content="Explore a practical software quality assurance case study covering manual testing, test case design, defect investigation, API validation and regression testing." />
+  <link rel="stylesheet" href="style.css" />
+  <script>
+    (function () { try { if (localStorage.getItem('portfolioTheme') === 'light') { document.documentElement.classList.add('light-theme'); } } catch (e) {} })();
+  </script>
+  <style>
+    .project-hero { background: linear-gradient(135deg, rgba(59,130,246,0.2) 0%, rgba(139,92,246,0.2) 100%); padding: 60px 0; margin-bottom: 40px; }
+    .project-header h1 { font-size: 2.5rem; margin-bottom: 15px; }
+    .project-meta { display: flex; gap: 20px; flex-wrap: wrap; margin-bottom: 20px; color: var(--muted); font-size: 0.95rem; }
+    .meta-item { display: flex; align-items: center; gap: 8px; }
+    .project-content { max-width: 900px; }
+    .project-content h2 { font-size: 1.8rem; margin-top: 40px; margin-bottom: 20px; color: var(--accent); }
+    .project-content h3 { font-size: 1.3rem; margin-top: 30px; margin-bottom: 15px; }
+    .project-content p { line-height: 1.8; margin-bottom: 15px; }
+    .project-content ul { margin-left: 20px; margin-bottom: 20px; line-height: 1.8; }
+    .project-content li { margin-bottom: 10px; }
+    .highlights { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 16px; margin: 24px 0; }
+    .highlight-card { background: var(--surface); padding: 18px; border-radius: 8px; text-align: center; border: 1px solid var(--border); }
+    .highlight-card .number { font-size: 1.8rem; font-weight: bold; color: var(--accent); }
+    .highlight-card .label { font-size: 0.85rem; color: var(--muted); margin-top: 8px; }
+    .back-link { display: inline-flex; align-items: center; gap: 8px; margin-bottom: 30px; color: var(--accent); text-decoration: none; font-size: 0.95rem; }
+    .back-link:hover { text-decoration: underline; }
+    .code-block { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 14px 16px; font-family: monospace; font-size: 0.9rem; overflow-x: auto; margin: 16px 0; }
+    .lifecycle { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin: 20px 0; }
+    .lifecycle span { background: var(--surface); border: 1px solid var(--border); border-radius: 999px; padding: 6px 12px; font-size: 0.85rem; }
+    .lifecycle .arrow { background: none; border: none; padding: 0; }
+    .finding { background: var(--surface); border-left: 4px solid var(--accent); padding: 16px; border-radius: 8px; margin: 16px 0; }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">Lakshima</a>
+      <nav class="site-nav" id="siteNav">
+        <a href="index.html#home">Home</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#skills">Skills</a>
+        <a href="index.html#projects">Projects</a>
+        <a href="index.html#research">Research</a>
+        <a href="index.html#resume">Resume</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <button class="icon-button" id="themeToggle" type="button" aria-label="Switch to light theme" title="Switch theme">&#127769;</button>
+        <button class="icon-button mobile-menu" id="mobileMenuBtn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="siteNav">&#9776;</button>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section class="project-hero">
+      <div class="container">
+        <a href="index.html#projects" class="back-link">&larr; Back to Projects</a>
+        <div class="project-header">
+          <h1>Software Quality Assurance &ndash; PantryPal Testing Case Study</h1>
+          <p style="font-size: 1.2rem; color: var(--muted);">Manual Testing | Test Case Design | Defect Investigation | API Testing | Regression Testing</p>
+        </div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container project-content">
+        <h2>A. Project overview</h2>
+        <p>PantryPal is a full-stack recipe recommendation and meal-planning application. This case study documents quality assurance work performed on the existing application without modifying its functionality, except for the documented BUG-001 fix.</p>
+        <p>Technologies involved: React, Node.js, Express.js, Flask, MySQL, Python, scikit-learn and REST APIs. QA activities focused on validating application behaviour, API inputs, pantry functionality, data validation and application workflows. Not every feature or service was fully tested; limitations are stated transparently.</p>
+        <h2>B. QA objectives</h2>
+        <ul>
+          <li>Validate functional behaviour.</li>
+          <li>Identify input validation issues.</li>
+          <li>Verify API responses.</li>
+          <li>Test positive and negative scenarios.</li>
+          <li>Check database-related behaviour where accessible.</li>
+          <li>Identify and document defects.</li>
+          <li>Perform retesting and regression testing.</li>
+          <li>Maintain structured QA documentation.</li>
+        </ul>
+        <h2>C. Software Testing Life Cycle (STLC)</h2>
+        <ol>
+          <li>Requirement Analysis</li>
+          <li>Test Planning</li>
+          <li>Test Case Development</li>
+          <li>Test Environment Preparation</li>
+          <li>Test Execution</li>
+          <li>Defect Reporting</li>
+          <li>Retesting and Regression Testing</li>
+          <li>Test Closure</li>
+        </ol>
+        <p>Requirements were reverse-engineered from source code, routes, controllers and schema. No formal client requirements, stakeholder interviews or production testing took place.</p>
+        <h2>D. Test planning and test case design</h2>
+        <p>44 test cases were designed across 9 modules, using positive, negative and boundary-value techniques.</p>
+        <ul>
+          <li>Authentication and authorisation: TC-AUTH-001..008</li>
+          <li>Pantry item creation: TC-PANTRY-001, TC-PANTRY-002</li>
+          <li>Pantry item updates: TC-PANTRY-003..005</li>
+          <li>Quantity validation: TC-PANTRY-002, TC-PANTRY-004</li>
+          <li>Recipe recommendation: TC-RECIPE-005</li>
+          <li>API request validation: TC-API-001..003</li>
+          <li>Database validation: TC-DB-001..003</li>
+          <li>Error handling: invalid recipe id, weak password, missing fields</li>
+        </ul>
+        <h2>Sample Test Cases and Execution Evidence</h2>
+        <p>Representative examples from the executed QA work. Full workbook remains in the project QA documentation.</p>
+        <table style="width:100%;border-collapse:collapse;margin:16px 0;">
+          <thead>
+            <tr>
+              <th style="text-align:left;border-bottom:1px solid var(--border);padding:8px;">Test case</th>
+              <th style="text-align:left;border-bottom:1px solid var(--border);padding:8px;">Scenario</th>
+              <th style="text-align:left;border-bottom:1px solid var(--border);padding:8px;">Test type</th>
+              <th style="text-align:left;border-bottom:1px solid var(--border);padding:8px;">Result</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td style="padding:8px;">TC-PANTRY-001</td><td style="padding:8px;">Valid pantry item creation</td><td style="padding:8px;">Positive</td><td style="padding:8px;">PASS - 201 Created with id 9</td></tr>
+            <tr><td style="padding:8px;">TC-PANTRY-002</td><td style="padding:8px;">Pantry quantity validation</td><td style="padding:8px;">Boundary/negative</td><td style="padding:8px;">FAIL initially - 400 "Quantity must be a number."; retested PASS after fix</td></tr>
+            <tr><td style="padding:8px;">TC-PANTRY-003</td><td style="padding:8px;">Pantry item list</td><td style="padding:8px;">Functional</td><td style="padding:8px;">PASS - 200 OK with items</td></tr>
+            <tr><td style="padding:8px;">TC-API-001</td><td style="padding:8px;">API health check</td><td style="padding:8px;">Availability/smoke</td><td style="padding:8px;">PASS - 200 {status:ok}</td></tr>
+            <tr><td style="padding:8px;">TC-AUTH-001</td><td style="padding:8px;">Authentication validation</td><td style="padding:8px;">Functional</td><td style="padding:8px;">PASS - 201 with JWT</td></tr>
+            <tr><td style="padding:8px;">TC-DB-001</td><td style="padding:8px;">User record exists after registration</td><td style="padding:8px;">Database validation</td><td style="padding:8px;">PASS - row exists with hashed password</td></tr>
+            <tr><td style="padding:8px;">BUG-001</td><td style="padding:8px;">Quantity string such as "500 g"</td><td style="padding:8px;">Defect retesting</td><td style="padding:8px;">Initial FAIL -> Retest PASS</td></tr>
+          </tbody>
+        </table>
+        <details style="margin:12px 0;">
+          <summary style="cursor:pointer;font-weight:bold;">TC-PANTRY-001 details</summary>
+          <p><strong>Objective:</strong> Verify item added with id.</p>
+          <p><strong>Preconditions:</strong> Authenticated user.</p>
+          <p><strong>Steps:</strong> 1. POST /api/pantry.</p>
+          <p><strong>Test data:</strong> name: Tomato; quantity: 2; unit: kg.</p>
+          <p><strong>Expected:</strong> 201 Created with id.</p>
+          <p><strong>Actual:</strong> 201 Created with id 9.</p>
+          <p><strong>Status:</strong> PASS.</p>
+        </details>
+        <details style="margin:12px 0;">
+          <summary style="cursor:pointer;font-weight:bold;">TC-PANTRY-002 details</summary>
+          <p><strong>Objective:</strong> Verify "500 g" parsed.</p>
+          <p><strong>Preconditions:</strong> Authenticated user.</p>
+          <p><strong>Steps:</strong> 1. POST /api/pantry quantity "500 g".</p>
+          <p><strong>Test data:</strong> quantity: "500 g".</p>
+          <p><strong>Expected:</strong> 201; quantity=500, unit=g.</p>
+          <p><strong>Actual:</strong> 400 "Quantity must be a number." (initial); post-fix 201 quantity 500 unit g.</p>
+          <p><strong>Status:</strong> FAIL initially; retested PASS after fix.</p>
+        </details>
+        <details style="margin:12px 0;">
+          <summary style="cursor:pointer;font-weight:bold;">TC-PANTRY-003 details</summary>
+          <p><strong>Objective:</strong> Verify list returns items.</p>
+          <p><strong>Preconditions:</strong> Authenticated user with items.</p>
+          <p><strong>Steps:</strong> 1. GET /api/pantry.</p>
+          <p><strong>Test data:</strong> none.</p>
+          <p><strong>Expected:</strong> 200 OK array.</p>
+          <p><strong>Actual:</strong> 200 OK with items.</p>
+          <p><strong>Status:</strong> PASS.</p>
+        </details>
+        <details style="margin:12px 0;">
+          <summary style="cursor:pointer;font-weight:bold;">TC-API-001 details</summary>
+          <p><strong>Objective:</strong> Verify /api/health.</p>
+          <p><strong>Preconditions:</strong> Server running.</p>
+          <p><strong>Steps:</strong> 1. GET /api/health.</p>
+          <p><strong>Test data:</strong> none.</p>
+          <p><strong>Expected:</strong> 200 {status:ok}.</p>
+          <p><strong>Actual:</strong> 200 {status:ok}.</p>
+          <p><strong>Status:</strong> PASS.</p>
+        </details>
+        <details style="margin:12px 0;">
+          <summary style="cursor:pointer;font-weight:bold;">TC-AUTH-001 details</summary>
+          <p><strong>Objective:</strong> Verify a new user can register with a strong password.</p>
+          <p><strong>Preconditions:</strong> No existing account with the email.</p>
+          <p><strong>Steps:</strong> 1. POST /api/auth/register. 2. Check response.</p>
+          <p><strong>Test data:</strong> Synthetic QA account credentials; actual values not published.</p>
+          <p><strong>Expected:</strong> 201 Created and JWT token returned.</p>
+          <p><strong>Actual:</strong> 201 with user id 5026 and JWT (token not published).</p>
+          <p><strong>Status:</strong> PASS.</p>
+        </details>
+        <details style="margin:12px 0;">
+          <summary style="cursor:pointer;font-weight:bold;">TC-DB-001 details</summary>
+          <p><strong>Objective:</strong> Verify persistence.</p>
+          <p><strong>Preconditions:</strong> Register user.</p>
+          <p><strong>Steps:</strong> 1. Query users by email.</p>
+          <p><strong>Test data:</strong> Synthetic QA account email (not published).</p>
+          <p><strong>Expected:</strong> Row exists with hashed password.</p>
+          <p><strong>Actual:</strong> Row exists with hashed password (user_id 5026).</p>
+          <p><strong>Status:</strong> PASS.</p>
+        </details>
+        <details style="margin:12px 0;">
+          <summary style="cursor:pointer;font-weight:bold;">BUG-001 details</summary>
+          <p><strong>Original input:</strong> quantity "500 g".</p>
+          <p><strong>Initial API result:</strong> HTTP 400 "Quantity must be a number."</p>
+          <p><strong>Root cause:</strong> Mismatch between validation middleware and controller parsing.</p>
+          <p><strong>Fix:</strong> Validation aligned with supported quantity formats.</p>
+          <p><strong>Post-fix API result:</strong> HTTP 201, quantity 500, unit g.</p>
+          <p><strong>Evidence:</strong> Original failure preserved; successful post-fix retest; automated Node.js regression suite 261/261 passed. Manual retesting and automated regression testing are separate activities.</p>
+        </details>
+        <h2>E. Test execution results</h2>
+        <div class="highlights">
+          <div class="highlight-card"><div class="number">44</div><div class="label">Test cases designed</div></div>
+          <div class="highlight-card"><div class="number">24</div><div class="label">Manual cases executed</div></div>
+          <div class="highlight-card"><div class="number">17</div><div class="label">Passed (initial)</div></div>
+          <div class="highlight-card"><div class="number">1</div><div class="label">Failed (BUG-001)</div></div>
+          <div class="highlight-card"><div class="number">2</div><div class="label">Blocked (initial)</div></div>
+          <div class="highlight-card"><div class="number">261/261</div><div class="label">Automated tests passed</div></div>
+        </div>
+        <p>Initial execution: 17 PASS, 1 FAIL and 2 BLOCKED. Additional post-fix execution and retesting were performed. BUG-001 was successfully retested. The original failure remains visible as historical evidence; not all 24 cases passed. The 261 automated tests are separate from manual test cases. Migration-dependent testing and several service-level activities remain blocked or unexecuted.</p>
+        <h2>F. Defect investigation and resolution &ndash; BUG-001</h2>
+        <p><strong>Issue:</strong> Pantry quantity validation rejected valid quantity strings such as &quot;500 g&quot;.</p>
+        <p><strong>Root cause:</strong> The validation middleware rejected non-numeric strings before the request reached the controller's existing parseQuantity function.</p>
+        <p><strong>Investigation:</strong> inspected the pantry API route, traced validation middleware, reviewed controller parsing logic, reproduced the issue through the API, identified the mismatch between validation and controller behaviour.</p>
+        <p><strong>Fix:</strong> aligned validation with supported quantity formats, added regression tests, preserved existing invalid-input and negative-value restrictions.</p>
+        <p><strong>Verification:</strong> original failing test result preserved; post-fix retest passed; API reproduction returned HTTP 201; automated Node.js test suite 261/261 passed.</p>
+        <div class="lifecycle">
+          <span>Detection</span><span class="arrow">&rarr;</span>
+          <span>Investigation</span><span class="arrow">&rarr;</span>
+          <span>Root Cause</span><span class="arrow">&rarr;</span>
+          <span>Fix</span><span class="arrow">&rarr;</span>
+          <span>Retesting</span><span class="arrow">&rarr;</span>
+          <span>Regression Verification</span>
+        </div>
+        <p>This does not imply that all possible PantryPal defects have been resolved.</p>
+        <h2>G. Additional QA findings</h2>
+        <div class="finding">
+          <h3>QA-FINDING-001 &ndash; Quantity boundary inconsistency</h3>
+          <p>Create accepts extremely large quantities; update rejects values above 1,000,000. The intended business limit remains unconfirmed.</p>
+        </div>
+        <div class="finding">
+          <h3>QA-FINDING-002 &ndash; Empty quantity behaviour</h3>
+          <p>Empty, null and missing quantities pass validation; the controller converts these values to zero. The intended API contract requires clarification.</p>
+        </div>
+        <p>These are additional findings requiring product decisions, not confirmed resolved defects.</p>
+        <h2>H. API testing</h2>
+        <p>Practical API testing was performed using PowerShell Invoke-RestMethod against the live Node server. Postman was only explored/learned, not used as a completed practical testing tool.</p>
+        <p>Example reproduction:</p>
+        <div class="code-block">POST /api/pantry<br />{"name":"Flour","quantity":"500 g"}</div>
+        <p>After the fix, the request returned HTTP 201 with quantity 500 and unit g. No JWT tokens, credentials, secrets or private data are exposed.</p>
+        <h2>I. Database testing</h2>
+        <p>SQL validation used read-only SELECT statements. Integrity checks on existing tables passed. Limitations: meal-plan tests blocked because required diet-plan tables were missing; shopping-list tests blocked because shopping_list_items.completed was missing; ratings tests blocked because the ratings table was missing. These features were not fully validated.</p>
+        <h2>J. Retesting and regression testing</h2>
+        <p>The original BUG-001 failure was reproduced, investigated, fixed and retested. Initial result: FAIL. Post-fix retest: PASS. Automated regression suite: 261/261 passed. No retesting of unrelated defects that did not occur is claimed.</p>
+        <h2>K. Testing limitations</h2>
+        <ul>
+          <li>Only 24 of 44 designed manual test cases were executed.</li>
+          <li>Migration-dependent features remain untested.</li>
+          <li>Docker testing was not performed.</li>
+          <li>SMTP email delivery was not tested.</li>
+          <li>Flask AI services were not started for relevant testing.</li>
+          <li>Performance, WCAG and mobile testing were outside the executed scope.</li>
+        </ul>
+        <h2>L. Tools and technologies</h2>
+        <p><strong>Practically used:</strong> manual testing, the project's existing automated test framework, API request/reproduction testing, SQL validation, Excel QA documentation, Git/GitHub.</p>
+        <p><strong>Explored or currently learning:</strong> Jira, Postman, Docker. These are not represented as professional experience.</p>
+        <h2>M. Skills demonstrated</h2>
+        <ul>
+          <li>Manual Functional Testing</li>
+          <li>Test Case Design</li>
+          <li>Test Planning</li>
+          <li>STLC Documentation</li>
+          <li>Defect Identification</li>
+          <li>Root Cause Investigation</li>
+          <li>Bug Reporting</li>
+          <li>Retesting</li>
+          <li>Regression Testing</li>
+          <li>API Testing Fundamentals</li>
+          <li>SQL Validation</li>
+          <li>QA Documentation</li>
+          <li>Analytical and Problem-Solving Skills</li>
+        </ul>
+        <h2>Lessons learned</h2>
+        <p>Environment and setup gaps can dominate testing outcomes; validation/controller mismatches can make code unreachable; honest status reporting matters more than inflated pass rates.</p>
+        <div style="margin-top: 50px; padding-top: 30px; border-top: 1px solid var(--border);">
+          <a href="index.html#projects" class="button primary">&larr; Back to All Projects</a>
+          <a href="pantrypal.html" class="button small secondary" style="margin-left: 10px;">View PantryPal build</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; 2026 M.H. Lakshima Madurangi &bull; Colombo, Sri Lanka</p>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
