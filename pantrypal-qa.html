@@ -69,10 +69,10 @@
     </section>
     <section class="section">
       <div class="container project-content">
-        <h2>A. Project overview</h2>
+        <h2>Project overview</h2>
         <p>PantryPal is a full-stack recipe recommendation and meal-planning application. This case study documents quality assurance work performed on the existing application without modifying its functionality, except for the documented BUG-001 fix.</p>
         <p>Technologies involved: React, Node.js, Express.js, Flask, MySQL, Python, scikit-learn and REST APIs. QA activities focused on validating application behaviour, API inputs, pantry functionality, data validation and application workflows. Not every feature or service was fully tested; limitations are stated transparently.</p>
-        <h2>B. QA objectives</h2>
+        <h2>QA objectives</h2>
         <ul>
           <li>Validate functional behaviour.</li>
           <li>Identify input validation issues.</li>
@@ -83,7 +83,7 @@
           <li>Perform retesting and regression testing.</li>
           <li>Maintain structured QA documentation.</li>
         </ul>
-        <h2>C. Software Testing Life Cycle (STLC)</h2>
+        <h2>Software Testing Life Cycle (STLC)</h2>
         <ol>
           <li>Requirement Analysis</li>
           <li>Test Planning</li>
@@ -95,7 +95,7 @@
           <li>Test Closure</li>
         </ol>
         <p>Requirements were reverse-engineered from source code, routes, controllers and schema. No formal client requirements, stakeholder interviews or production testing took place.</p>
-        <h2>D. Test planning and test case design</h2>
+        <h2>Test planning and test case design</h2>
         <p>44 test cases were designed across 9 modules, using positive, negative and boundary-value techniques.</p>
         <ul>
           <li>Authentication and authorisation: TC-AUTH-001..008</li>
@@ -197,7 +197,7 @@
           <p><strong>Post-fix API result:</strong> HTTP 201, quantity 500, unit g.</p>
           <p><strong>Evidence:</strong> Original failure preserved; successful post-fix retest; automated Node.js regression suite 261/261 passed. Manual retesting and automated regression testing are separate activities.</p>
         </details>
-        <h2>E. Test execution results</h2>
+        <h2>Test execution results</h2>
         <div class="highlights">
           <div class="highlight-card"><div class="number">44</div><div class="label">Test cases designed</div></div>
           <div class="highlight-card"><div class="number">24</div><div class="label">Manual cases executed</div></div>
@@ -207,7 +207,7 @@
           <div class="highlight-card"><div class="number">261/261</div><div class="label">Automated tests passed</div></div>
         </div>
         <p>Initial execution: 17 PASS, 1 FAIL and 2 BLOCKED. Additional post-fix execution and retesting were performed. BUG-001 was successfully retested. The original failure remains visible as historical evidence; not all 24 cases passed. The 261 automated tests are separate from manual test cases. Migration-dependent testing and several service-level activities remain blocked or unexecuted.</p>
-        <h2>F. Defect investigation and resolution &ndash; BUG-001</h2>
+        <h2>Defect investigation and resolution &ndash; BUG-001</h2>
         <p><strong>Issue:</strong> Pantry quantity validation rejected valid quantity strings such as &quot;500 g&quot;.</p>
         <p><strong>Root cause:</strong> The validation middleware rejected non-numeric strings before the request reached the controller's existing parseQuantity function.</p>
         <p><strong>Investigation:</strong> inspected the pantry API route, traced validation middleware, reviewed controller parsing logic, reproduced the issue through the API, identified the mismatch between validation and controller behaviour.</p>
@@ -222,7 +222,7 @@
           <span>Regression Verification</span>
         </div>
         <p>This does not imply that all possible PantryPal defects have been resolved.</p>
-        <h2>G. Additional QA findings</h2>
+        <h2>Additional QA findings</h2>
         <div class="finding">
           <h3>QA-FINDING-001 &ndash; Quantity boundary inconsistency</h3>
           <p>Create accepts extremely large quantities; update rejects values above 1,000,000. The intended business limit remains unconfirmed.</p>
@@ -232,16 +232,16 @@
           <p>Empty, null and missing quantities pass validation; the controller converts these values to zero. The intended API contract requires clarification.</p>
         </div>
         <p>These are additional findings requiring product decisions, not confirmed resolved defects.</p>
-        <h2>H. API testing</h2>
+        <h2>API testing</h2>
         <p>Practical API testing was performed using PowerShell Invoke-RestMethod against the live Node server. Postman was only explored/learned, not used as a completed practical testing tool.</p>
         <p>Example reproduction:</p>
         <div class="code-block">POST /api/pantry<br />{"name":"Flour","quantity":"500 g"}</div>
         <p>After the fix, the request returned HTTP 201 with quantity 500 and unit g. No JWT tokens, credentials, secrets or private data are exposed.</p>
-        <h2>I. Database testing</h2>
+        <h2>Database testing</h2>
         <p>SQL validation used read-only SELECT statements. Integrity checks on existing tables passed. Limitations: meal-plan tests blocked because required diet-plan tables were missing; shopping-list tests blocked because shopping_list_items.completed was missing; ratings tests blocked because the ratings table was missing. These features were not fully validated.</p>
-        <h2>J. Retesting and regression testing</h2>
+        <h2>Retesting and regression testing</h2>
         <p>The original BUG-001 failure was reproduced, investigated, fixed and retested. Initial result: FAIL. Post-fix retest: PASS. Automated regression suite: 261/261 passed. No retesting of unrelated defects that did not occur is claimed.</p>
-        <h2>K. Testing limitations</h2>
+        <h2>Testing limitations</h2>
         <ul>
           <li>Only 24 of 44 designed manual test cases were executed.</li>
           <li>Migration-dependent features remain untested.</li>
@@ -250,10 +250,10 @@
           <li>Flask AI services were not started for relevant testing.</li>
           <li>Performance, WCAG and mobile testing were outside the executed scope.</li>
         </ul>
-        <h2>L. Tools and technologies</h2>
+        <h2>Tools and technologies</h2>
         <p><strong>Practically used:</strong> manual testing, the project's existing automated test framework, API request/reproduction testing, SQL validation, Excel QA documentation, Git/GitHub.</p>
         <p><strong>Explored or currently learning:</strong> Jira, Postman, Docker. These are not represented as professional experience.</p>
-        <h2>M. Skills demonstrated</h2>
+        <h2>Skills demonstrated</h2>
         <ul>
           <li>Manual Functional Testing</li>
           <li>Test Case Design</li>
