@@ -33,4 +33,6 @@ check_images.py
 /resume/Lakshima_CV.pdf
 # Microsoft Office temporary lock files
 ~$*
+# temp helper scripts
+/_add_analytics.py
 

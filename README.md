@@ -14,7 +14,7 @@ Live site: https://lakshima409.github.io/lakshima-portfolio/
 | [Event Ticketing Platform](event-ticket.html) | ASP.NET MVC, SQL Server | Full-stack | Event CRUD, checkout, QR validation, analytics |
 | [Luxora Hotel Suite](luxora.html) | PHP, MySQL, Bootstrap | Team of 4 billing + check-in/out | Invoicing, split payments, late-checkout rules |
 | [PantryPal (final-year research)](pantrypal.html) | React 19, Node/Express, MySQL 8.4, Flask microservices | Research + full-stack | Reported 83% accuracy, 0.7s API · 249 server unit tests · PyTest · 40-assertion journey test · GitHub Actions CI |
-| [AI Mental Health Chatbot](chatbot.html) | Python, NLP | Team design + NLP + docs | Intent classification, knowledge base |
+| [AI Mental Health Chatbot](chatbot.html) [code](https://github.com/Lakshima409/Mindmate-) | Python, NLP | Team design + NLP + docs | Intent classification, knowledge base |
 | [Sales analysis (Sampath Food City)](taxi.html) [code](https://github.com/Lakshima409/sampath-food-city-analytics) | Python, Pandas, Matplotlib, Pytest | Solo analysis + CLI | Branch trends, pricing, preferences, KDE |
 
 Code: https://github.com/Lakshima409?tab=repositories pin eShift, EventTicket, Luxora, PantryPal with READMEs + setup steps.
